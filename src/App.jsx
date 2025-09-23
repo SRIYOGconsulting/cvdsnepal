@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Home from './Pages/Home'
+import Gallery from './Pages/Gallery'
+import ProjectPartnership from './Pages/ProjectPartnership'
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
   return(
     <div>
 <Home />
+<Gallery/>
+<ProjectPartnership/>
     </div>
   )
 }
