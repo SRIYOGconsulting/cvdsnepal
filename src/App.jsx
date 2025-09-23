@@ -19,6 +19,9 @@ import Donations from './Pages/Donations'
 import PastActivities from './Pages/PastActivities'
 import UpcomingActivities from './Pages/UpcomingActivities'
 import { Route, Routes } from 'react-router-dom'
+import Gallery from './Pages/Gallery'
+import ProjectPartnership from './Pages/ProjectPartnership'
+
 
 
 function App() {
@@ -54,7 +57,9 @@ function App() {
       <Route path='/objectives' element={<Objectives />} />
       <Route path='/ourteam' element={<Ourteam />} />
       <Route path='/partners' element={<Partners />} />
+      <Route path='/projectpartnership' element={<ProjectPartnership />} />
       <Route path='/photogallery' element={<PhotoGallery />} />
+      <Route path='/gallery' element={<Gallery />} />
       <Route path='/projects' element={<Projects />} />
       <Route path='/staffs' element={<Staffs />} />
       <Route path='/supportus' element={<Supportus />} />
