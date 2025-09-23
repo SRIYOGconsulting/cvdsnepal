@@ -1,28 +1,7 @@
 import { useState } from 'react'
-import Home from './Pages/Home'
-import About from './Pages/About'
-import Activities from './Pages/Activities'
-import Contactus from './Pages/Contactus'
-import Donate from './Pages/Donate'
-import Members from './Pages/Members'
-import Messages from './Pages/Messages'
-import Objectives from './Pages/Objectives'
-import Ourteam from './Pages/Ourteam'
-import Partners from './Pages/Partners'
-import PhotoGallery from './Pages/PhotoGallery'
-import Projects from './Pages/Projects'
-import Staffs from './Pages/Staffs'
-import Supportus from './Pages/Supportus'
 import Footer from './Components/Footer'
 import Header from './Components/Header'
-import Donations from './Pages/Donations'
-import PastActivities from './Pages/PastActivities'
-import UpcomingActivities from './Pages/UpcomingActivities'
-import { Route, Routes } from 'react-router-dom'
-import Gallery from './Pages/Gallery'
-import ProjectPartnership from './Pages/ProjectPartnership'
-
-
+import { Outlet, useLocation} from 'react-router-dom'
 
 function App() {
   const organizationName = "CVDS Nepal"
@@ -43,30 +22,14 @@ function App() {
   const poweredBy = "flickr embed"
   const accountNumber = "050000023543"
   const accountName = "Conflict victim and disable society nepal"
+
+  const location = useLocation();
+
   return(
     <div>
-      <Header />
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/about' element={<About />} />
-      <Route path='/activities' element={<Activities />} />
-      <Route path='/contactus' element={<Contactus />} />
-      <Route path='/donate' element={<Donate />} />
-      <Route path='/members' element={<Members />} />
-      <Route path='/messages' element={<Messages />} />
-      <Route path='/objectives' element={<Objectives />} />
-      <Route path='/ourteam' element={<Ourteam />} />
-      <Route path='/partners' element={<Partners />} />
-      <Route path='/projectpartnership' element={<ProjectPartnership />} />
-      <Route path='/photogallery' element={<PhotoGallery />} />
-      <Route path='/gallery' element={<Gallery />} />
-      <Route path='/projects' element={<Projects />} />
-      <Route path='/staffs' element={<Staffs />} />
-      <Route path='/supportus' element={<Supportus />} />
-      <Route path='/donations' element={<Donations />} />
-      <Route path='/pastactivities' element={<PastActivities />} />
-      <Route path='/upcomingactivities' element={<UpcomingActivities />} />
-    </Routes>
+      <Header/> 
+    <h1>you are in {location.pathname === "/"?"Home":location.pathname.slice(1)} page</h1>
+    <Outlet/>
     <Footer/>
       </div>
   )
