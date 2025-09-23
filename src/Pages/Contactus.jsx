@@ -18,6 +18,7 @@ const Contactus = () => {
             <div>Email</div>
             <div>[email1]</div>
             <div>[email2]</div>
+            {/* location map */}
         </div>
     )
 }

@@ -15,7 +15,7 @@ const Projects = () => {
       </p>
       <li>National Child Right Council</li>
       <li>Local Goverment</li>
-        <li>Individual Donors</li>
+      <li>Individual Donors</li>
     </div>
   )
 }

@@ -1,14 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
     <div>
-      <li>Home</li>
-      <li>Contact Us</li>
-      <li>Our Team</li>
-      <li>About</li>
-      <li>Projects</li>
-      <li>Donate(CTA)</li>
+      <div>
+        <p>
+          [email1]
+        </p>
+      </div>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/contactus">Contact Us</Link></li>
+      <li><Link to="/ourteam">Our Team</Link></li>
+      <li><Link to="/about">About</Link></li>
+      <li><Link to="/projects">Projects</Link></li>
+      <li><Link to="/donate">Donate(CTA)</Link></li>
     </div>
   )
 }
