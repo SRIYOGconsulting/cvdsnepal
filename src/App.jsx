@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import { Outlet, useLocation, useMatches } from "react-router-dom";
+import { Outlet, useMatches } from "react-router-dom";
 import ChatModal from "./Components/ChatModel";
 import Logo from "./Components/Logo";
+import BasicBreadcrumbs from "./Components/BasicBreadcrumbs";
 
 function App() {
   const organizationName = "cdvs Nepal";
@@ -19,11 +20,7 @@ function App() {
     <div>
       <Logo />
       <Header />
-      {/* <h1>
-        you are in{" "}
-        {location.pathname === "/" ? "Home" : location.pathname.slice(1)} page
-      </h1> */}
-
+      <BasicBreadcrumbs />
       <Outlet context={{ organizationName, pathname: location.pathname }} />
 
       <Footer />

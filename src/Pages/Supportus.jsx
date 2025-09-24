@@ -1,14 +1,11 @@
 import React from "react";
+import { appData } from "../constants";
 
 const Supportus = () => {
   return (
     <div>
       <h1>Support Us</h1>
-      <ol>
-        <li>Home</li>
-        <li>Support Us</li>
-      </ol>
-      <h2>Welcome to [organizationName]</h2>
+      <h2>Welcome to {appData.organizationName}</h2>
       <div>
         <p>
           Thank you for your interest in supporting our work. Here are some of
@@ -25,13 +22,13 @@ const Supportus = () => {
 
         </div>
         <div>
-          Bank Detail:
+          <h2>Bank Detail:</h2>
           <br />
-          Bank of [city], [country]
+          Bank of {appData.city}, {appData.country}
           <br />
-          A/C number : [accountNumber]
+          A/C number : {appData.accountNumber}
           <br />
-          A/c name : [accountName]
+          A/C name : {appData.accountName}
         </div>
       </div>
     </div>

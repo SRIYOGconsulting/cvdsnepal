@@ -4,14 +4,9 @@ const Members = () => {
     return (
         <div>
             <h1>Members & Staffs</h1>
-            <ol>
-                <li>Home</li>
-                <li>Members & Staffs</li>
-            </ol>
             <div>
-                <h2>Members & Staffs</h2>
                 <p>
-                    The organization has a total 09 executive members from good
+                    The organization has a total 9 executive members from good
                     background. It also has full time working staffs and
                     consultant and legal advisors. The number of employees
                     varies as per various projects undertaken are experienced

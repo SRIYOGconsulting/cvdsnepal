@@ -4,13 +4,6 @@ const Objectives = () => {
   return (
     <div>
       <h1>Objectives</h1>
-      <ol>
-        <li>
-          <a>Home</a>
-        </li>
-        <li>Objectives</li>
-      </ol>
-      <h2>Objectives</h2>
       <div>
         <p>
           With realizations that love, harmony and peace are necessary for the

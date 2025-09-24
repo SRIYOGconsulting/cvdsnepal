@@ -16,7 +16,6 @@ import Objectives from './Pages/Objectives.jsx'
 import Ourteam from './Pages/Ourteam.jsx'
 import Partners from './Pages/Partners.jsx'
 import PastActivities from './Pages/PastActivities.jsx'
-import PhotoGallery from './Pages/PhotoGallery.jsx'
 import ProjectPartnership from './Pages/ProjectPartnership.jsx'
 import Projects from './Pages/Projects.jsx'
 import Staffs from './Pages/Staffs.jsx'
@@ -43,7 +42,6 @@ const router = createBrowserRouter([
     { path: 'ourteam', element: <Ourteam/>, handle: { title: "Our Team" } },
     { path: 'partners', element: <Partners/>, handle: { title: "Partners" } },
     { path: 'pastactivities', element: <PastActivities/>, handle: { title: "Past Activities" } },
-    { path: 'photogallery', element: <PhotoGallery/>, handle: { title: "Photo Gallery" } },
     { path: 'projectpartnership', element: <ProjectPartnership/>, handle: { title: "Project Partnership" } },
     { path: 'projects', element: <Projects/>, handle: { title: "Projects" } },
     { path: 'staffs', element: <Staffs/>, handle: { title: "Staffs" } },

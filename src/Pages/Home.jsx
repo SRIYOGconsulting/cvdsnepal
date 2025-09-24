@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { useOutletContext } from "react-router-dom";
+import { appData } from "../constants";
 
 const Home = () => {
   const { organizationName, pathname } = useOutletContext();
@@ -17,10 +18,10 @@ const Home = () => {
         {" "}
         We, CDVS family welcome to you all with love, harmony and peace,
         necessary for the enhancing the life of our target groups.It has been
-        established in [established] with a mission to enhance opportunities and
-        uplift the livelihood of child with disabilities (cwd’s) in Nepal.CVDS
+        established in {appData.established} with a mission to enhance opportunities and
+        uplift the livelihood of child with disabilities (cwd’s) in {appData.country}. CVDS
         aims at creating avenues so that the existing negative views and social
-        prejudice towards them can slowly be eradicated.CVDS has been supporting
+        prejudice towards them can slowly be eradicated. CVDS has been supporting
         people who have been affected by political, social, and cultural
         violence and provide a good shelter for a homeless child and kids with
         different facilities.
@@ -29,7 +30,7 @@ const Home = () => {
       <h3>About Us</h3>
       <div>
         Conflict Victim and Disable Society-Nepal (CVDS-Nepal hereinafter) is a
-        non profit social organization established in [established] with a
+        non profit social organization established in {appData.established} with a
         mission to enhance opportunities and uplift the livelihood of conflict
         victims and child with disabilities (cwd’s) in Nepal.
       </div>
@@ -42,7 +43,7 @@ const Home = () => {
 
       <div>
         With realizations that love, harmony and peace are necessary for the
-        enhancing the life of our target groups, The goal of CVDS is to open
+        enhancing the life of our target groups, the goal of CVDS is to open
         doors for the gradual eradication of societal prejudice and the current
         unfavorable opinions about them.
       </div>
@@ -50,15 +51,15 @@ const Home = () => {
       <h3>Photo Gallery</h3>
       <div>Vist our photo gallery</div>
 
-      <h2>[organizationName]-pipeline</h2>
+      <h2>{appData.organizationName}-pipeline</h2>
       <h3>
-        [organizationName] is planning to run vocational School as project.
+        {appData.organizationName} is planning to run vocational School as project.
       </h3>
       <p>
         It will be mainly support to lifting thousands of the persons with
-        disability and others marginalize group. [organizationName] is focusing
+        disability and others marginalize group. {appData.organizationName} is focusing
         and promoting the livelihood of 1000 persons with disability and
-        marginalized people in 10 years...
+        marginalized people in 10 years.
       </p>
 
       <button onClick={handleReadMore}>
@@ -79,10 +80,10 @@ const Home = () => {
           <h3>About Us</h3>
           <p>
             Conflict Victim and Disable Society (CVDS-Nepal) is one of these
-            non- profit organizations located at Shankarapur Municipality-6,
-            Shalambutar, Sankhu, Kathmandu. This organization has been devoting
+            non- profit organizations located at {appData.municipality} Municipality-{appData.wardno},{" "}  
+             {appData.address1},{" "} {appData.address2},{" "} {appData.city}. This organization has been devoting
             unceasingly with the aim of supporting the people with disability in
-            Nepal since 2005. The organization has been providing food, clothes,
+            Nepal since {appData.established}. The organization has been providing food, clothes,
             shelter, basic care and support mentally and physically disabled
             children through the ‘Rehabilitation Center for Children with
             disability due to Cerebral Palsy (CP)’ project.
@@ -90,17 +91,17 @@ const Home = () => {
 
           <h3>Keep In Touch</h3>
           <p>
-            Shalambutar, Sakhu, Kathmandu
+            {appData.address1}, {appData.address2}, {appData.city}
             <br />
-            +977-9851160868
+            {appData.phone1}
             <br />
-            info@cvdsnepal.org.np
+            {appData.email1}
           </p>
 
           <h3>Events Gallery</h3>
 
-          <p>Copyright © 2025 CVDS Nepal. All Rights Reserved.</p>
-          <p>Technology Partner : PRACAS pipeline</p>
+          <p>Copyright © 2025 {appData.organizationName}. All Rights Reserved.</p>
+          <p>BuildWith : BoardPress pipeline</p>
         </div>
       )}
     </div>

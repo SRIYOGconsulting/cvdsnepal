@@ -7,25 +7,21 @@ const Contactus = () => {
   return (
     <div>
       <h1>Contact Us</h1>
-      <ol>
-        <li>Home</li>
-        <li>Get in Touch</li>
-      </ol>
-      <h2>
+      <h3>
         Contact us if you need our services. We will be happy to make your
         events memorable!
-      </h2>
+      </h3>
       <div>Address</div>
       <div>
-        [municipality] Municipality,
-        ward-[wardno],,[address1],,[address2],[city]
+        {appData.municipality} Municipality-{appData.wardno},{" "}  
+         {appData.address1},{" "} {appData.address2},{" "} {appData.city}
       </div>
       <div>Phone</div>
-      <div>[phone1]</div>
-      <div>[phone2]</div>
+      <div>{appData.phone1}</div>
+      <div>{appData.phone2}</div>
       <div>Email</div>
-      <div>[email1]</div>
-      <div>[email2]</div>
+      <div>{appData.email1}</div>
+      <div>{appData.email2}</div>
       {/* location map */}
     </div>
   );

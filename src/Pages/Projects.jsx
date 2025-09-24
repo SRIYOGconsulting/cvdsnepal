@@ -4,10 +4,6 @@ const Projects = () => {
   return (
     <div>
       <h1> Projects</h1>
-      <ol>
-        <li>Home</li>
-        <li>Projects</li>
-      </ol>
       <p>
         Note: CVDS-Nepal has prioritized socially marginalized,
         backward caste, women and extremely poor conflict victim &

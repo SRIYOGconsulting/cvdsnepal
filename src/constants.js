@@ -10,7 +10,7 @@ export const  appData  = {
     email2 :"cvdsnepal@yahoo.com",
     phone1  : "+977-9851160868",
     phone2  : "+977-9841360868",
-    builtWith  : "Broad Press",
+    builtWith  : "BroadPress",
     facebook  : "cvdsnepal/yubraj thapa bairagi",
     established  : "2005",
     youtube  : "https://www.youtubevideoembed.com",
