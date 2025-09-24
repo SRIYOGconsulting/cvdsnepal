@@ -24,6 +24,8 @@ import UpcomingActivities from './Pages/UpcomingActivities.jsx'
 import Videos from './Pages/Videos.jsx'
 import Gallery from './Pages/Gallery.jsx'
 
+
+
 const router = createBrowserRouter([
   {path:'/', element: <App />, children:[
     {index:true, element:<Home/>},
