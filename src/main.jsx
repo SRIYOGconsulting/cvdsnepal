@@ -26,6 +26,8 @@ import Videos from './Pages/Videos.jsx'
 import Gallery from './Pages/Gallery.jsx'
 import Pracas from './Pages/Pracas.jsx';
 
+
+
 const router = createBrowserRouter([
   { path: '/', element: <App />, children: [
     { index: true, element: <Home/>, handle: { title: "Home" } },
