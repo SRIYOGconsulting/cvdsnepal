@@ -3,6 +3,7 @@ import Footer from './Components/Footer'
 import Header from './Components/Header'
 import { Outlet, useLocation} from 'react-router-dom'
 import ChatModal from './Components/ChatModel'
+import BasicBreadcrumbs from './Components/BasicBreadcrumbs'
 
 function App() {
   const organizationName = "CVDS Nepal"
@@ -29,6 +30,7 @@ function App() {
   return(
     <div>
       <Header/> 
+      <BasicBreadcrumbs/>
     <h1>you are in {location.pathname === "/"?"Home":location.pathname.slice(1)} page</h1>
     <Outlet/>
     <Footer/>

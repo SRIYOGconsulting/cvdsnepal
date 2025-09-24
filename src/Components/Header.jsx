@@ -9,7 +9,7 @@ const Header = () => {
       </div>
 
       <nav>
-        <ul className="nav-links">
+        <ul className="nav-links" style={{display:"flex", gap:"20px", listStyleType:"none", padding:"0px"}}>
           <li>
             <Link to="/">Home</Link>
           </li>

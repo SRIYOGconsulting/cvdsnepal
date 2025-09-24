@@ -20,10 +20,13 @@ const Footer = () => {
         <div>Events Gallery</div>
         Copyright © 2025 CVDS Nepal. All Rights Reserved.
         Technology Partner : PRACAS
-        <li><Link to="/activities">Activities</Link></li>
+        <ul style={{display:"flex", gap:"20px", listStyleType:"none", padding:"0px"}}>
+          <li><Link to="/activities">Activities</Link></li>
         <li><Link to="/videos">Videos</Link></li>
         <li><Link to="/partners">Partners</Link></li>
         <li><Link to="/supportus">Support Us</Link></li>
+        </ul>
+        
       </footer>
 
     </div>
