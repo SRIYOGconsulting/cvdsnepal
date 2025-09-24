@@ -1,4 +1,6 @@
-import React from "react";
+
+import React from 'react'
+import { appData } from '../constants'
 
 const About = () => {
   return (
@@ -8,7 +10,7 @@ const About = () => {
         <li>Home</li>
         <li>About</li>
       </ol>
-      <h2>Welcome to [organizationName]</h2>
+      <h2>Welcome to {appData.organizationName}</h2>
       <p>
         {" "}
         People with disability are the most vulnerable and marginalized group of
@@ -26,7 +28,7 @@ const About = () => {
         Therefore, non-governmental organizations have been providing care and
         different needed support activities targeting people with disabilities.
         <br />
-        Conflict Victim and Disable Society ([organizationName]) is one of these
+        Conflict Victim and Disable Society ({appData.organizationName}) is one of these
         non- profit organizations located at Shankarapur Municipality-6,
         Shalambutar,Sankhu,Kathmandu.This organization has been devoting
         unceasingly with the aim of supporting the people with disability in
@@ -35,6 +37,7 @@ const About = () => {
         disabled children through the ‘Rehabilitation Center for Children with
         disability due to Cerebral Palsy (CP)’ project. <br />
         <br />
+      
       </p>
       <h2>Vision</h2>
       <p>
@@ -210,7 +213,7 @@ const About = () => {
           solving your problem. When we came here you are saying to go to
           Nepalgunj and when you will go there you may say to go to India. You
           may finish the little property that I have. We also need to live and
-          your brother, sisters also need to live.) With this statement he
+          your brother, sisters also need to live. With this statement he
           returned back to Sunsari District, eastern, Terai where he had owned
           some land several years before leaving me alone in Kathmandu.
         </p>
@@ -305,10 +308,11 @@ const About = () => {
         <br></br>
         <p>
           Thank You. Yub Raj Thapa President Conflict Victim and Disable
-          Society-Nepal [municipality] Municipality- [wardno],[address2],
+          Society-Nepal {appData.municipality} Municipality- [wardno],[address2],
           [address2], [city], [country] Tel:[address1]/[address2] Email:
           [email2] Facebook: [facebook]
         </p>
+
       </div>
     </div>
   );

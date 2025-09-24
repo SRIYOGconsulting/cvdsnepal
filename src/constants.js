@@ -1,0 +1,20 @@
+export const  appData  = {
+    organizationName  : "CVDS Nepal",
+    country  : "Nepal",
+    city  :"Kathmandu",
+    address2  : "Sankhu",
+    address1  : "Shalambutar",
+    municipality : "Shankharapur ",
+    wardno  : "6",
+    email1 :"info@cvdsnepal.org.np",
+    email2 :"cvdsnepal@yahoo.com",
+    phone1  : "+977-9851160868",
+    phone2  : "+977-9841360868",
+    builtWith  : "Broad Press",
+    facebook  : "cvdsnepal/yubraj thapa bairagi",
+    established  : "2005",
+    youtube  : "https://www.youtubevideoembed.com",
+    poweredBy  : "flickr embed",
+    accountNumber  : "050000023543",
+    accountName  : "Conflict victim and disable society nepal"
+};

@@ -98,7 +98,6 @@ const Home = () => {
           </p>
 
           <h3>Events Gallery</h3>
-          <p>fotofotofotofotofotofoto</p>
 
           <p>Copyright © 2025 CVDS Nepal. All Rights Reserved.</p>
           <p>Technology Partner : PRACAS pipeline</p>

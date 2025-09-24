@@ -22,6 +22,7 @@ const Supportus = () => {
           world. Your contribution to CVDS-Nepal can make a real difference in
           the livelihoods of child with disabilities. Your support will be
           highly appreciated.
+
         </div>
         <div>
           Bank Detail:

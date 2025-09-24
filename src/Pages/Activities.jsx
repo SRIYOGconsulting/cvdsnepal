@@ -1,4 +1,5 @@
 import React from "react";
+import { appData } from "../constants";
 
 const Activities = () => {
   return (
@@ -31,16 +32,16 @@ const Activities = () => {
       </div>
       <div className="keep-in-touch-section">
         <h2>Keep In Touch</h2>
-        <p>Shalambutar, Sakhu, Kathmandu</p>
-        <p>+977-9851160868</p>
-        <p>info@cvdsnepal.org.np</p>
+        <p>{appData.address1}, {appData.address2}, {appData.city}</p>
+        <p>{appData.phone1}</p>
+        <p>{appData.email1}</p>
       </div>
       <div className="events-gallery-section">
         <h2>Events Gallery</h2>
       </div>
       <div className="footer-section">
         <p>Copyright © 2025 CVDS Nepal. All Rights Reserved.</p>
-        <p>Technology Partner : PRACAS</p>
+        <p>Technology Partner : {appData.builtWith}</p>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { appData } from "../constants";
 
 const ProjectPartnership = () => {
   return (
@@ -48,9 +49,9 @@ const ProjectPartnership = () => {
           {/* Keep In Touch */}
           <section>
             <h3>Keep In Touch</h3>
-            <p>Shalambutar, Sakhu, Kathmandu</p>
-            <p>+977-9851160868</p>
-            <p>info@cvdsnepal.org.np</p>
+            <p>{appData.address1}, {appData.address2}, {appData.city}</p>
+            <p>{appData.phone1}</p>
+            <p>{appData.email1}</p>
           </section>
 
           {/* Events Gallery */}

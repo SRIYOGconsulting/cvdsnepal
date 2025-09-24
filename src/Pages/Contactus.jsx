@@ -1,6 +1,7 @@
-import React from "react";
-
+import React from 'react'
+import { appData } from '../constants'
 import { useOutletContext } from "react-router-dom";
+
 const Contactus = () => {
   const { organizationName, pathname } = useOutletContext();
   return (
@@ -29,5 +30,6 @@ const Contactus = () => {
     </div>
   );
 };
+
 
 export default Contactus;

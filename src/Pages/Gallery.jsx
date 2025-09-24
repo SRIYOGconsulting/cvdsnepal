@@ -1,4 +1,5 @@
 import React from "react";
+import { appData } from "../constants";
 
 import img1 from "../assets/footer-1.jpg";
 import img2 from "../assets/footer-2.jpg";
@@ -53,15 +54,15 @@ const Gallery = () => {
           <div className="keep-in-touch">
             <h3>Keep In Touch</h3>
             <ul>
-              <li>Shalambutar, Sakhu, Kathmandu</li>
-              <li>+977-9851160868</li>
-              <li>info@cvdsnepal.org.np</li>
+              <li>{appData.address1}, {appData.address2}, {appData.city}</li>
+              <li>{appData.phone1}</li>
+              <li>{appData.email1}</li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>Copyright 2025 CVDS Nepal. All Rights Reserved.</p>
+          <p>Copyright  2025 {appData.organizationName}. All Rights Reserved.</p>
         </div>
       </footer>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { appData } from '../constants'
 
 const PhotoGallery = () => {
   return (
@@ -9,8 +10,8 @@ const PhotoGallery = () => {
         <li>Gallery</li>
       </ol>
       <h1>Gallery</h1>
-      <a>[youtube]</a>
-      <small>Powered by<a>[poweredBy]</a></small>
+      <a>{appData.youtube}</a>
+      <small>Powered by<a>{appData.poweredBy}</a></small>
     </div>
   )
 }

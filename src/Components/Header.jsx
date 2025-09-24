@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { appData } from "../constants";
 
 const Header = () => {
   return (
     <header>
       <div className="topbar">
-        <p>[email: info@cvdsnepal.org.np]</p>
+
+        <p>{appData.email1}</p>
       </div>
 
       <nav>
