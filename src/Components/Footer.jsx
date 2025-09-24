@@ -22,6 +22,7 @@ const Footer = () => {
         <br/>
 
         Technology Partner : <Link to ="/pracas">PRACAS</Link>
+        <ul>
         <li><Link to="/activities">Activities</Link></li>
         <li><Link to="/videos">Videos</Link></li>
         <li><Link to="/partners">Partners</Link></li>
