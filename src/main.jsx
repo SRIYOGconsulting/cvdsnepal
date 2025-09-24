@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async' 
 import Home from './Pages/Home.jsx'
 import About from './Pages/About.jsx'
 import Activities from './Pages/Activities.jsx'
@@ -23,33 +24,39 @@ import Supportus from './Pages/Supportus.jsx'
 import UpcomingActivities from './Pages/UpcomingActivities.jsx'
 import Videos from './Pages/Videos.jsx'
 import Gallery from './Pages/Gallery.jsx'
+import Pracas from './Pages/Pracas.jsx';
 
 const router = createBrowserRouter([
-  {path:'/', element: <App />, children:[
-    {index:true, element:<Home/>},
-    {path:'about', element:<About/>},
-    {path:'activities', element:<Activities/>},
-    {path:'contactus', element:<Contactus/>},
-    {path:'donate', element:<Donate/>},
-    {path:'donations', element:<Donations/>},
-    {path:'gallery', element:<Gallery/>},
-    {path:'members', element:<Members/>},
-    {path:'messages', element:<Messages/>},
-    {path:'objectives', element:<Objectives/>},
-    {path:'ourteam', element:<Ourteam/>},
-    {path:'partners', element:<Partners/>},
-    {path:'pastactivities', element:<PastActivities/>},
-    {path:'photogallery', element:<PhotoGallery/>},
-    {path:'projectpartnership', element:<ProjectPartnership/>},
-    {path:'projects', element:<Projects/>},
-    {path:'staffs', element:<Staffs/>},
-    {path:'supportus', element:<Supportus/>},
-    {path:'upcomingactivities', element:<UpcomingActivities/>},
-    {path:'videos', element:<Videos/>},
+  { path: '/', element: <App />, children: [
+    { index: true, element: <Home/>, handle: { title: "Home" } },
+    { path: 'about', element: <About/>, handle: { title: "About Us" } },
+    { path: 'activities', element: <Activities/>, handle: { title: "Activities" } },
+    { path: 'contactus', element: <Contactus/>, handle: { title: "Contact Us" } },
+    { path: 'donate', element: <Donate/>, handle: { title: "Donate" } },
+    { path: 'donations', element: <Donations/>, handle: { title: "Donations" } },
+    { path: 'gallery', element: <Gallery/>, handle: { title: "Gallery" } },
+    { path: 'members', element: <Members/>, handle: { title: "Members" } },
+    { path: 'messages', element: <Messages/>, handle: { title: "Messages" } },
+    { path: 'objectives', element: <Objectives/>, handle: { title: "Objectives" } },
+    { path: 'ourteam', element: <Ourteam/>, handle: { title: "Our Team" } },
+    { path: 'partners', element: <Partners/>, handle: { title: "Partners" } },
+    { path: 'pastactivities', element: <PastActivities/>, handle: { title: "Past Activities" } },
+    { path: 'photogallery', element: <PhotoGallery/>, handle: { title: "Photo Gallery" } },
+    { path: 'projectpartnership', element: <ProjectPartnership/>, handle: { title: "Project Partnership" } },
+    { path: 'projects', element: <Projects/>, handle: { title: "Projects" } },
+    { path: 'staffs', element: <Staffs/>, handle: { title: "Staffs" } },
+    { path: 'supportus', element: <Supportus/>, handle: { title: "Support Us" } },
+    { path: 'upcomingactivities', element: <UpcomingActivities/>, handle: { title: "Upcoming Activities" } },
+    { path: 'videos', element: <Videos/>, handle: { title: "Videos" } },
+    { path: 'pracas', element: <Pracas />, handle: { title: "Pracas" } }
   ]}
-])
+]);
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <HelmetProvider>
   <RouterProvider router={router}/>
+  </HelmetProvider>
   </StrictMode>,
 )

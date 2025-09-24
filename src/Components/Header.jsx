@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <div className="topbar">
-        <p>[email1]</p>
+        <p>[email: info@cvdsnepal.org.np]</p>
       </div>
 
       <nav>
@@ -35,6 +35,18 @@ const Header = () => {
 
           <li>
             <Link to ="/ProjectPartnership">ProjectPartnership</Link>
+          </li>
+
+          <li>
+            <Link to ="/Objectives">Objectives</Link>
+          </li>
+
+          <li>
+            <Link to ="Gallery">Gallery</Link>
+          </li>
+
+          <li>
+            <Link to ="Supportus">Supportus</Link>
           </li>
         </ul>
       </nav>

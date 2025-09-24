@@ -13,8 +13,8 @@ const ProjectPartnership = () => {
       <main>
         <section>
           <p>
-            CVDS-Nepal has prioritized socially marginalized, backward caste, 
-            women and extremely poor conflict victim & pwd’s groups for its 
+            CVDS-Nepal has prioritized socially marginalized, backward caste,
+            women and extremely poor conflict victim & pwd’s groups for its
             entrepreneurship training program:
           </p>
           <ul>
@@ -32,15 +32,15 @@ const ProjectPartnership = () => {
           <section>
             <h3>About Us</h3>
             <p>
-              Conflict Victim and Disable Society (CVDS-Nepal) is one of these 
-              non-profit organizations located at Shankarapur Municipality-6, 
-              Shalambutar, Sankhu, Kathmandu. This organization has been 
+              Conflict Victim and Disable Society (CVDS-Nepal) is one of these
+              non-profit organizations located at Shankarapur Municipality-6,
+              Shalambutar, Sankhu, Kathmandu. This organization has been
               supporting people with disabilities in Nepal since 2005.
             </p>
             <p>
-              The organization has been providing food, clothes, shelter, and 
-              care for mentally and physically disabled children through the 
-              ‘Rehabilitation Center for Children with disability due to 
+              The organization has been providing food, clothes, shelter, and
+              care for mentally and physically disabled children through the
+              ‘Rehabilitation Center for Children with disability due to
               Cerebral Palsy (CP)’ project.
             </p>
           </section>

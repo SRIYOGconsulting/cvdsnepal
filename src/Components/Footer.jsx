@@ -19,7 +19,9 @@ const Footer = () => {
         </div>
         <div>Events Gallery</div>
         Copyright © 2025 CVDS Nepal. All Rights Reserved.
-        Technology Partner : PRACAS
+        <br/>
+
+        Technology Partner : <Link to ="/pracas">PRACAS</Link>
         <li><Link to="/activities">Activities</Link></li>
         <li><Link to="/videos">Videos</Link></li>
         <li><Link to="/partners">Partners</Link></li>
