@@ -41,19 +41,19 @@ const Header = () => {
           </li>
 
           <li>
-            <Link to ="/ProjectPartnership" className="text-sm hover:text-gray-300">Project Partnership</Link>
+            <Link to ="/projectPartnership" className="text-sm hover:text-gray-300">Project Partnership</Link>
           </li>
 
           <li>
-            <Link to ="/Objectives" className="text-sm hover:text-gray-300">Objectives</Link>
+            <Link to ="/objectives" className="text-sm hover:text-gray-300">Objectives</Link>
           </li>
 
           <li>
-            <Link to ="Gallery" className="text-sm hover:text-gray-300">Gallery</Link>
+            <Link to ="gallery" className="text-sm hover:text-gray-300">Gallery</Link>
           </li>
 
           <li>
-            <Link to ="Support" className="text-sm hover:text-gray-300">Support Us</Link>
+            <Link to ="support" className="text-sm hover:text-gray-300">Support Us</Link>
           </li>
         </ul>
       </nav>
