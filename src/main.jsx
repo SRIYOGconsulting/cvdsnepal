@@ -24,6 +24,7 @@ import UpcomingActivities from './Pages/UpcomingActivities.jsx'
 import Videos from './Pages/Videos.jsx'
 import Gallery from './Pages/Gallery.jsx'
 import Pracas from './Pages/Pracas.jsx';
+import Faq from './Pages/Faq.jsx'
 
 
 
@@ -48,7 +49,8 @@ const router = createBrowserRouter([
     { path: 'supportus', element: <Supportus/>, handle: { title: "Support Us" } },
     { path: 'upcomingactivities', element: <UpcomingActivities/>, handle: { title: "Upcoming Activities" } },
     { path: 'videos', element: <Videos/>, handle: { title: "Videos" } },
-    { path: 'pracas', element: <Pracas />, handle: { title: "Pracas" } }
+    { path: 'pracas', element: <Pracas />, handle: { title: "Pracas" } },
+    { path: 'faq', element: <Faq/>, handle: {title:"Faq"}}
   ]}
 ]);
 

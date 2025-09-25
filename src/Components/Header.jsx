@@ -1,54 +1,59 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { appData } from "../constants";
+import Logo from './Logo'; 
 
 const Header = () => {
   return (
-    <header>
-      <div className="topbar">
-
-        <p>{appData.email1}</p>
+    <header className="bg-black text-white w-full">
+      <div className="flex justify-between items-center max-w-5xl mx-auto px-5 py-2">
+        <a href={`mailto:${appData.email1}`} className="text-sm hover:text-gray-300">
+          {appData.email1}
+        </a>
+        <div className="flex items-center">
+          <Logo />
+        </div>
       </div>
 
-      <nav>
-        <ul className="nav-links" style={{display:"flex", gap:"20px", listStyleType:"none", padding:"0px"}}>
+      <nav className="py-2">
+        <ul  className="flex justify-center space-x-8 list-none p-0">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="text-sm hover:text-gray-300">Home</Link>
           </li>
           <li>
-            <Link to="/contactus">Contact Us</Link>
+            <Link to="/contactus" className="text-sm hover:text-gray-300">Contact Us</Link>
           </li>
           <li>
-            <Link to="/ourteam">Our Team</Link>
+            <Link to="/ourteam" className="text-sm hover:text-gray-300">Our Team</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" className="text-sm hover:text-gray-300">About</Link>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects" className="text-sm hover:text-gray-300">Projects</Link>
           </li>
           <li>
-            <Link to="/donate">Donate(CTA)</Link>
-          </li>
-
-          <li>
-            <Link to ="/activities">Activities</Link>
+            <Link to="/donate" className="text-sm hover:text-gray-300">Donate(CTA)</Link>
           </li>
 
           <li>
-            <Link to ="/ProjectPartnership">Project Partnership</Link>
+            <Link to ="/activities" className="text-sm hover:text-gray-300">Activities</Link>
           </li>
 
           <li>
-            <Link to ="/Objectives">Objectives</Link>
+            <Link to ="/ProjectPartnership" className="text-sm hover:text-gray-300">Project Partnership</Link>
           </li>
 
           <li>
-            <Link to ="Gallery">Gallery</Link>
+            <Link to ="/Objectives" className="text-sm hover:text-gray-300">Objectives</Link>
           </li>
 
           <li>
-            <Link to ="Supportus">Support Us</Link>
+            <Link to ="Gallery" className="text-sm hover:text-gray-300">Gallery</Link>
+          </li>
+
+          <li>
+            <Link to ="Supportus" className="text-sm hover:text-gray-300">Support Us</Link>
           </li>
         </ul>
       </nav>
@@ -57,3 +62,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+

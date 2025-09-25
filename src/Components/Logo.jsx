@@ -1,10 +1,10 @@
 import React from 'react'
-
+import logoImage from '../assets/logo.png';
 const Logo = () => {
   return (
     <div className='logo'>
-        <span className='icon'>CDVS</span>
-        <span className='text'>CDVS Nepal</span>
+      <img src={logoImage} alt="CVDS Nepal Logo" />
+       
 
     </div>
   )
