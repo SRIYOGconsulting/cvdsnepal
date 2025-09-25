@@ -62,7 +62,7 @@ const Footer = () => {
       <div className="text-center mt-4">
         <p>Copyright © 2025 {appData.organizationName}. All Rights Reserved.</p>
         <p className="mt-2">
-          Build With: <Link to="/pracas" className="text-blue-400 hover:underline">BoardPress</Link>
+          Build With: <Link to="/BoardPress" className="text-blue-400 hover:underline">BoardPress</Link>
         </p>
         <ul className="list-none flex justify-center gap-4 mt-2 p-0">
           <li><Link to="/activities" className="text-blue-400 hover:underline">Activities</Link></li>

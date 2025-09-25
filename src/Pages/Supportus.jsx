@@ -3,7 +3,7 @@ import { appData } from "../constants";
 
 const Supportus = () => {
   return (
-    <div>
+    <div className="min-h-screen max-w-5xl mx-auto px-4 py-12">
       <h1>Support Us</h1>
       <h2>Welcome to {appData.organizationName}</h2>
       <div>

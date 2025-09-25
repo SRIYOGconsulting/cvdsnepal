@@ -23,7 +23,6 @@ import Supportus from './Pages/Supportus.jsx'
 import UpcomingActivities from './Pages/UpcomingActivities.jsx'
 import Videos from './Pages/Videos.jsx'
 import Gallery from './Pages/Gallery.jsx'
-import Pracas from './Pages/Pracas.jsx';
 import Faq from './Pages/Faq.jsx'
 
 
@@ -33,23 +32,22 @@ const router = createBrowserRouter([
     { index: true, element: <Home/>, handle: { title: "Home" } },
     { path: 'about', element: <About/>, handle: { title: "About Us" } },
     { path: 'activities', element: <Activities/>, handle: { title: "Activities" } },
-    { path: 'contactus', element: <Contactus/>, handle: { title: "Contact Us" } },
+    { path: 'contact', element: <Contactus/>, handle: { title: "Contact Us" } },
     { path: 'donate', element: <Donate/>, handle: { title: "Donate" } },
     { path: 'donations', element: <Donations/>, handle: { title: "Donations" } },
     { path: 'gallery', element: <Gallery/>, handle: { title: "Gallery" } },
     { path: 'members', element: <Members/>, handle: { title: "Members" } },
     { path: 'messages', element: <Messages/>, handle: { title: "Messages" } },
     { path: 'objectives', element: <Objectives/>, handle: { title: "Objectives" } },
-    { path: 'ourteam', element: <Ourteam/>, handle: { title: "Our Team" } },
+    { path: 'team', element: <Ourteam/>, handle: { title: "Our Team" } },
     { path: 'partners', element: <Partners/>, handle: { title: "Partners" } },
     { path: 'pastactivities', element: <PastActivities/>, handle: { title: "Past Activities" } },
     { path: 'projectpartnership', element: <ProjectPartnership/>, handle: { title: "Project Partnership" } },
     { path: 'projects', element: <Projects/>, handle: { title: "Projects" } },
     { path: 'staffs', element: <Staffs/>, handle: { title: "Staffs" } },
-    { path: 'supportus', element: <Supportus/>, handle: { title: "Support Us" } },
+    { path: 'support', element: <Supportus/>, handle: { title: "Support Us" } },
     { path: 'upcomingactivities', element: <UpcomingActivities/>, handle: { title: "Upcoming Activities" } },
     { path: 'videos', element: <Videos/>, handle: { title: "Videos" } },
-    { path: 'pracas', element: <Pracas />, handle: { title: "Pracas" } },
     { path: 'faq', element: <Faq/>, handle: {title:"Faq"}}
   ]}
 ]);

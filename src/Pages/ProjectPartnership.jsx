@@ -3,14 +3,7 @@ import { appData } from "../constants";
 
 const ProjectPartnership = () => {
   return (
-    <div>
-      {/* Page Header */}
-      <header>
-        <h1>Project</h1>
-        <p>Home Project</p>
-      </header>
-
-      {/* Note Section */}
+    <div className="min-h-screen max-w-5xl mx-auto px-4 py-12">
       <main>
         <section>
           <p>

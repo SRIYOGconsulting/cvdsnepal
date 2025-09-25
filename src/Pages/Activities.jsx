@@ -3,7 +3,7 @@ import { appData } from "../constants";
 
 const Activities = () => {
   return (
-    <div>
+    <div className='min-h-screen max-w-5xl mx-auto px-4 py-12'>
       <h1>Activities</h1>
       <div className="pipeline-section">
         <h2>Pipeline</h2>

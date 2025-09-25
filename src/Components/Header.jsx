@@ -21,10 +21,10 @@ const Header = () => {
             <Link to="/" className="text-sm hover:text-gray-300">Home</Link>
           </li>
           <li>
-            <Link to="/contactus" className="text-sm hover:text-gray-300">Contact Us</Link>
+            <Link to="/contact" className="text-sm hover:text-gray-300">Contact Us</Link>
           </li>
           <li>
-            <Link to="/ourteam" className="text-sm hover:text-gray-300">Our Team</Link>
+            <Link to="/team" className="text-sm hover:text-gray-300">Our Team</Link>
           </li>
           <li>
             <Link to="/about" className="text-sm hover:text-gray-300">About</Link>
@@ -53,7 +53,7 @@ const Header = () => {
           </li>
 
           <li>
-            <Link to ="Supportus" className="text-sm hover:text-gray-300">Support Us</Link>
+            <Link to ="Support" className="text-sm hover:text-gray-300">Support Us</Link>
           </li>
         </ul>
       </nav>

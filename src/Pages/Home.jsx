@@ -15,7 +15,7 @@ const HeroSection = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden">
+    <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden ">
       <img
         src={slides[currentSlide]}
         alt={`Slide ${currentSlide + 1}`}
@@ -53,7 +53,7 @@ const HeroSection = () => {
 };
 
 const AboutUsSection = () => (
-  <div className="max-w-7xl mx-auto p-6">
+  <div className="max-w-5xl mx-auto px-4 py-12">
     <h3 className="text-2xl font-semibold text-gray-800 mb-4">About Us</h3>
     <div className="bg-white p-6 rounded-lg shadow-md text-gray-700 leading-relaxed">
       Conflict Victim and Disable Society-Nepal (CVDS-Nepal hereinafter) is a
@@ -65,7 +65,7 @@ const AboutUsSection = () => (
 );
 
 const ObjectivesSection = () => (
-  <div className="max-w-7xl mx-auto p-6">
+  <div className="max-w-5xl mx-auto px-4 py-12">
     <h3 className="text-2xl font-semibold text-gray-800 mb-4">
       <span className="text-blue-600">Our Objectives</span>
     </h3>
@@ -79,7 +79,7 @@ const ObjectivesSection = () => (
 );
 
 const PhotoGallerySection = () => (
-  <div className="max-w-7xl mx-auto p-6">
+  <div className="p-6 max-w-5xl mx-auto px-4 py-12">
     <h3 className="text-2xl font-semibold text-gray-800 mb-4">Photo Gallery</h3>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
       {[img1, img2, img1, img2].map((photo, i) => (
@@ -95,7 +95,7 @@ const PhotoGallerySection = () => (
 );
 
 const PipelineSection = ({ showPipeline, handleReadMore }) => (
-  <div className="max-w-7xl mx-auto p-6">
+  <div className="p-6 max-w-5xl mx-auto px-4 py-12">
     <h2 className="text-3xl font-bold text-gray-900 mb-4">
       {appData.organizationName} - Pipeline
     </h2>

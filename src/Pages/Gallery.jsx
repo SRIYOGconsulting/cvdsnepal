@@ -11,7 +11,7 @@ import img6 from "../assets/footer-6.jpg";
 const Gallery = () => {
   const galleryImages = [img1, img2, img3, img4, img5, img6];
   return (
-    <div>
+    <div className='min-h-screen max-w-5xl mx-auto px-4 py-12'>
       <section className="gallery-header">
         <h1>Gallery</h1>
       </section>
