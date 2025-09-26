@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import Footer from "./Components/Footer";
-
 import Header from "./Components/Header";
 import { Outlet, useMatches } from "react-router-dom";
 import ChatModal from "./Components/ChatModel";
 
 import BasicBreadcrumbs from "./Components/BasicBreadcrumbs";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -27,7 +26,7 @@ function App() {
       
       <Outlet context={{ organizationName, pathname: location.pathname }} />
 
-      <Footer />
+      <Footer/>
     
     </div>
   );

@@ -1,71 +1,53 @@
-
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { appData } from "../constants";
 import Logo from "./Logo";
 
 const Header = () => {
-  const barHeight = "60px"; // same height for top and bottom bars
-  const navigate = useNavigate(); // hook for navigation
+  const barHeight = "60px";
+  const navigate = useNavigate();
 
   return (
-    <header className="w-full shadow-md">
-      {/* Top Bar (Logo left, Email right) */}
-      <div
-        className="bg-[#FCFEFE] text-[#1F2B6C] border-b flex items-center justify-between px-6"
-        style={{ height: barHeight }}
-      >
-        {/* Logo */}
-        <div className="flex items-center">
-          <Logo />
+    <header className="w-full absolute top-10 left-0 z-50 bg-transparent"> 
+
+      {/* Bottom Navbar */}
+      <nav className="bg-transparent text-[#f2eeec]">
+        <div
+          className="max-w-8xl mx-auto flex items-center justify-between px-12"
+          style={{ height: barHeight }}
+        >
+          <Link to='/' className="flex items-center gap-3">
+              <img src="../public/assets/images/cvdslogo.png" alt="logo" style={{height:'63px', marginLeft:'45px'}} className="rounded-l-lg"></img>
+            </Link>
+          {/* Navbar Links */}
+          <ul className="flex gap-3 list-none p-0 font-medium text-[#f2eeec]">
+            {[
+              { name: "Home", path: "/" },
+              { name: "About", path: "/about" },
+              { name: "Team", path: "/team" },
+              { name: "Projects", path: "/projects" },
+              { name: "Activities", path: "/activities" },
+              { name: "Contact", path: "/contact" },
+            ].map((item, i) => (
+              <li key={i}>
+                <Link
+                  to={item.path}
+                  className="hover:text-[#159EEC] transition"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Donate Button */}
+          <button
+            onClick={() => navigate("/donate")}
+            className="bg-[#d9d9d9] px-8 py-2 text-black font-semibold hover:bg-blue-500 transition rounded-[0.5vw]" 
+          >
+            Donate
+          </button>
         </div>
-
-        {/* Email */}
-        <a
-          href={`mailto:${appData.email1}`}
-          className="text-sm font-medium hover:text-[#159EEC] transition"
-        >
-          {appData.email1}
-        </a>
-      </div>
-
-      {/*  Bottom Navbar */}
-      <nav
-        className="bg-[#1F2B6C] flex items-center justify-between px-6"
-        style={{ height: barHeight }}
-      >
-        {/* Navbar Links */}
-        <ul className="flex flex-wrap gap-6 list-none p-0 font-medium text-[#FCFEFE]">
-          {[
-            { name: "Home", path: "/" },
-            { name: "About", path: "/about" },
-            { name: "Members & Staffs", path: "/team" },
-            { name: "Projects", path: "/projects" },
-            { name: "Partnership", path: "/projectPartnership" },
-            
-            { name: "Gallery", path: "/gallery" },
-            { name: "Objectives", path: "/objectives" },
-            { name: "Support Us", path: "/support" },
-            { name: "Contact Us", path: "/contact" },
-          ].map((item, i) => (
-            <li key={i}>
-              <Link
-                to={item.path}
-                className="hover:text-[#159EEC] transition"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        {/*  CTA Donate Button on Right */}
-        <button
-          onClick={() => navigate("/donate")}
-          className="bg-[#159EEC] px-8 py-2 rounded-full text-white font-semibold hover:bg-blue-500 transition"
-        >
-          Donate
-        </button>
       </nav>
     </header>
   );

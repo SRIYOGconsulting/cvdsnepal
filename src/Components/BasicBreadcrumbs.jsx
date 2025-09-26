@@ -12,7 +12,7 @@ const BasicBreadcrumbs = () => {
   }
 
   return (
-    <div className="bg-[#1F2B6C] py-12 text-center relative overflow-hidden">
+    <div className="bg-[#1F2B6C] py-12 text-center relative overflow-hidden pt-24">
       {/* Decorative gradient overlay (optional) */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#E5E4E8] to-transparent opacity-20 pointer-events-none"></div>
 

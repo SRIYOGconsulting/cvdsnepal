@@ -35,7 +35,11 @@ const BoardPress = () => {
               Conflict Victim and Disable Society ({appData.organizationName}) is located at {appData.municipality} Municipality-{appData.wardno}, {appData.address1}, {appData.address2}, {appData.city}. This organization has been supporting people with disability in Nepal since {appData.established}, providing food, clothes, shelter, and basic care through the Rehabilitation Center for Children with disability due to Cerebral Palsy (CP) project.
             </p>
             <br />
-            <p>Follow CDVS Nepal on social media</p>
+            <p>Follow CDVS Nepal on social media</p><br/>
+            <div>
+              <img src='../public/assets/images/twitter.png' alt="Twitter" className="w-6 h-6 mb-3 object-cover inline mr-2" style={{marginRight:'10px'}}/>
+              <img src='../public/assets/images/linkedin.png' alt="Linkedin" className="w-6 h-6 mb-3 object-cover inline mr-2"/>
+            </div>
           </div></div></div>
 
       {/* Team members grid */}

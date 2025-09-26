@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { appData } from "../constants";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight } from "lucide-react"; 
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import img1 from "../assets/slide3.jpg";
 import img2 from "../assets/slide2.jpg";
+import Header from "../Components/Header";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,25 +16,26 @@ const HeroSection = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden ">
+    <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden min-h-screen">
       <img
-        src={slides[currentSlide]}
+        src='../public/assets/images/herosetion.jpg'
         alt={`Slide ${currentSlide + 1}`}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover "
       />
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
-        <h1 className="text-4xl lg:text-6xl font-bold mb-4">
-          Welcome To {appData.organizationName}
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start  px-6 md:px-16 lg:px-24 text-white">
+        <h1 className="text-xl lg:text-4xl font-bold mb-4">
+          Turning Challenges into <br/> Opportunities for All<br/>
         </h1>
-        <h3 className="text-lg lg:text-xl mb-6">
-          We make you smile & life impactful through our services.
+        <h3 className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl text-[#f2eeec]" style={{fontSize:"18px"}}>
+          Adding the Wheel in Wheelchair, Restoring Dignity
         </h3>
+        <br/><br/>
         <Link to="/donate">
-  <button className="bg-blue-600 px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition">
-    Donate Now
-  </button>
-</Link>
+          <button className="bg-[#d9d9d9] px-3 py-1 text-black font-semibold hover:bg-blue-500 transition rounded-[0.5vw]">
+            Donate Now
+          </button>
+        </Link>
       </div>
       {/* Arrows */}
       <button

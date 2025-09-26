@@ -10,33 +10,82 @@ const Footer = () => {
           <h3 className="text-lg font-bold mb-2">Ways to Give</h3>
           <ul className="list-none p-0">
             <li>
-              <Link to="/donate" className="text-blue-600 hover:underline">
+              {/* <Link to="/donate" className="text-blue-600 hover:underline">
                 Donate Now
-              </Link>
+              </Link> */}
+              <li>
+                <Link to="/donations" className="text-blue-400 hover:underline">
+                  Donations
+                </Link>
+              </li>
             </li>
-            <li>Give Monthly</li>
-            <li>Honor Someone Special</li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-lg font-bold mb-2">Take Action</h3>
           <ul className="list-none p-0">
-            <li>Get Involved</li>
-            <li>Partner with Us</li>
+            <li>
+              <Link to="/partners" className="text-blue-400 hover:underline">
+                Partners
+              </Link>
+            </li>
+            <li>
+            <Link to="/messages" className="text-blue-400 hover:underline">
+              Messages
+            </Link>
+          </li>
+            <li>
+            <Link to="/support" className="text-blue-400 hover:underline">
+              Support Us
+            </Link>
+          </li>
+            
           </ul>
         </div>
 
         <div>
           <h3 className="text-lg font-bold mb-2">Quick Links</h3>
           <ul className="list-none p-0">
-            <li>News & Stories</li>
-            <li>Careers</li>
             <li>
-              <Link to="/contactus" className="text-sm hover:text-gray-300">
-                Contact Us
+              <Link to="/activities" className="text-blue-400 hover:underline">
+                Activities
               </Link>
+              <li>
+                <Link
+                  to="/pastactivities"
+                  className="text-blue-400 hover:underline"
+                >
+                  Past Activities
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/upcomingactivities"
+                  className="text-blue-400 hover:underline"
+                >
+                  Upcoming Activities
+                </Link>
+              </li>
+              <li>
+                <Link to="/videos" className="text-blue-400 hover:underline">
+                  Videos
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="text-blue-400 hover:underline">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+
+                <Link to='/objectives' className="text-blue-400 hover:underline">
+                  Objectives
+                </Link>
+              </li>
             </li>
+            
+            
           </ul>
         </div>
 
@@ -72,65 +121,6 @@ const Footer = () => {
             BoardPress
           </Link>
         </p>
-
-        <ul className="list-none flex justify-center gap-4 mt-2 p-0">
-          <li>
-            <Link to="/activities" className="text-blue-400 hover:underline">
-              Activities
-            </Link>
-          </li>
-          <li>
-            <Link to="/donations" className="text-blue-400 hover:underline">
-              Donations
-            </Link>
-          </li>
-          <li>
-            <Link to="/members" className="text-blue-400 hover:underline">
-              Members
-            </Link>
-          </li>
-          <li>
-            <Link to="/messages" className="text-blue-400 hover:underline">
-              Messages
-            </Link>
-          </li>
-          <li>
-            <Link to="/partners" className="text-blue-400 hover:underline">
-              Partners
-            </Link>
-          </li>
-          <li>
-            <Link to="/staffs" className="text-blue-400 hover:underline">
-              Staffs
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/pastactivities"
-              className="text-blue-400 hover:underline"
-            >
-              Past Activities
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/upcomingactivities"
-              className="text-blue-400 hover:underline"
-            >
-              Upcoming Activities
-            </Link>
-          </li>
-          <li>
-            <Link to="/videos" className="text-blue-400 hover:underline">
-              Videos
-            </Link>
-          </li>
-          <li>
-            <Link to="/faq" className="text-blue-400 hover:underline">
-              FAQ
-            </Link>
-          </li>
-        </ul>
 
         <div className="mt-4">
           <a href="#" className="text-blue-400 mx-2 hover:underline">
