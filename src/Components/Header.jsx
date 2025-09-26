@@ -1,67 +1,74 @@
+
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { appData } from "../constants";
-import Logo from './Logo'; 
+import Logo from "./Logo";
 
 const Header = () => {
+  const barHeight = "60px"; // same height for top and bottom bars
+  const navigate = useNavigate(); // hook for navigation
+
   return (
-    <header className="bg-black text-white w-full">
-      <div className="flex justify-between items-center max-w-5xl mx-auto px-5 py-2">
-        <a href={`mailto:${appData.email1}`} className="text-sm hover:text-gray-300">
-          {appData.email1}
-        </a>
+    <header className="w-full shadow-md">
+      {/* Top Bar (Logo left, Email right) */}
+      <div
+        className="bg-[#FCFEFE] text-[#1F2B6C] border-b flex items-center justify-between px-6"
+        style={{ height: barHeight }}
+      >
+        {/* Logo */}
         <div className="flex items-center">
           <Logo />
         </div>
+
+        {/* Email */}
+        <a
+          href={`mailto:${appData.email1}`}
+          className="text-sm font-medium hover:text-[#159EEC] transition"
+        >
+          {appData.email1}
+        </a>
       </div>
 
-      <nav className="py-2">
-        <ul  className="flex justify-center space-x-8 list-none p-0">
-          <li>
-            <Link to="/" className="text-sm hover:text-gray-300">Home</Link>
-          </li>
-          <li>
-            <Link to="/contact" className="text-sm hover:text-gray-300">Contact Us</Link>
-          </li>
-          <li>
-            <Link to="/team" className="text-sm hover:text-gray-300">Our Team</Link>
-          </li>
-          <li>
-            <Link to="/about" className="text-sm hover:text-gray-300">About</Link>
-          </li>
-          <li>
-            <Link to="/projects" className="text-sm hover:text-gray-300">Projects</Link>
-          </li>
-          <li>
-            <Link to="/donate" className="text-sm hover:text-gray-300">Donate(CTA)</Link>
-          </li>
-
-          <li>
-            <Link to ="/activities" className="text-sm hover:text-gray-300">Activities</Link>
-          </li>
-
-          <li>
-            <Link to ="/projectPartnership" className="text-sm hover:text-gray-300">Project Partnership</Link>
-          </li>
-
-          <li>
-            <Link to ="/objectives" className="text-sm hover:text-gray-300">Objectives</Link>
-          </li>
-
-          <li>
-            <Link to ="gallery" className="text-sm hover:text-gray-300">Gallery</Link>
-          </li>
-
-          <li>
-            <Link to ="support" className="text-sm hover:text-gray-300">Support Us</Link>
-          </li>
+      {/*  Bottom Navbar */}
+      <nav
+        className="bg-[#1F2B6C] flex items-center justify-between px-6"
+        style={{ height: barHeight }}
+      >
+        {/* Navbar Links */}
+        <ul className="flex flex-wrap gap-6 list-none p-0 font-medium text-[#FCFEFE]">
+          {[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Members & Staffs", path: "/team" },
+            { name: "Projects", path: "/projects" },
+            { name: "Partnership", path: "/projectPartnership" },
+            { name: "Activities", path: "/activities" },
+            { name: "Gallery", path: "/gallery" },
+            { name: "Objectives", path: "/objectives" },
+            { name: "Support Us", path: "/support" },
+            { name: "Contact Us", path: "/contact" },
+          ].map((item, i) => (
+            <li key={i}>
+              <Link
+                to={item.path}
+                className="hover:text-[#159EEC] transition"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
+
+        {/*  CTA Donate Button on Right */}
+        <button
+          onClick={() => navigate("/donate")}
+          className="bg-[#159EEC] px-8 py-2 rounded-full text-white font-semibold hover:bg-blue-500 transition"
+        >
+          Donate
+        </button>
       </nav>
     </header>
   );
 };
 
 export default Header;
-
-
-

@@ -8,7 +8,7 @@ import BasicBreadcrumbs from "./Components/BasicBreadcrumbs";
 
 
 function App() {
-  const organizationName = "cdvs Nepal";
+  const organizationName = "Conflict Victim and Disabled Society | Nepal";
   const matches = useMatches();
   const currentMatch = matches[matches.length - 1];
   const pageTitle = currentMatch?.handle?.title || "Page";

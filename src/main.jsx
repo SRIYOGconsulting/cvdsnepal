@@ -48,7 +48,7 @@ const router = createBrowserRouter([
     { path: 'support', element: <Supportus/>, handle: { title: "Support Us" } },
     { path: 'upcomingactivities', element: <UpcomingActivities/>, handle: { title: "Upcoming Activities" } },
     { path: 'videos', element: <Videos/>, handle: { title: "Videos" } },
-    { path: 'faq', element: <Faq/>, handle: {title:"Faq"}}
+    { path: 'FAQ', element: <Faq/>, handle: {title:"FAQ"}}
   ]}
 ]);
 

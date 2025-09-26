@@ -1,5 +1,5 @@
 export const  appData  = {
-    organizationName  : "CVDS Nepal",
+    organizationName  : "Conflict Victim and Disabled Society",
     country  : "Nepal",
     city  :"Kathmandu",
     address2  : "Sankhu",
