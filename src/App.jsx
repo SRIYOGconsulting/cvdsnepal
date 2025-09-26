@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Footer from "./Components/Footer";
+
 import Header from "./Components/Header";
 import { Outlet, useMatches } from "react-router-dom";
 import ChatModal from "./Components/ChatModel";
@@ -33,3 +34,12 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+

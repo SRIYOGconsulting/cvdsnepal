@@ -42,7 +42,7 @@ const Header = () => {
             { name: "Members & Staffs", path: "/team" },
             { name: "Projects", path: "/projects" },
             { name: "Partnership", path: "/projectPartnership" },
-            { name: "Activities", path: "/activities" },
+            
             { name: "Gallery", path: "/gallery" },
             { name: "Objectives", path: "/objectives" },
             { name: "Support Us", path: "/support" },

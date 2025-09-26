@@ -1,66 +1,146 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { appData } from '../constants';
+import React from "react";
+import { Link } from "react-router-dom";
+import { appData } from "../constants";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1F2B6C] text-[#FCFEFE] pt-14 font-sans">
-      {/* Top Section with multiple columns */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-6xl mx-auto px-6">
-        {/* Ways to Give */}
+    <footer className="bg-black text-white p-6 font-sans">
+      <div className="flex flex-wrap justify-around max-w-6xl mx-auto">
         <div>
-          <h3 className="text-lg font-semibold mb-4">Ways to Give</h3>
-          <ul className="space-y-3 mt-3">
-            <li><Link to="/donate" className="hover:text-[#159EEC]">Donate Now</Link></li>
+          <h3 className="text-lg font-bold mb-2">Ways to Give</h3>
+          <ul className="list-none p-0">
+            <li>
+              <Link to="/donate" className="text-blue-600 hover:underline">
+                Donate Now
+              </Link>
+            </li>
+            <li>Give Monthly</li>
+            <li>Honor Someone Special</li>
           </ul>
         </div>
 
-        {/* Take Action */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Take Action</h3>
-          <ul className="space-y-3 mt-3">
-            <li><Link to="/partners" className="hover:text-[#159EEC]">Partners</Link></li>
-            <li><Link to="/staffs" className="hover:text-[#159EEC]">Staffs</Link></li>
-            <li><Link to="/members" className="hover:text-[#159EEC]">Members</Link></li>
-            <li><Link to="/messages" className="hover:text-[#159EEC]">Messages</Link></li>
+          <h3 className="text-lg font-bold mb-2">Take Action</h3>
+          <ul className="list-none p-0">
+            <li>Get Involved</li>
+            <li>Partner with Us</li>
           </ul>
         </div>
 
-        {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-3 mt-3">
-            <li><Link to="/activities" className="hover:text-[#159EEC]">Activities</Link></li>
-            <li><Link to="/donations" className="hover:text-[#159EEC]">Donations</Link></li>
-            <li><Link to="/pastactivities" className="hover:text-[#159EEC]">Past Activities</Link></li>
-            <li><Link to="/upcomingactivities" className="hover:text-[#159EEC]">Upcoming Activities</Link></li>
-            <li><Link to="/videos" className="hover:text-[#159EEC]">Videos</Link></li>
-            <li><Link to="/faq" className="hover:text-[#159EEC]">FAQ</Link></li>
+          <h3 className="text-lg font-bold mb-2">Quick Links</h3>
+          <ul className="list-none p-0">
+            <li>News & Stories</li>
+            <li>Careers</li>
+            <li>
+              <Link to="/contactus" className="text-sm hover:text-gray-300">
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Contact</h3>
-          <p className="text-sm leading-relaxed mb-3">
-            Shalambutar, Sankhu, Kathmandu
-            <br />Phone: +977-9851160868
+          <h3 className="text-lg font-bold mb-2">Contact</h3>
+          <p>
+            {appData.address1}, {appData.address2}, {appData.city}
+            <br />
+            Phone: {appData.phone1}
           </p>
-          <input
-            type="email"
-            placeholder="Your Email*"
-            className="p-3 w-full border border-gray-300 rounded-md focus:outline-none text-[#1F2B6C]"
-          />
+          <button className="bg-blue-500 text-white px-4 py-2 mt-2 rounded hover:bg-blue-600">
+            Live Chat
+          </button>
         </div>
       </div>
 
-      {/* Divider */}
-      {/* Removed divider */}
+      <div className="text-center mt-6">
+        <input
+          type="email"
+          placeholder="Email*"
+          className="p-2 mr-2 border border-gray-300 rounded"
+        />
+        <button className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+          Join
+        </button>
+      </div>
 
-      {/* Bottom Section */}
-      <div className="text-center text-sm mt-6 px-6 bg-[#1F2B6C] py-4 rounded-md">
-        <p className="text-[#FCFEFE]">Copyright © 2025 {appData.organizationName}. All Rights Reserved.</p>
+      <div className="text-center mt-4">
+        <p>Copyright © 2025 {appData.organizationName}. All Rights Reserved.</p>
+        <p className="mt-2">
+          Build With:{" "}
+          <Link to="/BoardPress" className="text-blue-400 hover:underline">
+            BoardPress
+          </Link>
+        </p>
+
+        <ul className="list-none flex justify-center gap-4 mt-2 p-0">
+          <li>
+            <Link to="/activities" className="text-blue-400 hover:underline">
+              Activities
+            </Link>
+          </li>
+          <li>
+            <Link to="/donations" className="text-blue-400 hover:underline">
+              Donations
+            </Link>
+          </li>
+          <li>
+            <Link to="/members" className="text-blue-400 hover:underline">
+              Members
+            </Link>
+          </li>
+          <li>
+            <Link to="/messages" className="text-blue-400 hover:underline">
+              Messages
+            </Link>
+          </li>
+          <li>
+            <Link to="/partners" className="text-blue-400 hover:underline">
+              Partners
+            </Link>
+          </li>
+          <li>
+            <Link to="/staffs" className="text-blue-400 hover:underline">
+              Staffs
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/pastactivities"
+              className="text-blue-400 hover:underline"
+            >
+              Past Activities
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/upcomingactivities"
+              className="text-blue-400 hover:underline"
+            >
+              Upcoming Activities
+            </Link>
+          </li>
+          <li>
+            <Link to="/videos" className="text-blue-400 hover:underline">
+              Videos
+            </Link>
+          </li>
+          <li>
+            <Link to="/faq" className="text-blue-400 hover:underline">
+              FAQ
+            </Link>
+          </li>
+        </ul>
+
+        <div className="mt-4">
+          <a href="#" className="text-blue-400 mx-2 hover:underline">
+            Privacy Policy
+          </a>{" "}
+          |{" "}
+          <a href="#" className="text-blue-400 mx-2 hover:underline">
+            Terms of Use
+          </a>
+        </div>
       </div>
     </footer>
   );

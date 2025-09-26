@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Heart } from "lucide-react";
-import img1 from "../assets/seconddoctor.png"; 
+import img1 from "../assets/images.jpg";
 
 export default function DonatePage() {
   const [selectedAmount, setSelectedAmount] = useState(25000);
@@ -88,12 +88,36 @@ export default function DonatePage() {
         </div>
 
         {/* ===== RIGHT SIDE - IMAGE (Equal size) ===== */}
-        <div className="flex items-center justify-center">
+        <div className="fflex flex-col">
           <img
             src={img1}
             alt="Donate visual"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-64 object-cover rounded-xl shadow mb-6"
           />
+
+          {/* Subheading */}
+          <h2 className="text-xl font-bold text-gray-800 mb-4 text-center">
+            Support CVDS-Nepal and Empower Lives
+          </h2>
+
+          <p className="text-gray-600 text-sm text-justify leading-relaxed">
+            Conflict Victim and Disabled Society-Nepal (CVDS-Nepal) is a
+            nonprofit social organization established in 2005 with a mission to
+            enhance opportunities and uplift the livelihood of conflict victims
+            and children with disabilities (CWDs) in Nepal. With the realization
+            that love, harmony, and peace are essential for enhancing the life
+            of our target groups, CVDS aims to gradually eradicate societal
+            prejudice and unfavorable opinions about them.
+          </p>
+
+          <p className="text-gray-600 text-sm text-justify mt-4 leading-relaxed">
+            CVDS is planning to run a vocational school project to support
+            thousands of persons with disabilities and other marginalized
+            groups. The organization focuses on promoting the livelihood of
+            1,000 persons with disabilities and marginalized people over the
+            next 10 years, creating sustainable opportunities and a better
+            future.
+          </p>
         </div>
       </div>
     </div>
