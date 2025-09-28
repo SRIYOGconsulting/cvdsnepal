@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import img1 from "../assets/slide3.jpg";
 import img2 from "../assets/slide2.jpg";
 import Header from "../Components/Header";
+import newHeroImage from "../assets/homepage.jpg";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -17,11 +18,13 @@ const HeroSection = () => {
 
   return (
     <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden min-h-screen">
-      <img
-        src='../public/assets/images/herosetion.jpg'
+      
+<img
+        src={newHeroImage} 
         alt={`Slide ${currentSlide + 1}`}
         className="w-full h-full object-cover "
       />
+      
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start  px-6 md:px-16 lg:px-24 text-white">
         <h1 className="text-xl lg:text-4xl font-bold mb-4">
@@ -173,3 +176,4 @@ const Home = () => {
 };
 
 export default Home;
+
