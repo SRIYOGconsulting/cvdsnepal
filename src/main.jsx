@@ -18,7 +18,7 @@ import Partners from './Pages/Partners.jsx'
 import PastActivities from './Pages/PastActivities.jsx'
 import ProjectPartnership from './Pages/ProjectPartnership.jsx'
 import Projects from './Pages/Projects.jsx'
-import Staffs from './Pages/Staffs.jsx'
+
 import Supportus from './Pages/Supportus.jsx'
 import UpcomingActivities from './Pages/UpcomingActivities.jsx'
 import Videos from './Pages/Videos.jsx'
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
     { path: 'pastactivities', element: <PastActivities/>, handle: { title: "Past Activities" } },
     { path: 'projectpartnership', element: <ProjectPartnership/>, handle: { title: "Project Partnership" } },
     { path: 'projects', element: <Projects/>, handle: { title: "Projects" } },
-    { path: 'staffs', element: <Staffs/>, handle: { title: "Staffs" } },
+   
     { path: 'support', element: <Supportus/>, handle: { title: "Support Us" } },
     { path: 'upcomingactivities', element: <UpcomingActivities/>, handle: { title: "Upcoming Activities" } },
     { path: 'videos', element: <Videos/>, handle: { title: "Videos" } },
