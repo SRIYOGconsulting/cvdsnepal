@@ -2,58 +2,66 @@ import React from "react";
 
 const videos = [
   {
-    title: "cvds",
-    url: "https://youtu.be/Hnwz4zCg7CQ?si=h8bT75YZOoCLa9gH",
+    title: "Nepal Startup Meet",
+    embedUrl: "https://www.youtube.com/embed/5dKqpqdZuCs",
   },
   {
-    title: "cvds",
-    url: "https://youtu.be/AezAW5Q-mC4?si=D9l3OlCNmLUgU0gm",
+    title: "Nepal Startup Meet 2019: Sriyog.com",
+    embedUrl: "https://www.youtube.com/embed/AezAW5Q-mC4",
   },
   {
-    title: "cvds",
-    url: "https://youtu.be/OTUzeBR1Ka4?si=NILGDJbKlig1WpLQ",
-  },
-  {
-    title: "cvds",
-    url: "https://youtu.be/OTUzeBR1Ka4?si=NILGDJbKlig1WpLQ",
+    title: "SRIYOG Nepal Startup Meet",
+    embedUrl: "https://www.youtube.com/embed/OTUzeBR1Ka4",
   },
 ];
 
-export default function VideoPage() {
+function VideoPage() {
+  const featuredVideo = "https://www.youtube.com/embed/N071A7j5TVI";
+
   return (
-    <div className="font-sans">
-      {/* Featured Video */}
-      <section className="bg-teal-800 text-white py-10 text-center">
-        <h2 className="text-2xl font-semibold mb-6">Featured Video cvds</h2>
-        <div className="max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden shadow-lg">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/OTUzeBR1Ka4?si=SEfdFalkVO86oWYi"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+    <div className="bg-white min-h-screen font-sans">
+      {/* Featured Video Section */}
+      <section className="max-w-6xl mx-auto bg-[#1F2B6C] rounded-md mt-12 shadow-lg">
+        <div className="text-center py-10">
+          <h2 className="text-white text-3xl font-semibold mb-8">
+            Featured CVDS Nepal Video
+          </h2>
+
+          <div className="flex justify-center">
+            <iframe
+              src={featuredVideo}
+              title="Featured CVDS NEpal Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-lg shadow-2xl w-full max-w-4xl aspect-video"
+            ></iframe>
+          </div>
         </div>
       </section>
 
-      {/* Video Gallery */}
-      <section className="py-12 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {videos.map((video, idx) => (
-            <div key={idx} className="text-center">
-              <div className="aspect-video rounded-lg overflow-hidden shadow-md">
-                <iframe
-                  className="w-full h-full"
-                  src={video.url}
-                  title={video.title}
-                  frameBorder="0"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <p className="mt-3 text-gray-800 text-sm">{video.title}</p>
+      {/* Video Gallery Section */}
+      <section className="max-w-7xl mx-auto py-14 px-6">
+        <h2 className="text-[#1F2B6C] text-2xl font-semibold text-center mb-10">
+          CVDS Nepal  Videos
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          {videos.map((video, index) => (
+            <div key={index} className="text-center">
+              <iframe
+                className="w-full aspect-video rounded-md shadow-md"
+                src={video.embedUrl}
+                title={video.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+              <p className="text-gray-700 text-sm mt-3 font-medium">
+                {video.title}
+              </p>
             </div>
           ))}
         </div>
@@ -61,3 +69,5 @@ export default function VideoPage() {
     </div>
   );
 }
+
+export default VideoPage;

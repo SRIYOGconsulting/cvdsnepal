@@ -14,7 +14,7 @@ const Footer = () => {
                 Donate Now
               </Link> */}
               <li>
-                <Link to="/donations" className="text-blue-400 hover:underline">
+                <Link to="/donate" >
                   Donations
                 </Link>
               </li>
@@ -26,17 +26,17 @@ const Footer = () => {
           <h3 className="text-lg font-bold mb-2">Take Action</h3>
           <ul className="list-none p-0">
             <li>
-              <Link to="/partners" className="text-blue-400 hover:underline">
+              <Link to="/partners" >
                 Partners
               </Link>
             </li>
             <li>
-            <Link to="/messages" className="text-blue-400 hover:underline">
+            <Link to="/messages" >
               Messages
             </Link>
           </li>
             <li>
-            <Link to="/support" className="text-blue-400 hover:underline">
+            <Link to="/support" >
               Support Us
             </Link>
           </li>
@@ -47,14 +47,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold mb-2">Quick Links</h3>
           <ul className="list-none p-0">
-            <li>
-              <Link to="/activities" className="text-blue-400 hover:underline">
-                Activities
-              </Link>
               <li>
                 <Link
                   to="/pastactivities"
-                  className="text-blue-400 hover:underline"
+                 
                 >
                   Past Activities
                 </Link>
@@ -62,28 +58,28 @@ const Footer = () => {
               <li>
                 <Link
                   to="/upcomingactivities"
-                  className="text-blue-400 hover:underline"
+                 
                 >
                   Upcoming Activities
                 </Link>
               </li>
               <li>
-                <Link to="/videos" className="text-blue-400 hover:underline">
+                <Link to="/videos" >
                   Videos
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-blue-400 hover:underline">
+                <Link to="/faq" >
                   FAQ
                 </Link>
               </li>
               <li>
 
-                <Link to='/objectives' className="text-blue-400 hover:underline">
+                <Link to='/objectives' >
                   Objectives
                 </Link>
               </li>
-            </li>
+            
             
             
           </ul>

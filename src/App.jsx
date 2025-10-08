@@ -4,7 +4,7 @@ import { Outlet, useMatches } from "react-router-dom";
 import ChatModal from "./Components/ChatModel";
 
 import BasicBreadcrumbs from "./Components/BasicBreadcrumbs";
-import Footer from "./components/Footer";
+import Footer from "./Components/Footer";
 
 
 function App() {
