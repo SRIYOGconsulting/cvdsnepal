@@ -1,75 +1,51 @@
+import React from "react";
+import chairmanPortrait from "../assets/chairman.png";
 
-import React from 'react';
-import earlyLifeImage from '../assets/message1.jpg';
-import image2 from '../assets/message2.jpg';
-import chairmanPortrait from '../assets/chairman.png'; 
 const Messages = () => {
-  // Sections data
   const sections = [
     {
-      title: 'Early Life in the Hills',
-      image: earlyLifeImage,
-      text: `I am Yub Raj Thapa born in 23rd march, 1973 in Hasanpur VDC, a remote
-          place of Bhojpur district. I am the second child among 6
-          children (4 sons and 2 daughters) of my parents. I was not only an
-          active and curious sibling but also very good in study. My schooling
-          was started from SHREE JAN SEVA LOWER SECONDARY school which was
-          located nearby my house. I often stood first in study in the classes.
-          After I passed class 7 I had to go four hours far from my house on
-          feet to pursue my further education since we did not have high school
-          in our village. When I was admitted to Shree Sagarmatha SECONDARY
-          SCHOOL that time I was only fourteen year old. It was only me going
-          that school from my area which used to lead me going alone finding
-          school friends from only the middle of the path. I used feel often
-          fear going through the jungle and hill where there were many dangerous
-          animal like tigers and beers. Due to fear I used to carry a stick with
-          me from my home thinking I could be safe and secured with it. I would
-          not even get money to have my lunch and snacks going to the school.
-          Struggling through hunger, tiredness and thrust coming back home from
-          the school was my normal phenomena. Although, my family had enough
-          resource providing a pocket money, I never got money to have my food
-          caused starving time and again. However, I continued my study and
-          passed grade 8..`
+      title: "Message from the Executive Director",
+      image: chairmanPortrait,
+      text: `At the Conflict Victim Disabled Society (CVDS), our mission is rooted in compassion, equality, and justice. 
+      We work to ensure that individuals affected by conflict and disability across Nepal are given the opportunity to live meaningful, independent, and dignified lives. 
+      Through our programs in rehabilitation, education, livelihood, and advocacy, we strive to break barriers and create an inclusive environment where everyone can participate equally. 
+      Our success stories are not just about recovery they are about empowerment, resilience, and hope.
+      As we continue to expand our reach, I call upon government bodies, national and international partners, and compassionate individuals to join hands with us in creating a just and inclusive society for all.
+      `,
+      name: "Mr./Ms. X",
+      position: "Executive Director",
+      email: "executive@cvds.org.np",
     },
     {
-      title: 'The Onset of Illness',
-      image: image2,
-      text: `.`
+      title: "Message from the Program Director",
+      image: chairmanPortrait,
+      text: `Dear Friends and Partners,
+      CVDS has always believed that real change happens when people work together with purpose. 
+      Our programs are designed to provide practical support from psychosocial counseling and vocational training to community reintegration and awareness campaigns.
+      Each initiative reflects our belief that every individual has the right to participate, contribute, and thrive. 
+      The dedication of our team and the trust of our partners have enabled us to reach thousands of beneficiaries who once felt left behind.
+      Together, we continue to build opportunities for a more inclusive and compassionate Nepal.`,
+      name: "Mr./Ms. Y",
+      position: "Program Director",
+      email: "programs@cvds.org.np",
     },
     {
-      title: 'Journey to Kathmandu',
-      image: earlyLifeImage,
-      text: `.`
+      title: "Message from the Chairperson",
+      image: chairmanPortrait,
+      text: `The Conflict Victim Disabled Society was founded on the vision of an inclusive Nepal one where no individual is defined by their disability or by the conflicts of the past. 
+      Our work is not just about service delivery; it is about restoring voices, rights, and dignity.
+      We remain deeply grateful to our staff, partners, and communities who make this journey possible. 
+      As we look to the future, CVDS remains committed to transparency, collaboration, and sustainable change.
+      Let us continue to stand together for equality, justice, and inclusion.`,
+      name: "Mr./Ms. Z",
+      position: "Chairperson",
+      email: "chairperson@cvds.org.np",
     },
-    {
-      title: 'Recovery and Education',
-      image: image2,
-      text: `.`
-    },
-    {
-      title: 'Our Mission and Appeal',
-      image: earlyLifeImage,
-      text: `.`
-    }
   ];
 
   return (
     <div className="bg-white min-h-screen py-12 px-4 max-w-5xl mx-auto">
-      {/* Header Section */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-black mb-4">
-          Message from the Chairman
-        </h1>
-        <img
-          src={chairmanPortrait}
-          alt="Chairman Portrait"
-          className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg border-4 border-blue-400"
-        />
-        <h2 className="text-2xl font-semibold text-black">Yub Raj Thapa</h2>
-        <p className="text-black">President, Conflict Victim and Disable Society (CVDS)</p>
-      </div>
-
-      {/* Sections */}
+      {/* Message Sections */}
       <div className="space-y-12">
         {sections.map((section, index) => (
           <div
@@ -80,16 +56,23 @@ const Messages = () => {
               src={section.image}
               alt={section.title}
               className={`w-full md:w-1/3 h-64 object-cover ${
-                index % 2 !== 0 ? 'order-2 md:order-1' : ''
+                index % 2 !== 0 ? "order-2 md:order-1" : ""
               }`}
             />
             <div
               className={`p-6 md:w-2/3 ${
-                index % 2 !== 0 ? 'order-1 md:order-2' : ''
+                index % 2 !== 0 ? "order-1 md:order-2" : ""
               }`}
             >
-              <h3 className="text-2xl font-bold text-black mb-4">{section.title}</h3>
-              <p className="text-black leading-relaxed">{section.text}</p>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">{section.title}</h3>
+              <p className="text-gray-800 leading-relaxed text-justify mb-4 whitespace-pre-line">
+                {section.text}
+              </p>
+              <div className="mt-4">
+                <p className="font-semibold text-black">{section.name}</p>
+                <p className="text-black">{section.position}</p>
+                <p className="text-blue-600">{section.email}</p>
+              </div>
             </div>
           </div>
         ))}
