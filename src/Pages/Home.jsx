@@ -2,16 +2,24 @@ import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight,  BarChart3 , 
+import {
+  ChevronLeft,
+  ChevronRight,
+  BarChart3,
   Heart,
   Users,
   Star,
-  Lock,Newspaper, CalendarDays, HelpCircle, Megaphone, HeartHandshake  } from "lucide-react";
-import img1 from "../assets/slide3.jpg";
-import img2 from "../assets/slide2.jpg";
+  Lock,
+  Newspaper,
+  CalendarDays,
+  HelpCircle,
+  Megaphone,
+  HeartHandshake,
+} from "lucide-react";
+import img1 from "../assets/female.png";
+import img2 from "../assets/male.png";
 import Header from "../Components/Header";
 import newHeroImage from "../assets/homepage.jpg";
-
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -23,22 +31,26 @@ const HeroSection = () => {
 
   return (
     <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden min-h-screen">
-      
-<img
-        src={newHeroImage} 
+      <img
+        src={newHeroImage}
         alt={`Slide ${currentSlide + 1}`}
         className="w-full h-full object-cover "
       />
-      
+
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start  px-6 md:px-16 lg:px-24 text-white">
         <h1 className="text-xl lg:text-4xl font-bold mb-4">
-          Turning Challenges into <br/> Opportunities for All<br/>
+          Turning Challenges into <br /> Opportunities for All
+          <br />
         </h1>
-        <h3 className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl text-[#f2eeec]" style={{fontSize:"18px"}}>
+        <h3
+          className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl text-[#f2eeec]"
+          style={{ fontSize: "18px" }}
+        >
           Adding the Wheel in Wheelchair, Restoring Dignity
         </h3>
-        <br/><br/>
+        <br />
+        <br />
         <Link to="/donate">
           <button className="bg-[#d9d9d9] px-3 py-1 text-black font-semibold hover:bg-blue-500 transition rounded-[0.5vw]">
             Donate Now
@@ -61,7 +73,6 @@ const HeroSection = () => {
     </div>
   );
 };
-
 
 const ImpactSection = () => (
   <div className="bg-white text-black py-16 px-4">
@@ -113,9 +124,9 @@ const SponsorSection = () => (
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {[
-          { img: img1, name: "Alice" },
-          { img: img2, name: "Bob" },
-          { img: img1, name: "Nep" },
+          { img: img1, name: "Aarati Lama" },
+          { img: img2, name: "Bishal Thapa" },
+          { img: img1, name: "Sita Magar" },
         ].map((child, i) => (
           <div
             key={i}
@@ -143,11 +154,6 @@ const SponsorSection = () => (
         <Link to="/gallery">
           <button className="border border-black px-6 py-2 rounded hover:bg-black hover:text-white transition">
             View More
-          </button>
-        </Link>
-        <Link to="/donate">
-          <button className="border border-black px-6 py-2 rounded hover:bg-black hover:text-white transition">
-            Select a Child
           </button>
         </Link>
       </div>
@@ -194,7 +200,6 @@ const ConfidenceSection = () => (
     </div>
   </div>
 );
-
 
 const NewsSection = () => (
   <div className="bg-white text-black py-20 px-4">
@@ -259,7 +264,6 @@ const NewsSection = () => (
   </div>
 );
 
-
 const ActionSection = () => (
   <div className="bg-white text-black py-20 px-4">
     <div className="max-w-6xl mx-auto text-center">
@@ -323,11 +327,7 @@ const ActionSection = () => (
   </div>
 );
 
-
-
-
 const Home = () => {
-  
   return (
     <div className="min-h-screen bg-white text-black">
       <Header />
@@ -335,14 +335,10 @@ const Home = () => {
       <ImpactSection />
       <SponsorSection />
       <ConfidenceSection />
-      <NewsSection />       
+      <NewsSection />
       <ActionSection />
-     
     </div>
   );
 };
 
 export default Home;
-
-
-
