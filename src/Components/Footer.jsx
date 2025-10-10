@@ -1,10 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React , {useEffect} from "react";
+import { Link, useLocation } from "react-router-dom";
 import { appData } from "../constants";
 
+// ScrollToTop Component for Footer Links
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  React.useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top on route change
+  }, [pathname]);
+  return null;
+};
 const Footer = () => {
   return (
     <footer className="bg-black text-white p-6 font-sans">
+       <ScrollToTop />
       <div className="flex flex-wrap justify-around max-w-6xl mx-auto">
         <div>
           <h3 className="text-lg font-bold mb-2">Ways to Give</h3>
@@ -102,8 +111,10 @@ const Footer = () => {
         <input
           type="email"
           placeholder="Email*"
-          className="p-2 mr-2 border border-gray-300 rounded"
+          className="p-2 mr-2 border border-gray-300 rounded text-black"
         />
+
+        // FIXED Footer Join email input text visibility issue
         <button className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
           Join
         </button>

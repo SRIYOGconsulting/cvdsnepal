@@ -78,7 +78,7 @@ const UpcomingActivities = () => {
         <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">Join Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {upcomingEvents.map((event, index) => (
-            <article key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow p-6" role="article">
+            <article key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow p-6 flex flex-col justify-between" role="article">
               <event.icon 
                 size={48} 
                 className="mx-auto mb-4 text-blue-600" 
@@ -93,8 +93,16 @@ const UpcomingActivities = () => {
                 <MapPin size={16} className="mr-2" />
                 <span>{event.location}</span>
               </div>
+
               <p className="text-gray-600 leading-relaxed mb-4">{event.description}</p>
+             
+
+<div className="mt-auto">
+
+  // FIXED Register button alignment on Upcoming Activities page
               <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Register Now</button>
+           
+           </div>
             </article>
           ))}
         </div>
@@ -106,3 +114,9 @@ const UpcomingActivities = () => {
 };
 
 export default UpcomingActivities;
+
+
+
+
+
+

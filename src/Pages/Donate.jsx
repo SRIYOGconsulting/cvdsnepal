@@ -1,6 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Heart } from "lucide-react";
 import img1 from "../assets/images.jpg";
+
+// ===== ScrollToTop Component for Donate Page =====
+const ScrollToTop = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top when DonatePage loads
+  }, []);
+  return null;
+};
 
 export default function DonatePage() {
   const [selectedAmount, setSelectedAmount] = useState(25000);
@@ -10,6 +18,7 @@ export default function DonatePage() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6 max-w-5xl mx-auto px-4 py-12">
+       <ScrollToTop />
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-8">
         {/* ===== LEFT SIDE - DONATE FORM ===== */}
         <div className="bg-white rounded-2xl shadow-lg p-6 border flex flex-col justify-between">

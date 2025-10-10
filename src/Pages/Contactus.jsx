@@ -6,7 +6,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 const Contactus = () => {
   const { organizationName, pathname } = useOutletContext();
   return (
-    <div className="bg-gray-50 min-h-screen py-16 px-6 max-w-5xl mx-auto px-4 py-12" >
+    <div className="bg-gray-50 min-h-screen  max-w-5xl mx-auto px-4 py-12" >
        {/* Section Header */}
       <div className="text-center mb-14">
         <h1 className="text-4xl font-bold text-gray-800 mb-3">
@@ -61,17 +61,30 @@ const Contactus = () => {
             />
           </div>
 
+
           <div className="grid md:grid-cols-2 gap-4">
             <input
               type="text"
               placeholder="Subject"
               className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            
+
             <input
-              type="text"
+              type="number"
               placeholder="Contact Number"
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500  [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              onKeyDown={(e) => {
+                if (["e", "E", "+", "-", "."].includes(e.key)) {
+                  e.preventDefault(); 
+                }
+              }}
+              onInput={(e) => {
+                e.target.value = e.target.value.replace(/[^0-9]/g, ""); // FIXED Restricted ContactUs phone number input to numeric values only
+              }}
             />
+       
+      
           </div>
 
           <textarea
@@ -94,3 +107,6 @@ const Contactus = () => {
 
 
 export default Contactus;
+
+
+

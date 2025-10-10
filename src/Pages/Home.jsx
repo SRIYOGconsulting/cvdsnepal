@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
-
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   ChevronLeft,
   ChevronRight,
@@ -10,9 +9,6 @@ import {
   Users,
   Star,
   Lock,
-  Newspaper,
-  CalendarDays,
-  HelpCircle,
   Megaphone,
   HeartHandshake,
 } from "lucide-react";
@@ -20,7 +16,19 @@ import img1 from "../assets/female.png";
 import img2 from "../assets/male.png";
 import Header from "../Components/Header";
 import newHeroImage from "../assets/homepage.jpg";
+import img3 from "../assets/blog1.jpg";
 
+// ScrollToTop Component (Fixed Scroll Restoration Issue)
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top on route change
+  }, [pathname]);
+  return null;
+};
+
+
+// FIXED Home page sections Latest Update, Hero Section, and Support layout
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [img1, img2];
@@ -122,11 +130,12 @@ const SponsorSection = () => (
         Help children living with disabilities and conflict victims build
         brighter futures.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
         {[
           { img: img1, name: "Aarati Lama" },
           { img: img2, name: "Bishal Thapa" },
           { img: img1, name: "Sita Magar" },
+          { img: img2, name: "Ramesh Shrestha" },
         ].map((child, i) => (
           <div
             key={i}
@@ -183,6 +192,12 @@ const ConfidenceSection = () => (
             desc: "Every donation is tracked with detailed reports.",
             icon: <BarChart3 />,
           },
+
+          {
+            title: "Trusted Partners",
+            desc: "We collaborate with verified organizations to maximize impact.",
+            icon: <Heart />,
+          },
         ].map((item, i) => (
           <div
             key={i}
@@ -201,126 +216,150 @@ const ConfidenceSection = () => (
   </div>
 );
 
-const NewsSection = () => (
-  <div className="bg-white text-black py-20 px-4">
-    <div className="max-w-6xl mx-auto text-center">
-      <h2 className="text-2xl md:text-3xl font-semibold mb-12">
-        Latest Updates
-      </h2>
+const NewsSection = () => {
+  const posts = [
+    {
+      title: "Empowering Children with Special Needs",
+      desc: "CVDS works to support children with disabilities by providing inclusive education and resources.",
+      img: img3,
+      link: "/about",
+      date: "Oct 10, 2025",
+    },
+    {
+      title: "Community Outreach: Chepang Network",
+      desc: "CVDS engages local communities to empower marginalized groups and ensure child rights.",
+      img: img3,
+      link: "/activities",
+      date: "Sep 20, 2025",
+    },
+    {
+      title: "Art for Awareness: Eak Abhiyan",
+      desc: "An initiative by CVDS to promote creativity among children and raise awareness on social issues.",
+      img: img3,
+      link: "/support",
+      date: "Aug 15, 2025",
+    },
+  ];
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
-          <div className="flex justify-center mb-4">
-            <Newspaper size={40} className="text-black" />
-          </div>
-          <h3 className="text-lg font-semibold mb-3">New Report Released</h3>
-          <p className="text-sm text-gray-700 mb-6">
-            Our 2025 Nationwide Access Report explores how exclusion impacts
-            families and children across Nepal.
-          </p>
-          <Link
-            to="/about"
-            className="font-semibold text-black border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition"
-          >
-            Learn More
-          </Link>
-        </div>
+  return (
+    <div className="bg-white text-black py-20 px-4">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-[#1F2B6C]">
+          Our Latest Updates
+        </h2>
 
-        <div className="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
-          <div className="flex justify-center mb-4">
-            <CalendarDays size={40} className="text-black" />
-          </div>
-          <h3 className="text-lg font-semibold mb-3">Upcoming Event</h3>
-          <p className="text-sm text-gray-700 mb-6">
-            This October, join 400+ leaders in a national dialogue to promote
-            inclusion for children and families.
-          </p>
-          <Link
-            to="/activities"
-            className="font-semibold text-black border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition"
-          >
-            View Event
-          </Link>
-        </div>
-
-        <div className="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
-          <div className="flex justify-center mb-4">
-            <HelpCircle size={40} className="text-black" />
-          </div>
-          <h3 className="text-lg font-semibold mb-3">Need Support?</h3>
-          <p className="text-sm text-gray-700 mb-6">
-            Explore available resources and local assistance programs for
-            children and families in need.
-          </p>
-          <Link
-            to="/support"
-            className="font-semibold text-black border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition"
-          >
-            Get Help
-          </Link>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {posts.map((post, i) => (
+            <div
+              key={i}
+              className="border border-[#1F2B6C] rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition flex flex-col h-full"
+            >
+              <img
+                src={post.img}
+                alt={post.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6 flex flex-col flex-1 justify-between">
+                <div>
+                  <p className="text-sm text-[#1F2B6C] mb-2">{post.date}</p>
+                  <h3 className="text-lg font-semibold mb-3 text-[#1F2B6C]">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-black mb-4">{post.desc}</p>
+                </div>
+                <Link
+                  to={post.link}
+                  className="font-semibold text-[#1F2B6C] hover:underline flex items-center mt-2"
+                >
+                  Read More <span className="ml-1">→</span>
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const ActionSection = () => (
   <div className="bg-white text-black py-20 px-4">
     <div className="max-w-6xl mx-auto text-center">
-      <h2 className="text-2xl md:text-3xl font-semibold mb-12">
+      <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-[#1F2B6C]">
         Your Turn — Take Action
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg hover:shadow-md transition">
-          <div className="p-3 border border-black rounded-full mb-6">
-            <Users size={36} className="text-black" />
+        {/* Card 1 */}
+        <div className="flex flex-col items-center p-6 border border-[#1F2B6C] rounded-lg hover:shadow-md transition h-full">
+          <div className="p-3 border border-[#1F2B6C] rounded-full mb-6">
+            <Users size={36} className="text-[#1F2B6C]" />
           </div>
-          <h3 className="text-lg font-semibold mb-4">Why Inclusion Matters</h3>
-          <p className="text-sm text-gray-700 mb-6 max-w-xs">
-            Learn how disability and conflict exclusion remain key causes of
-            poverty — and what we can do together.
-          </p>
-          <Link
-            to="/objectives"
-            className="font-semibold text-black border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition"
-          >
-            See Why
-          </Link>
+          <div className="flex flex-col flex-1 justify-between items-center">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[#1F2B6C]">
+                Why Inclusion Matters
+              </h3>
+              <p className="text-sm text-black mb-6 max-w-xs">
+                Learn how disability and conflict exclusion remain key causes of
+                poverty — and what we can do together.
+              </p>
+            </div>
+            <Link
+              to="/objectives"
+              className="font-semibold text-white bg-[#1F2B6C] px-6 py-2 rounded hover:bg-black transition"
+            >
+              See Why
+            </Link>
+          </div>
         </div>
 
-        <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg hover:shadow-md transition">
-          <div className="p-3 border border-black rounded-full mb-6">
-            <Megaphone size={36} className="text-black" />
+        {/* Card 2 */}
+        <div className="flex flex-col items-center p-6 border border-[#1F2B6C] rounded-lg hover:shadow-md transition h-full">
+          <div className="p-3 border border-[#1F2B6C] rounded-full mb-6">
+            <Megaphone size={36} className="text-[#1F2B6C]" />
           </div>
-          <h3 className="text-lg font-semibold mb-4">Join a Campaign</h3>
-          <p className="text-sm text-gray-700 mb-6 max-w-xs">
-            Advocate for the rights of children and families with disabilities
-            by joining one of our active campaigns.
-          </p>
-          <Link
-            to="/activities"
-            className="font-semibold text-black border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition"
-          >
-            Join Now
-          </Link>
+          <div className="flex flex-col flex-1 justify-between items-center">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[#1F2B6C]">
+                Join a Campaign
+              </h3>
+              <p className="text-sm text-black mb-6 max-w-xs">
+                Advocate for the rights of children and families with
+                disabilities by joining one of our active campaigns.
+              </p>
+            </div>
+            <Link
+              to="/activities"
+              className="font-semibold text-white bg-[#1F2B6C] px-6 py-2 rounded hover:bg-black transition"
+            >
+              Join Now
+            </Link>
+          </div>
         </div>
 
-        <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg hover:shadow-md transition">
-          <div className="p-3 border border-black rounded-full mb-6">
-            <HeartHandshake size={36} className="text-black" />
+        {/* Card 3 */}
+        <div className="flex flex-col items-center p-6 border border-[#1F2B6C] rounded-lg hover:shadow-md transition h-full">
+          <div className="p-3 border border-[#1F2B6C] rounded-full mb-6">
+            <HeartHandshake size={36} className="text-[#1F2B6C]" />
           </div>
-          <h3 className="text-lg font-semibold mb-4">Donate Today</h3>
-          <p className="text-sm text-gray-700 mb-6 max-w-xs">
-            Your contribution helps restore dignity and provide support to
-            children and families in crisis.
-          </p>
-          <Link
-            to="/donate"
-            className="font-semibold text-black border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition"
-          >
-            Donate
-          </Link>
+          <div className="flex flex-col flex-1 justify-between items-center">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[#1F2B6C]">
+                Donate Today
+              </h3>
+              <p className="text-sm text-black mb-6 max-w-xs">
+                Your contribution helps restore dignity and provide support to
+                children and families in crisis.
+              </p>
+            </div>
+            <Link
+              to="/donate"
+              className="font-semibold text-white bg-[#1F2B6C] px-6 py-2 rounded hover:bg-black transition"
+            >
+              Donate
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -330,7 +369,9 @@ const ActionSection = () => (
 const Home = () => {
   return (
     <div className="min-h-screen bg-white text-black">
+      <ScrollToTop />
       <Header />
+
       <HeroSection />
       <ImpactSection />
       <SponsorSection />

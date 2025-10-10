@@ -1,6 +1,6 @@
 import React from "react";
-import chairmanPortrait from "../assets/chairman.png";
-
+import chairmanPortrait from "../assets/male.png";
+// UPDATED Message page image replaced as per latest design 
 const Messages = () => {
   const sections = [
     {
@@ -42,7 +42,7 @@ const Messages = () => {
       email: "chairperson@cvds.org.np",
     },
   ];
-
+// UPDATED: Added top gap inside message card for image spacing
   return (
     <div className="bg-white min-h-screen py-12 px-4 max-w-5xl mx-auto">
       {/* Message Sections */}
@@ -52,13 +52,20 @@ const Messages = () => {
             key={index}
             className="flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden border border-gray-200"
           >
+
+             <div
+              className={`w-full md:w-1/3 flex justify-center items-start p-4 ${
+                index % 2 !== 0 ? "order-2 md:order-1" : ""
+              }`}
+            >
             <img
               src={section.image}
               alt={section.title}
-              className={`w-full md:w-1/3 h-64 object-cover ${
+              className={` h-64 object-cover ${
                 index % 2 !== 0 ? "order-2 md:order-1" : ""
               }`}
             />
+                </div>
             <div
               className={`p-6 md:w-2/3 ${
                 index % 2 !== 0 ? "order-1 md:order-2" : ""
