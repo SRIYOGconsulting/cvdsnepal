@@ -10,24 +10,30 @@ const ScrollToTop = () => {
   }, [pathname]);
   return null;
 };
+
 const Footer = () => {
   return (
-    <footer className="bg-black text-white p-6 font-sans">
+    // Added responsive padding (py-10 px-6) instead of fixed p-6
+    <footer className="bg-black text-white py-10 px-6 font-sans">
        <ScrollToTop />
-      <div className="flex flex-wrap justify-around max-w-6xl mx-auto">
+       {/* Changed flex layout to responsive grid layout for better stacking */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-center md:text-left">
         <div>
           <h3 className="text-lg font-bold mb-2">Ways to Give</h3>
-          <ul className="list-none p-0">
-            <li>
+          {/* Added space-y-2 for vertical spacing between list items  */}
+          
+          <ul className="list-none p-0 space-y-2">
+            
               {/* <Link to="/donate" className="text-blue-600 hover:underline">
                 Donate Now
               </Link> */}
               <li>
+               
                 <Link to="/donate" >
                   Donations
                 </Link>
               </li>
-            </li>
+          
           </ul>
         </div>
 
@@ -107,14 +113,15 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center mt-6">
+{/* Made this section responsive using flex + gap classes */}
+      <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-3 text-center">
         <input
           type="email"
           placeholder="Email*"
-          className="p-2 mr-2 border border-gray-300 rounded text-black"
+          className="p-2 border border-gray-300 rounded text-black w-full sm:w-auto"
         />
 
-        // FIXED Footer Join email input text visibility issue
+   
         <button className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
           Join
         </button>
@@ -128,12 +135,14 @@ const Footer = () => {
             BoardPress
           </Link>
         </p>
-
-        <div className="mt-4">
+{/* Made links stack on small screens and inline on larger ones  */}
+         {/*  Made links stack on small screens and inline on larger ones */}
+        <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-1">
           <a href="#" className="text-blue-400 mx-2 hover:underline">
             Privacy Policy
-          </a>{" "}
-          |{" "}
+          </a>
+          {/*  Added vertical separator visible only on larger screens */}
+          <span className="hidden sm:inline">|</span>
           <a href="#" className="text-blue-400 mx-2 hover:underline">
             Terms of Use
           </a>
@@ -144,3 +153,16 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
+
+
+
+
+
+
+
+
+
