@@ -18,6 +18,7 @@ const ScrollToTop = () => {
   }, [pathname]);
   return null;
 };
+
 const Footer = () => {
   return (
     <footer className="bg-gray-100 text-black p-6 font-sans">
@@ -113,3 +114,16 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
+
+
+
+
+
+
+
+
+
