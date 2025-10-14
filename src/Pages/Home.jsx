@@ -144,7 +144,7 @@ const SponsorSection = () => (
             <img
               src={child.img}
               alt={child.name}
-              className="w-full h-56 object-cover rounded-t-lg"
+              className="w-54 h-54 flex justify-center items-center px-10 py-5 rounded-t-lg"
             />
             <div className="p-4">
               <h3 className="font-semibold text-lg">{child.name}</h3>

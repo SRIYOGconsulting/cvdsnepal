@@ -8,7 +8,7 @@ const Contactus = () => {
   return (
     <div className="bg-gray-50 min-h-screen  max-w-5xl mx-auto px-4 py-12" >
        {/* Section Header */}
-      <div className="text-center mb-14">
+      <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-3">
           Contact {appData.organizationName}
         </h1>
@@ -17,6 +17,9 @@ const Contactus = () => {
           possible.
         </p>
       </div>
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.636738758784!2d85.44933267546811!3d27.72850007617052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb052f80a28783%3A0x31997672e2ca2d2d!2sConflict%20victim%20and%20disabled%20society!5e0!3m2!1sen!2snp!4v1760454686904!5m2!1sen!2snp" style={{width:'990px', height:'500px'}} wallowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div><br/>
 
       {/* Contact Section */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start bg-white shadow-lg rounded-2xl p-10">

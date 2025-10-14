@@ -1,91 +1,93 @@
 import React from "react";
-import chairmanPortrait from "../assets/male.png";
-// UPDATED Message page image replaced as per latest design 
-const Messages = () => {
-  const sections = [
-    {
-      title: "Message from the Executive Director",
-      image: chairmanPortrait,
-      text: `At the Conflict Victim Disabled Society (CVDS), our mission is rooted in compassion, equality, and justice. 
-      We work to ensure that individuals affected by conflict and disability across Nepal are given the opportunity to live meaningful, independent, and dignified lives. 
-      Through our programs in rehabilitation, education, livelihood, and advocacy, we strive to break barriers and create an inclusive environment where everyone can participate equally. 
-      Our success stories are not just about recovery they are about empowerment, resilience, and hope.
-      As we continue to expand our reach, I call upon government bodies, national and international partners, and compassionate individuals to join hands with us in creating a just and inclusive society for all.
-      `,
-      name: "Mr./Ms. X",
-      position: "Executive Director",
-      email: "executive@cvds.org.np",
-    },
-    {
-      title: "Message from the Program Director",
-      image: chairmanPortrait,
-      text: `Dear Friends and Partners,
-      CVDS has always believed that real change happens when people work together with purpose. 
-      Our programs are designed to provide practical support from psychosocial counseling and vocational training to community reintegration and awareness campaigns.
-      Each initiative reflects our belief that every individual has the right to participate, contribute, and thrive. 
-      The dedication of our team and the trust of our partners have enabled us to reach thousands of beneficiaries who once felt left behind.
-      Together, we continue to build opportunities for a more inclusive and compassionate Nepal.`,
-      name: "Mr./Ms. Y",
-      position: "Program Director",
-      email: "programs@cvds.org.np",
-    },
-    {
-      title: "Message from the Chairperson",
-      image: chairmanPortrait,
-      text: `The Conflict Victim Disabled Society was founded on the vision of an inclusive Nepal one where no individual is defined by their disability or by the conflicts of the past. 
-      Our work is not just about service delivery; it is about restoring voices, rights, and dignity.
-      We remain deeply grateful to our staff, partners, and communities who make this journey possible. 
-      As we look to the future, CVDS remains committed to transparency, collaboration, and sustainable change.
-      Let us continue to stand together for equality, justice, and inclusion.`,
-      name: "Mr./Ms. Z",
-      position: "Chairperson",
-      email: "chairperson@cvds.org.np",
-    },
-  ];
-// UPDATED: Added top gap inside message card for image spacing
-  return (
-    <div className="bg-white min-h-screen py-12 px-4 max-w-5xl mx-auto">
-      {/* Message Sections */}
-      <div className="space-y-12">
-        {sections.map((section, index) => (
-          <div
-            key={index}
-            className="flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden border border-gray-200"
-          >
+import presidentImage from "../assets/male.png";
 
-             <div
-              className={`w-full md:w-1/3 flex justify-center items-start p-4 ${
-                index % 2 !== 0 ? "order-2 md:order-1" : ""
-              }`}
-            >
-            <img
-              src={section.image}
-              alt={section.title}
-              className={` h-64 object-cover ${
-                index % 2 !== 0 ? "order-2 md:order-1" : ""
-              }`}
-            />
-                </div>
-            <div
-              className={`p-6 md:w-2/3 ${
-                index % 2 !== 0 ? "order-1 md:order-2" : ""
-              }`}
-            >
-              <h3 className="text-2xl font-bold text-blue-900 mb-4">{section.title}</h3>
-              <p className="text-gray-800 leading-relaxed text-justify mb-4 whitespace-pre-line">
-                {section.text}
-              </p>
-              <div className="mt-4">
-                <p className="font-semibold text-black">{section.name}</p>
-                <p className="text-black">{section.position}</p>
-                <p className="text-blue-600">{section.email}</p>
-              </div>
-            </div>
+const Message = () => {
+  return (
+    <div className="min-h-screen text-gray-800">
+
+      {/* Image Section */}
+      <div className="max-w-5xl mx-auto mt-10">
+        <div className="relative bg-gray-200 w-full h-80 flex justify-center items-center overflow-hidden">
+          <img
+            src={presidentImage}
+            alt="President"
+            className="object-cover h-full w-full"
+          />
+          <div className="absolute bottom-5 right-6 text-right">
+            <h3 className="text-lg font-bold text-black">Name of President</h3>
+            <p className="text-sm text-gray-700">Designation</p>
           </div>
-        ))}
+        </div>
+
+        {/* Message Text Section */}
+        <div className="mt-10 px-6 md:px-0 ">
+          <p className="font-semibold mb-4">Message from the President</p>
+          <p className="mb-4">Dear Visitors,</p>
+
+          <p className="mb-4 text-justify">
+            It is with great pride and sincere appreciation that I welcome you
+            to the official website of CVDS Nepal. In today’s rapidly
+            evolving world, staying connected, transparent, and purpose-driven
+            is more important than ever. This digital space is more than just an
+            introduction to our organization - it is a window into our values,
+            our people, and our ongoing commitment to excellence.
+          </p>
+
+          <p className="mb-4 text-justify">
+            Since our founding, CVDS Nepal has been guided by a clear
+            mission: to deliver meaningful impact through innovation,
+            integrity, and a deep understanding of the needs of those we serve.<br/><br/>
+            Every decision we make, every project we undertake, and every
+            partnership we build is driven by this mission.
+          </p>
+
+          <p className="mb-4 text-justify">
+            As President, I am incredibly proud of how far we’ve come. Our team
+            is composed of dedicated professionals who bring not only skill and
+            experience, but also passion and heart to everything they do.
+          </p>
+
+          <div className="grid grid-cols-3 gap-20 my-8">
+            <div className="bg-gray-200 h-60 w-45 rounded-lg"><img src=""/></div>
+            <div className="bg-gray-200 h-60 w-45 rounded-lg"><img src=""/></div>
+            <div className="bg-gray-200 h-60 w-45 rounded-lg"><img src=""/></div>
+          </div>
+
+          <p className="mb-4 text-justify">
+            Together, we have cultivated a culture that values continuous
+            improvement, collaboration, and above all, a steadfast commitment to
+            quality and service.
+          </p>
+
+          <p className="mb-4 text-justify">
+            Looking ahead, we remain focused on growth that is sustainable,
+            inclusive, and future-ready. Whether that means embracing new
+            technologies, expanding our outreach, or deepening our community
+            impact, we are prepared to meet the challenges and opportunities of
+            tomorrow with confidence and resilience.
+          </p>
+
+          <p className="mb-4 text-justify">
+            To our valued clients, partners, employees, and supporters — thank
+            you for being part of our story. And to those visiting us for the
+            first time, I invite you to explore our site, learn more about our
+            work, and consider how we might collaborate for mutual success.
+          </p>
+
+          <p>
+            We are excited about what the future holds and are honored to have
+            you with us on this journey.<br/>
+            Warm regards,
+          </p>
+          <div className="mt-8 mb-10">
+            <p>___________________________</p>
+            <p >[President’s Full Name]</p>
+            <p>President, CVDS Nepal</p>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Messages;
+export default Message;

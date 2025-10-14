@@ -71,7 +71,7 @@ const Gallery = () => {
             <img
               src={child.image}
               alt={child.name}
-              className="w-full h-64 object-cover rounded-t-lg"
+              className="w-54 h-54 flex justify-center items-center px-10 py-5 rounded-t-lg"
             />
             <div className="p-4">
               <h3 className="font-semibold text-lg mb-1">{child.name}</h3>
