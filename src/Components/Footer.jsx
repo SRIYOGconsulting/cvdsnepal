@@ -26,7 +26,7 @@ const Footer = () => {
       <div className="grid md:grid-cols-6 max-w-6xl mx-auto py-8">
         {/* About us section */}
         <div className="col-span-1 md:col-span-2">
-          <img src="../assets/cvdslogo.png" alt="logo"/>
+          <img src="../src/assets/cvdslogo.png" alt="logo"/>
           <h3 className="font-semibold mb-2">
             CVDS Nepal
           </h3>
