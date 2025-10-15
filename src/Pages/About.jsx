@@ -23,7 +23,7 @@ const About = () => {
             className="rounded-xl shadow-lg w-full object-cover"
           />
         </div>
-        <div className="lg:w-1/2 text-gray-700 space-y-4">
+        <div className="lg:w-1/2 text-gray-700 space-y-4 text-justify">
           <p>
             People with disability are the most vulnerable and marginalized group of people. They live in isolation, segregation, disparagement, poverty and virtual dependence on charity and even pity. They are the victim of the community misconception and stigmas denying them of their inalienable and recognized rights.
           </p>
@@ -34,7 +34,7 @@ const About = () => {
       </div>
 
       {/* Vision and Mission */}
-      <div className="grid lg:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8 text-justify">
         <div className="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
           <h2 className="text-2xl font-semibold mb-4">Vision</h2>
           <p>

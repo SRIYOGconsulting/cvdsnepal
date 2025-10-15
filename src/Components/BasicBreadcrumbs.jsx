@@ -38,7 +38,7 @@ const BasicBreadcrumbs = () => {
 
   return (
     <section className="bg-[#1F2B6C] text-white mt-[72px] py-10 sm:py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center sm:text-left break-words">
           {formatName(pathnames[pathnames.length - 1])}
         </h1>

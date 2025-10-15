@@ -76,7 +76,7 @@ const Gallery = () => {
             <div className="p-4">
               <h3 className="font-semibold text-lg mb-1">{child.name}</h3>
               <p className="text-sm text-gray-600 mb-2">{child.location}</p>
-              <p className="text-sm text-gray-700">{child.description}</p>
+              <p className="text-sm text-gray-700 text-justify">{child.description}</p>
             </div>
           </div>
         ))}

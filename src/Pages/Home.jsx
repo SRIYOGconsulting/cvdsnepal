@@ -84,7 +84,7 @@ const HeroSection = () => {
 
 const ImpactSection = () => (
   <div className="bg-white text-black py-16 px-4">
-    <div className="max-w-6xl mx-auto text-center">
+    <div className="max-w-5xl mx-auto text-center">
       <h2 className="text-2xl md:text-3xl font-semibold mb-8">
         Your Support Makes a True Difference
       </h2>
@@ -122,7 +122,7 @@ const ImpactSection = () => (
 
 const SponsorSection = () => (
   <div className="bg-white text-black py-16 px-4">
-    <div className="max-w-6xl mx-auto text-center">
+    <div className="max-w-5xl mx-auto text-center">
       <h2 className="text-2xl md:text-3xl font-semibold mb-4">
         Support a Child Today
       </h2>
@@ -172,7 +172,7 @@ const SponsorSection = () => (
 
 const ConfidenceSection = () => (
   <div className="bg-white text-black py-16 px-4">
-    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div>
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Give With Confidence
@@ -243,7 +243,7 @@ const NewsSection = () => {
 
   return (
     <div className="bg-white text-black py-20 px-4">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-[#1F2B6C]">
           Our Latest Updates
         </h2>
@@ -283,8 +283,8 @@ const NewsSection = () => {
 };
 
 const ActionSection = () => (
-  <div className="bg-white text-black py-20 px-4">
-    <div className="max-w-6xl mx-auto text-center">
+  <div className="bg-white text-black py-10 px-4">
+    <div className="max-w-5xl mx-auto text-center">
       <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-[#1F2B6C]">
         Your Turn — Take Action
       </h2>

@@ -27,7 +27,7 @@ const BoardPress = () => {
             <h2 className="text-2xl text-center">Full Name</h2>
             <p className="text-2xl text-center ">President</p>
           </div>
-          <div className="flex-1 flex flex-col justify-start basis-[70%] ">
+          <div className="flex-1 flex flex-col justify-start basis-[70%] text-justify">
             <h1 style={{ fontSize: '30px' }}>About CDVS Nepal</h1><br />
             <p className=" text-gray-900 ">
               People with disability are the most vulnerable and marginalized group of people. They live in isolation, segregation, disparagement, poverty and virtual dependence on charity and even pity. They are the victim of the community misconception and stigmas denying them of their inalienable and recognized rights.

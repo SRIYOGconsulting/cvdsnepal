@@ -53,22 +53,45 @@ const pastActivities = [
       "Received national recognition for continuous dedication to the welfare of conflict-affected and disabled communities.",
     image: image1,
   },
+  {
+    year: "2017",
+    title: "Women Empowerment Workshop",
+    description:
+      "Conducted skill-based training for women with disabilities to promote self-employment through handicrafts and tailoring.",
+    image: image2,
+  },
+  {
+    year: "2018",
+    title: "Inclusive Education Program",
+    description:
+      "Partnered with local schools to enroll children with disabilities, ensuring they received equal educational opportunities.",
+    image: image1,
+  },
+  {
+    year: "2020",
+    title: "COVID-19 Emergency Support",
+    description:
+      "Distributed food, medicines, and hygiene kits to families of disabled individuals severely affected by the lockdown.",
+    image: image2,
+  },
+  {
+    year: "2021",
+    title: "Employment Partnership Drive",
+    description:
+      "Collaborated with local businesses to provide employment opportunities for skilled individuals with physical disabilities.",
+    image: image1,
+  },
+  {
+    year: "2023",
+    title: "Community Awareness Campaign",
+    description:
+      "Launched a campaign to raise awareness about disability rights and social inclusion.",
+    image: image2,
+  },
 ];
 
 const PastActivities = () => {
   const [selectedYear, setSelectedYear] = useState("All");
-  const scrollRef = useRef(null);
-
-  const handleScroll = (direction) => {
-    const { current } = scrollRef;
-    if (current) {
-      const scrollAmount = 400;
-      current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const years = ["All", ...new Set(pastActivities.map((a) => a.year))];
   const filtered =
@@ -104,53 +127,32 @@ const PastActivities = () => {
         </div>
       </div>
 
-      {/* Carousel Section */}
-      <div className="relative max-w-6xl mx-auto">
-        {/* Left Arrow */}
-        <button
-          onClick={() => handleScroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 p-2 rounded-full"
-        >
-          <ChevronLeft className="w-5 h-5 text-gray-700" />
-        </button>
-
-        {/* Scrollable Container */}
-        <div
-          ref={scrollRef}
-          className="flex gap-6 overflow-x-auto px-10"
-        >
-          {filtered.map((activity, index) => (
+      <div className="max-w-5xl mb-10 mx-auto flex">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map((pastactivities,index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-72 rounded-lg shadow-md border border-gray-200"
+              className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-all overflow-hidden"
             >
               <img
-                src={activity.image}
-                alt={activity.title}
-                className="w-full h-44 object-cover rounded-lg"
+                src={pastactivities.image}
+                alt={pastactivities.title}
+                className="w-full h-56 object-cover"
               />
-              <div className="p-4">
-                <p className="text-sm font-semibold text-gray-600 mb-1">
-                  {activity.year}
-                </p>
-                <h3 className="text-lg font-semibold text-[#1F2B6C] mb-2">
-                  {activity.title}
+              <div className="p-6">
+                <h3 className=" font-semibold mb-2 text-[#1F2B6C]">
+                  {pastactivities.year}
                 </h3>
-                <p className="text-gray-600 text-sm">
-                  {activity.description}
+                <h4 className="text-xl font-semibold mb-2 text-[#1F2B6C]">
+                  {pastactivities.title}
+                </h4>
+                <p className="text-sm text-gray-600 mb-4 line-clamp-3 text-justify">
+                  {pastactivities.description}
                 </p>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Right Arrow */}
-        <button
-          onClick={() => handleScroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 p-2 rounded-full"
-        >
-          <ChevronRight className="w-5 h-5 text-gray-700" />
-        </button>
       </div>
     </div>
   );

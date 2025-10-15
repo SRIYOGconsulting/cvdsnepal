@@ -44,11 +44,13 @@ const Contactus = () => {
           <ul className="space-y-4 text-gray-700">
             <li className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-blue-600" />
-              {appData.phone1 || "+977-9851160868"}
+              <a href='tel:+9779851160868'>{appData.phone1 || "+977-9851160868"}</a>
+              
             </li>
             <li className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-gray-600" />
-              {appData.email1 || "info@cvdsnepal.org.np"}
+              <a href='mailto:info@cvdsnepal.org.np'>{appData.email1 || "info@cvdsnepal.org.np"}</a>
+              
             </li>
             <li className="flex items-center gap-3">
               <MapPin className="w-5 h-5 text-green-600" />

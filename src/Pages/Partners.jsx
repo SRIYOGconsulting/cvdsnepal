@@ -3,14 +3,14 @@ import { Search } from "lucide-react";
 
 const partners = [
   { title: 'Silver Microsoft Partner', image: '../public/assets/images/silver-partnership.jpg' },
-  { title: 'Salesforce', image: '../public/assets/images/silver-partnership.jpg' },
-  { title: 'Webmerge', image: '../public/assets/images/silver-partnership.jpg' },
-  { title: 'Kentico Bronze Partner', image: '../public/assets/images/silver-partnership.jpg' },
-  { title: 'Amazon Web Services', image: '../public/assets/images/silver-partnership.jpg' },
-  { title: 'IBM SI partner', image: '../public/assets/images/silver-partnership.jpg' },
-  { title: 'DELL Boomi', image: '../public/assets/images/silver-partnership.jpg' },
-  { title: 'Clouddera Connect', image: '../public/assets/images/silver-partnership.jpg' },
-  { title: 'Salesforce', image: '../public/assets/images/silver-partnership.jpg' },
+  { title: 'Salesforce', image: '../public/assets/images/salesforce.png' },
+  { title: 'Webmerge', image: '../public/assets/images/webmerge.png' },
+  { title: 'Kentico Bronze Partner', image: '../public/assets/images/kentico.png' },
+  { title: 'Amazon Web Services', image: '../public/assets/images/amazon.png' },
+  { title: 'IBM SI partner', image: '../public/assets/images/ibm.png' },
+  { title: 'DELL Boomi', image: '../public/assets/images/dell.png' },
+  { title: 'Clouddera Connect', image: '../public/assets/images/clouddera.png' },
+  { title: 'Salesforce', image: '../public/assets/images/salesforce.png' },
 ];
 
 const Partners = () => {
@@ -50,8 +50,8 @@ const Partners = () => {
                 className="w-full h-60 object-cover outline outline-gray-200 rounded-lg"
               />
               <div className="py-3 text-center">
-                <h2 className="text-[24px] text-black py-3">{partner.title}</h2>
-                <button className="outline px-5 py-2 rounded-lg mx-auto block hover:bg-gray-100">
+                <h2 className="text-[20px] text-black py-3">{partner.title}</h2>
+                <button className="outline outline-gray-300 px-4 py-1 rounded-lg mx-auto block hover:bg-gray-300">
                   Browse more
                 </button>
               </div>

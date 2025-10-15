@@ -94,7 +94,7 @@ const UpcomingActivities = () => {
                 <span>{event.location}</span>
               </div>
 
-              <p className="text-gray-600 leading-relaxed mb-4">{event.description}</p>
+              <p className="text-gray-600 leading-relaxed mb-4 text-justify">{event.description}</p>
              
 
 <div className="mt-auto">
