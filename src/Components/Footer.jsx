@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Facebook,
   Linkedin,
@@ -12,11 +13,11 @@ import logo from "../assets/Broad-Press-Logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-gray-900 py-16 px-8 border-t border-gray-200 font-sans">
+    <footer className="bg-white text-gray-900 py-16 border-t border-gray-200 font-sans">
       {/* ====== Top Section (Logo + Description + 4 Columns) ====== */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row lg:justify-between ">
         {/* ===== Left Section ===== */}
-        <div className="w-full lg:w-[40%]">
+        <div className="w-full lg:w-[45%]">
           {/* Logo and Title */}
           <div className="flex items-center gap-3 mb-4">
             <img
@@ -33,11 +34,11 @@ const Footer = () => {
           <p className="font-semibold mb-3 text-[15px]">
             Blazing Fast Next Gen Corporate CMS
           </p>
-          <p className="text-[15px] leading-relaxed text-gray-700 mb-3">
+          <p className="text-[15px] leading-relaxed text-gray-700 mb-3 text-justify">
             BroadPress is a next-generation web platform crafted to empower
             organizations across various sectors.
           </p>
-          <p className="text-[15px] leading-relaxed text-gray-700">
+          <p className="text-[15px] leading-relaxed text-gray-700 text-justify">
             Whether it’s managing academic portals, running global corporate
             sites, driving social causes, or representing diverse businesses
             BroadPress delivers flexibility, speed, and enterprise-grade
@@ -46,19 +47,19 @@ const Footer = () => {
         </div>
 
         {/* ===== Right Section (4 Columns) ===== */}
-        <div className="w-full lg:w-[55%] grid grid-cols-2 md:grid-cols-4 gap-x-10">
+        <div className="w-full lg:w-[50%] grid grid-cols-2 md:grid-cols-4 gap-x-10">
           {/* Browse More */}
           <div>
             <h3 className="font-bold mb-4 text-[16px] tracking-wide">
               Browse More
             </h3>
             <ul className="space-y-[12px] text-[15px]">
-              <li>FAQs</li>
-              <li>Testimonials</li>
-              <li>Feedback</li>
+              <li><Link to="/faq">FAQs</Link></li>
+              <li><Link to="/testimonials">Testimonials</Link></li>
+              <li><Link to="/feedback">Feedback</Link></li>
               <li>Gallery</li>
               <li>News</li>
-              <li>Notice</li>
+              <li><Link to="/notice">Notice</Link></li>
             </ul>
           </div>
 
@@ -108,7 +109,7 @@ const Footer = () => {
       </div>
 
       {/* ====== Icons + Subscribe (Second Row) ====== */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between mt-12 gap-6">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between mt-12 gap-6">
         {/* Social Icons */}
         <div className="flex gap-5 text-gray-600">
           <Twitter className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
@@ -134,7 +135,7 @@ const Footer = () => {
       </div>
 
       {/* ===== Bottom Section ===== */}
-      <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-gray-200 text-[13px] text-gray-500 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+      <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-gray-200 text-[13px] text-gray-500 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
         <p>
           © 2025 <span className="font-medium">{`{ Organization Name }`}</span>
 . | All

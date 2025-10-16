@@ -137,9 +137,6 @@ const Testimonials = () => {
                   <p className="text-sm text-black leading-relaxed text-center mb-8">
                     {testimonial.description}
                   </p>
-                  <button className="flex mx-auto block text-black bg-white px-3 py-1.5 rounded border border-gray-300">
-                  Read More
-                </button>
                 </div>
                 
               </div>

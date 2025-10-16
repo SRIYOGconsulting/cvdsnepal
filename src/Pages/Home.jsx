@@ -50,12 +50,12 @@ const HeroSection = () => {
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start  px-6 md:px-16 lg:px-24 text-white">
-        <h1 className="text-xl lg:text-4xl font-bold mb-4">
+        <h1 className="text-xl lg:text-4xl font-bold mb-4 px-20">
           Turning Challenges into <br /> Opportunities for All
           <br />
         </h1>
         <h3
-          className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl text-[#f2eeec]"
+          className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl text-[#f2eeec] px-20"
           style={{ fontSize: "18px" }}
         >
           Adding the Wheel in Wheelchair, Restoring Dignity
@@ -63,7 +63,7 @@ const HeroSection = () => {
         <br />
         <br />
         <Link to="/donate">
-          <button className="bg-[#d9d9d9] px-3 py-1 text-black font-semibold hover:bg-blue-500 transition rounded-[0.5vw]">
+          <button className="bg-[#d9d9d9] px-3 py-1 text-black font-semibold hover:bg-blue-500 transition rounded-[0.5vw] mx-20">
             Donate Now
           </button>
         </Link>
@@ -87,7 +87,7 @@ const HeroSection = () => {
 
 const ImpactSection = () => (
   <div className="bg-white text-black py-16 px-4">
-    <div className="max-w-5xl mx-auto text-center">
+    <div className="max-w-6xl mx-auto text-center">
       <h2 className="text-2xl md:text-3xl font-semibold mb-8">
         Your Support Makes a True Difference
       </h2>
@@ -125,7 +125,7 @@ const ImpactSection = () => (
 
 const SponsorSection = () => (
   <div className="bg-white text-black py-16 px-4">
-    <div className="max-w-5xl mx-auto text-center">
+    <div className="max-w-6xl mx-auto text-center">
       <h2 className="text-2xl md:text-3xl font-semibold mb-4">
         Support a Child Today
       </h2>
@@ -222,7 +222,7 @@ const SponsorSection = () => (
 
 const ConfidenceSection = () => (
   <div className="bg-white text-black py-16 px-4">
-    <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-center">
+    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-center">
       
       {/* Left: Text Content */}
       <div>
@@ -304,7 +304,7 @@ const NewsSection = () => {
 
   return (
     <div className="bg-white text-black py-20 px-4">
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-[#1F2B6C]">
           Our Latest Updates
         </h2>
@@ -345,7 +345,7 @@ const NewsSection = () => {
 
 const ActionSection = () => (
   <div className="bg-white text-black py-10 px-4">
-    <div className="max-w-5xl mx-auto text-center">
+    <div className="max-w-6xl mx-auto text-center">
       <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-[#1F2B6C]">
         Your Turn — Take Action
       </h2>

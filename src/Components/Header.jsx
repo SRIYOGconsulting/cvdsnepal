@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <header className={headerClasses}>
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 md:py-4 relative">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-3 md:py-4">
         {/* Logo (responsive & clickable) */}
         <Link
           to="/"
@@ -50,7 +50,7 @@ const Header = () => {
             }`}
           />
         </Link>
-
+            
         {/*  Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8 font-medium">
           {navLinks.map((item, i) => {
@@ -63,7 +63,7 @@ const Header = () => {
               ? "text-white hover:text-[#00D1FF]"
               : "text-[#1F2B6C] hover:text-[#159EEC]";
 
-            return (
+            return (  
               <li key={i}>
                 <Link
                   to={item.path}

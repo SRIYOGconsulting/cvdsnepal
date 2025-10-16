@@ -25,6 +25,8 @@ import Videos from "./Pages/Videos.jsx";
 import Gallery from "./Pages/Gallery.jsx";
 import Faq from "./Pages/Faq.jsx";
 import Testimonials from "./Pages/Testimonials.jsx";
+import Feedback from "./Pages/Feedback.jsx";
+import Notice from "./Pages/Notice.jsx";
 
 const router = createBrowserRouter([
   {
@@ -88,6 +90,8 @@ const router = createBrowserRouter([
       { path: "videos", element: <Videos />, handle: { title: "Videos" } },
       { path: "FAQ", element: <Faq />, handle: { title: "FAQ" } },
       { path: "testimonials", element: <Testimonials />, handle: { title: "Testimonials" } },
+      { path: "feedback", element: <Feedback />, handle: { title: "Feedback" } },
+      { path: "notice", element: <Notice />, handle: { title: "Notice" } },
     ],
   },
 ]);
