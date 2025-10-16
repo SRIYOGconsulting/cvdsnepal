@@ -2,6 +2,13 @@ import React, { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import image1 from "../assets/project.jpg";
 import image2 from "../assets/project.jpg";
+import image3 from "../assets/images8.jpg";
+import image4 from "../assets/images9.jpg";
+import image5 from "../assets/home3.jpg";
+import image7 from "../assets/projecta.png";
+
+import image9 from "../assets/vocational.jpg";
+
 
 const pastActivities = [
   {
@@ -16,78 +23,38 @@ const pastActivities = [
     title: "Women Empowerment Workshop",
     description:
       "Conducted skill-based training for women with disabilities to promote self-employment through handicrafts and tailoring.",
-    image: image2,
+    image: image9,
   },
   {
     year: "2018",
     title: "Inclusive Education Program",
     description:
       "Partnered with local schools to enroll children with disabilities, ensuring they received equal educational opportunities.",
-    image: image1,
+    image: image3,
   },
   {
     year: "2020",
     title: "COVID-19 Emergency Support",
     description:
       "Distributed food, medicines, and hygiene kits to families of disabled individuals severely affected by the lockdown.",
-    image: image2,
+    image: image4,
   },
   {
     year: "2021",
     title: "Employment Partnership Drive",
     description:
       "Collaborated with local businesses to provide employment opportunities for skilled individuals with physical disabilities.",
-    image: image1,
+    image: image5,
   },
   {
     year: "2023",
     title: "Community Awareness Campaign",
     description:
       "Launched a campaign to raise awareness about disability rights and social inclusion.",
-    image: image2,
+    image: image7,
   },
-  {
-    year: "2024",
-    title: "National Recognition",
-    description:
-      "Received national recognition for continuous dedication to the welfare of conflict-affected and disabled communities.",
-    image: image1,
-  },
-  {
-    year: "2017",
-    title: "Women Empowerment Workshop",
-    description:
-      "Conducted skill-based training for women with disabilities to promote self-employment through handicrafts and tailoring.",
-    image: image2,
-  },
-  {
-    year: "2018",
-    title: "Inclusive Education Program",
-    description:
-      "Partnered with local schools to enroll children with disabilities, ensuring they received equal educational opportunities.",
-    image: image1,
-  },
-  {
-    year: "2020",
-    title: "COVID-19 Emergency Support",
-    description:
-      "Distributed food, medicines, and hygiene kits to families of disabled individuals severely affected by the lockdown.",
-    image: image2,
-  },
-  {
-    year: "2021",
-    title: "Employment Partnership Drive",
-    description:
-      "Collaborated with local businesses to provide employment opportunities for skilled individuals with physical disabilities.",
-    image: image1,
-  },
-  {
-    year: "2023",
-    title: "Community Awareness Campaign",
-    description:
-      "Launched a campaign to raise awareness about disability rights and social inclusion.",
-    image: image2,
-  },
+  
+ 
 ];
 
 const PastActivities = () => {

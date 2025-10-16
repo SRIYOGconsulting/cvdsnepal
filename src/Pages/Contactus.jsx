@@ -3,6 +3,8 @@ import { appData } from '../constants'
 import { useOutletContext } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 
+
+
 const Contactus = () => {
   const { organizationName, pathname } = useOutletContext();
   return (

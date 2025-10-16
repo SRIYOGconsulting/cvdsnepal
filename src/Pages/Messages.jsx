@@ -1,18 +1,13 @@
-import React from "react";
-import presidentImage from "../assets/male.png";
+import React, {  useEffect } from "react";
+
 
 const Message = () => {
   return (
     <div className="min-h-screen text-gray-800">
 
-      {/* Image Section */}
+      {/* Gray Background Section (no image) */}
       <div className="max-w-5xl mx-auto mt-10">
-        <div className="relative bg-gray-200 w-full h-80 flex justify-center items-center overflow-hidden">
-          <img
-            src={presidentImage}
-            alt="President"
-            className="object-cover h-full w-full"
-          />
+        <div className="relative bg-gray-200 w-full h-80 flex justify-center items-center">
           <div className="absolute bottom-5 right-6 text-right">
             <h3 className="text-lg font-bold text-black">Name of President</h3>
             <p className="text-sm text-gray-700">Designation</p>
@@ -20,7 +15,7 @@ const Message = () => {
         </div>
 
         {/* Message Text Section */}
-        <div className="mt-10 px-6 md:px-0 ">
+        <div className="mt-10 px-6 md:px-0">
           <p className="font-semibold mb-4">Message from the President</p>
           <p className="mb-4">Dear Visitors,</p>
 
@@ -48,9 +43,9 @@ const Message = () => {
           </p>
 
           <div className="grid grid-cols-3 gap-20 my-8">
-            <div className="bg-gray-200 h-60 w-45 rounded-lg"><img src=""/></div>
-            <div className="bg-gray-200 h-60 w-45 rounded-lg"><img src=""/></div>
-            <div className="bg-gray-200 h-60 w-45 rounded-lg"><img src=""/></div>
+            <div className="bg-gray-200 h-60 w-45 rounded-lg"></div>
+            <div className="bg-gray-200 h-60 w-45 rounded-lg"></div>
+            <div className="bg-gray-200 h-60 w-45 rounded-lg"></div>
           </div>
 
           <p className="mb-4 text-justify">
@@ -79,9 +74,10 @@ const Message = () => {
             you with us on this journey.<br/>
             Warm regards,
           </p>
+
           <div className="mt-8 mb-10">
             <p>___________________________</p>
-            <p >[President’s Full Name]</p>
+            <p>[President’s Full Name]</p>
             <p>President, CVDS Nepal</p>
           </div>
         </div>
@@ -91,4 +87,3 @@ const Message = () => {
 };
 
 export default Message;
-

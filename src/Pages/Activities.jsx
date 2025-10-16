@@ -1,15 +1,13 @@
-
 import React from "react";
-import {
-  Users,
-  Heart,
-  GraduationCap,
-  Activity,
-  Users2,
-  Scale,
-  Stethoscope,
-  Building2,
-} from "lucide-react"; 
+  
+import rehabImage from "../assets/rehabilation.jpg";
+import psychologicalImage from "../assets/psychologica.jpg";
+import vocationalImage from "../assets/vocational.jpg";
+import educationImage from "../assets/education.jpg";
+import communityImage from "../assets/community.jpg";
+import advocacyImage from "../assets/advocacy.jpg";
+import healthImage from "../assets/health.jpg";
+import futureImage from "../assets/future.jpg";
 
 const Activities = () => {
   const activities = [
@@ -17,97 +15,134 @@ const Activities = () => {
       title: "Rehabilitation Services",
       description:
         "Providing physical therapy and prosthetic support for conflict-injured individuals to regain mobility and independence.",
-      icon: Users, 
-      alt: "Rehabilitation icon",
+      image: rehabImage,
+      alt: "Rehabilitation image",
     },
     {
       title: "Psychological Support",
       description:
         "Counseling and trauma therapy programs to help victims process PTSD and rebuild emotional resilience.",
-      icon: Heart,
-      alt: "Heart icon for psychological support",
+      image: psychologicalImage,
+      alt: "Psychological support image",
     },
     {
       title: "Vocational Training",
       description:
         "Skill-building workshops (e.g., crafts, IT) tailored for disabled youth, leading to employment opportunities.",
-      icon: GraduationCap,
-      alt: "Graduation cap icon",
+      image: vocationalImage,
+      alt: "Vocational training image",
     },
     {
       title: "Education Access",
       description:
         "Inclusive schooling and literacy programs for disabled children from conflict zones, bridging educational gaps.",
-      icon: Activity,
-      alt: "Activity icon for education",
+      image: educationImage,
+      alt: "Education access image",
     },
     {
       title: "Community Integration",
       description:
         "Social events and awareness campaigns to reduce stigma and foster inclusive communities.",
-      icon: Users2,
-      alt: "Group users icon",
+      image: communityImage,
+      alt: "Community integration image",
     },
     {
       title: "Advocacy & Rights",
       description:
         "Legal aid and policy advocacy to secure rights and government support for disabled conflict victims.",
-      icon: Scale,
-      alt: "Scale icon for justice",
+      image: advocacyImage,
+      alt: "Advocacy and rights image",
     },
     {
       title: "Health & Nutrition",
       description:
         "Medical check-ups and nutrition drives to address secondary health issues from disabilities and displacement.",
-      icon: Stethoscope,
-      alt: "Stethoscope icon",
+      image: healthImage,
+      alt: "Health and nutrition image",
     },
     {
-      title: "Pipeline (Future Plans)",
+      title: "Infrastructure Development",
       description:
-        "To date, we have been renting houses to provide a good home for children with disabilities. In the near future, we plan to possess our own facility and give children with disabilities better amenities. Due to mental illnesses like cerebral palsy, which their families have neglected, there are many homeless children in Nepal.",
-      icon: Building2,
-      alt: "Building icon for future plans",
+        "We plan to acquire our own facility to provide children with disabilities a safe and fully equipped environment for learning and living.",
+      image: futureImage,
+      alt: "Infrastructure development image",
+    },
+    {
+      title: "Community Outreach Expansion",
+      description:
+        "We aim to extend our outreach programs to more rural areas, ensuring children with disabilities receive proper care, education, and social support.",
+      image: communityImage,
+      alt: "Community outreach expansion image",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 max-w-7xl mx-auto px-4 py-12">
-      {/* Hero Section - Keep as image or swap to icon if you want */}
-      <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          Our Activities
-        </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          At CVDS, we empower conflict victims with disabilities through
-          targeted activities that promote healing, skills, and inclusion.
+    <div className="bg-white min-h-screen">
+      
+
+      {/* Description Section */}
+      <section className="max-w-5xl mx-auto px-6 text-center py-12">
+        <h2 className="text-xl font-semibold mb-4">
+          {"CVDS Nepal"} Activities
+        </h2>
+        <p className="text-gray-700 text-[15px] leading-relaxed mb-6">
+          Recreational activities include hobbies such as painting, gardening,
+          reading, or gaming, which provide relaxation and enjoyment. Physical
+          activities like running, yoga, or sports promote health and
+          well-being. In professional environments, team-building activities
+          such as workshops, games, or retreats strengthen communication and
+          collaboration among employees.
+        </p>
+        <p className="text-gray-700 text-[15px] leading-relaxed">
+          For children, activities are essential for cognitive and social
+          development, ranging from simple arts and crafts to interactive
+          learning games. Outdoor activities like hiking, camping, or cycling
+          offer both adventure and a connection with nature. Each type of
+          activity serves a distinct purpose, enriching lives by enhancing
+          skills, promoting health, fostering relationships, or simply offering
+          a break from routine.
         </p>
       </section>
 
       {/* Activities Grid */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
-          What We Do
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {activities.map((activity, index) => (
-            <article
+            <div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow p-6 text-center"
-              role="article"
+              className="bg-white border border-gray-200 rounded-md shadow-sm flex flex-col h-[500px] overflow-hidden"
             >
-              <activity.icon
-                size={64}
-                className="mx-auto mb-4 text-blue-600" // Customize color/size
-                aria-hidden="true"
-              />
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
-                {activity.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {activity.description}
-              </p>
-            </article>
+              {/* Image Section - Fixed height to match text area */}
+              <div className="flex-1 flex items-center justify-center bg-gray-200 overflow-hidden">
+                <img
+                  src={activity.image}
+                  alt={activity.alt}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              
+              {/* Text Section - Equal height to image, with gray border on top and subtle bottom rounding */}
+              <div className="flex-1 flex flex-col justify-between p-4 border-t border-gray-200 rounded-b-md">
+                <div>
+                  <h3 className="text-lg font-semibold text-black mb-1">
+                    {activity.title}
+                  </h3>
+                  <p className="text-xs text-gray-500 mb-2">
+                    {new Date().toLocaleDateString("en-GB", {
+                      day: "2-digit",
+                      month: "long",
+                      year: "numeric",
+                    })}
+                  </p>
+                  <p className="text-sm text-black leading-relaxed">
+                    {activity.description}
+                  </p>
+                </div>
+                <button className="mt-4 inline-block self-center text-black bg-white px-3 py-1.5 rounded border border-gray-300">
+                  Read More
+                </button>
+              </div>
+            </div>
           ))}
         </div>
       </section>

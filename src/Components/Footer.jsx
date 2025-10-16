@@ -1,143 +1,158 @@
-import React , {useEffect} from "react";
-import { Link, useLocation } from "react-router-dom";
-import { appData } from "../constants";
+
+import React from "react";
 import {
-  Twitter,
   Facebook,
   Linkedin,
   Youtube,
   Twitch,
+  Twitter,
   Github,
 } from "lucide-react";
-
-// ScrollToTop Component for Footer Links
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  React.useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top on route change
-  }, [pathname]);
-  return null;
-};
+import logo from "../assets/Broad-press-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-black p-6">
-  <ScrollToTop />
+    <footer className="bg-white text-gray-900 py-16 px-8 border-t border-gray-200 font-sans">
+      {/* ====== Top Section (Logo + Description + 4 Columns) ====== */}
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between gap-12">
+        {/* ===== Left Section ===== */}
+        <div className="w-full lg:w-[40%]">
+          {/* Logo and Title */}
+          <div className="flex items-center gap-3 mb-4">
+            <img
+              src={logo}
+              alt="BroadPress Logo"
+              className="h-14 w-auto object-contain"
+            />
+            <span className="text-[#0B5D5E] text-3xl font-semibold tracking-wide">
+              BroadPress
+            </span>
+          </div>
 
-  {/* Top grid */}
-  <div className="grid md:grid-cols-6 max-w-6xl mx-auto py-8 gap-6">
-    {/* About us */}
-    <div className="col-span-1 md:col-span-2">
-      <img src="../src/assets/cvdslogo.png" alt="logo" className="h-12"/>
-      <p className="font-semibold mb-2 text-[15px]">Adding the Wheel in Wheelchair, Restoring Dignity</p>
-      <p className="text-sm leading-relaxed text-justify">
-        Conflict Victim and Disable Society (Conflict Victim and Disabled
-        Society) is located at Shankharapur Municipality-6, Shalambutar,
-        Sankhu, Kathmandu. This organization has been supporting people with
-        disability in Nepal since 2005, providing food, clothes, shelter, and
-        basic care through the Rehabilitation Center for Children with
-        disability due to Cerebral Palsy (CP) project.
-      </p>
-    </div>
+          {/* Description */}
+          <p className="font-semibold mb-3 text-[15px]">
+            Blazing Fast Next Gen Corporate CMS
+          </p>
+          <p className="text-[15px] leading-relaxed text-gray-700 mb-3">
+            BroadPress is a next-generation web platform crafted to empower
+            organizations across various sectors.
+          </p>
+          <p className="text-[15px] leading-relaxed text-gray-700">
+            Whether it’s managing academic portals, running global corporate
+            sites, driving social causes, or representing diverse businesses
+            BroadPress delivers flexibility, speed, and enterprise-grade
+            security for all.
+          </p>
+        </div>
 
-    {/* Browse more */}
-    <div className="col-span-1 md:col-span-1 px-4">
-      <h3 className="font-bold mb-3">Browse More</h3>
-      <ul className="space-y-1 text-sm">
-        <li><Link to="/FAQ" className="hover:underline">FAQs</Link></li>
-        <li><Link to="/gallery" className="hover:underline">Gallery</Link></li>
-        <li><Link to="/team" className="hover:underline">Our Team</Link></li>
-        <li><Link to="/pastactivities" className="hover:underline">Past Activities</Link></li>
-        <li><Link to="/upcomingactivities" className="hover:underline">Upcoming Activities</Link></li>
-      </ul>
-    </div>
+        {/* ===== Right Section (4 Columns) ===== */}
+        <div className="w-full lg:w-[55%] grid grid-cols-2 md:grid-cols-4 gap-x-10">
+          {/* Browse More */}
+          <div>
+            <h3 className="font-bold mb-4 text-[16px] tracking-wide">
+              Browse More
+            </h3>
+            <ul className="space-y-[12px] text-[15px]">
+              <li>FAQs</li>
+              <li>Testimonials</li>
+              <li>Feedback</li>
+              <li>Gallery</li>
+              <li>News</li>
+              <li>Notice</li>
+            </ul>
+          </div>
 
-    {/* Resources */}
-    <div className="col-span-1 md:col-span-1 px-4">
-      <h3 className="font-bold mb-3">Resources</h3>
-      <ul className="space-y-1 text-sm">
-        <li><Link to="/messages" className="hover:underline">Message</Link></li>
-        <li><Link to="/donate" className="hover:underline">Payment</Link></li>
-      </ul>
-    </div>
+          {/* Resources */}
+          <div>
+            <h3 className="font-bold mb-4 text-[16px] tracking-wide">
+              Resources
+            </h3>
+            <ul className="space-y-[12px] text-[15px]">
+              <li>Holidays</li>
+              <li>Career</li>
+              <li>CSR</li>
+              <li>Message</li>
+              <li>Payment</li>
+              <li>QR</li>
+            </ul>
+          </div>
 
-    {/* Support */}
-    <div className="col-span-1 md:col-span-1 px-4">
-      <h3 className="font-bold mb-3">Support</h3>
-      <ul className="space-y-1 text-sm">
-        <li><Link to="/case-studies" className="hover:underline">Community</Link></li>
-        <li><Link to="/partners" className="hover:underline">Partners</Link></li>
-      </ul>
-    </div>
+          {/* Support */}
+          <div>
+            <h3 className="font-bold mb-4 text-[16px] tracking-wide">Support</h3>
+            <ul className="space-y-[12px] text-[15px]">
+              <li>Docs</li>
+              <li>Community</li>
+              <li>Calendar</li>
+              <li>Blog</li>
+              <li>Trello Board</li>
+              <li>Social Impact</li>
+            </ul>
+          </div>
 
-    {/* Organization */}
-    <div className="col-span-1 md:col-span-1 px-4">
-      <h3 className="font-bold mb-3">Organisation</h3>
-      <ul className="space-y-1 text-sm">
-        <li><Link to="/donate" className="hover:underline">Donate Now</Link></li>
-        <li><Link to="/projects" className="hover:underline">Our Projects</Link></li>
-      </ul>
-    </div>
-  </div>
-
-  {/* icons + email + subscribe */}
-  <div>
-    <div className="max-w-5xl mx-auto flex md:flex-row justify-between items-center">
-      {/* Social Icons */}
-      <div className="flex gap-4">
-        <Twitter className="w-5 h-5 hover:text-[#1F2B6C] cursor-pointer" />
-        <Facebook className="w-5 h-5 hover:text-[#1F2B6C] cursor-pointer" />
-        <Linkedin className="w-5 h-5 hover:text-[#1F2B6C] cursor-pointer" />
-        <Youtube className="w-5 h-5 hover:text-[#1F2B6C] cursor-pointer" />
-        <Twitch className="w-5 h-5 hover:text-[#1F2B6C] cursor-pointer" />
-        <Github className="w-5 h-5 hover:text-[#1F2B6C] cursor-pointer" />
+          {/* Organisation */}
+          <div>
+            <h3 className="font-bold mb-4 text-[16px] tracking-wide">
+              Organisation
+            </h3>
+            <ul className="space-y-[12px] text-[15px]">
+              <li>Donate Now</li>
+              <li>Case Studies</li>
+              <li>Our Projects</li>
+              <li>Donation List</li>
+              <li>Careers</li>
+              <li>Internship</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      {/* Email input */}
-      <input
-        type="email"
-        placeholder="Enter your email address"
-        className="border border-gray-300 rounded px-4 py-2 w-full md:w-96 text-gray-700"
-      />
+      {/* ====== Icons + Subscribe (Second Row) ====== */}
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between mt-12 gap-6">
+        {/* Social Icons */}
+        <div className="flex gap-5 text-gray-600">
+          <Twitter className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
+          <Facebook className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
+          <Linkedin className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
+          <Youtube className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
+          <Twitch className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
+          <Github className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
+        </div>
 
-      {/* Subscribe button */}
-      <button className="bg-black text-white px-6 py-2 rounded-lg">
-        Subscribe
-      </button>
-    </div>
-  </div>
+        {/* Subscribe box aligned right */}
+        <div className="flex flex-col sm:flex-row items-center justify-end gap-2 sm:gap-4 w-full">
+  <input
+    type="email"
+    placeholder="Enter your eMail address"
+    className="border border-gray-400 rounded-md px-4 py-2 w-full sm:w-80 md:w-96 text-[15px] font-medium outline-none bg-white placeholder:text-gray-500"
+  />
+  <button className="border border-gray-400 text-gray-800 text-[16px] font-semibold rounded-md px-6 py-2 w-full sm:w-auto hover:bg-[#1F2B6C] hover:text-white transition">
+    Subscribe
+  </button>
+</div>
 
-  {/* Copyright bottom */}
-  <div className="mt-6 pt-4">
-    <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-      <p>
-        © 2025 {appData.organizationName || "Organization Name"}. All Rights
-        Reserved. Built With:{" "}
-        <span className="text-[#0B5D5E] font-medium">BroadPress</span>
-      </p>
-      <div className="flex space-x-2">
-        <Link to="/terms" className="hover:underline">Terms of Service |</Link>
-        <Link to="/privacy" className="hover:underline">Privacy Policy |</Link>
-        <Link to="/disclaimer" className="hover:underline">Disclaimer</Link>
       </div>
-    </div>
-  </div>
-</footer>
 
+      {/* ===== Bottom Section ===== */}
+      <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-gray-200 text-[13px] text-gray-500 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+        <p>
+          © 2025 <span className="font-medium">{`{ Organization Name }`}</span>
+. | All
+          Rights Reserved. Built With :
+          <span className="text-[#0B5D5E] font-semibold"> BroadPress</span>
+        </p>
+        <div className="flex flex-wrap justify-center gap-2">
+          <span className="hover:underline cursor-pointer">
+            Terms of Service
+          </span>
+          <span>|</span>
+          <span className="hover:underline cursor-pointer">Privacy Policy</span>
+          <span>|</span>
+          <span className="hover:underline cursor-pointer">Disclaimer</span>
+        </div>
+      </div>
+    </footer>
   );
 };
 
 export default Footer;
-
-
-
-
-
-
-
-
-
-
-
-
-

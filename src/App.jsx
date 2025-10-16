@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Header from "./Components/Header";
 import { Outlet, useMatches } from "react-router-dom";
 import ChatModal from "./Components/ChatModel";
+import ScrollToTop from "./Components/ScrollToTop";
+
 
 import BasicBreadcrumbs from "./Components/BasicBreadcrumbs";
 import Footer from "./Components/Footer";
@@ -20,7 +22,7 @@ function App() {
   return (
     <div>
     
-     
+     <ScrollToTop />
       <Header />
       <BasicBreadcrumbs />
       

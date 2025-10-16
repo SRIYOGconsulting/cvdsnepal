@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {  useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { appData } from '../constants';
 
-const BoardPress = () => {
+const OurTeam = () => {
   const teamMembers = [
     { name: 'Full Name', role: 'Vice President', image: '../public/assets/images/female.png' },
     { name: 'Full Name', role: 'Secretary', image: '../public/assets/images/male.png' },
@@ -56,4 +56,4 @@ const BoardPress = () => {
   );
 };
 
-export default BoardPress;
+export default OurTeam;
