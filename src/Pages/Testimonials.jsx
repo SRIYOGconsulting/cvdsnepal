@@ -9,66 +9,66 @@ import advocacyImage from "../assets/advocacy.jpg";
 import healthImage from "../assets/health.jpg";
 import futureImage from "../assets/future.jpg";
 
-const Activities = () => {
-  const activities = [
+const Testimonials = () => {
+  const testimonials = [
     {
-      title: "Rehabilitation Services",
+      fullName: "Full Name",
       description:
         "Providing physical therapy and prosthetic support for conflict-injured individuals to regain mobility and independence.",
       image: rehabImage,
       alt: "Rehabilitation image",
     },
     {
-      title: "Psychological Support",
+      fullName: "Full Name",
       description:
         "Counseling and trauma therapy programs to help victims process PTSD and rebuild emotional resilience.",
       image: psychologicalImage,
       alt: "Psychological support image",
     },
     {
-      title: "Vocational Training",
+      fullName: "Full Name",
       description:
         "Skill-building workshops (e.g., crafts, IT) tailored for disabled youth, leading to employment opportunities.",
       image: vocationalImage,
       alt: "Vocational training image",
     },
     {
-      title: "Education Access",
+      fullName: "Full Name",
       description:
         "Inclusive schooling and literacy programs for disabled children from conflict zones, bridging educational gaps.",
       image: educationImage,
       alt: "Education access image",
     },
     {
-      title: "Community Integration",
+      fullName: "Full Name",
       description:
         "Social events and awareness campaigns to reduce stigma and foster inclusive communities.",
       image: communityImage,
       alt: "Community integration image",
     },
     {
-      title: "Advocacy & Rights",
+      fullName: "Full Name",
       description:
         "Legal aid and policy advocacy to secure rights and government support for disabled conflict victims.",
       image: advocacyImage,
       alt: "Advocacy and rights image",
     },
     {
-      title: "Health & Nutrition",
+      fullName: "Full Name",
       description:
         "Medical check-ups and nutrition drives to address secondary health issues from disabilities and displacement.",
       image: healthImage,
       alt: "Health and nutrition image",
     },
     {
-      title: "Infrastructure Development",
+      fullName: "Full Name",
       description:
         "We plan to acquire our own facility to provide children with disabilities a safe and fully equipped environment for learning and living.",
       image: futureImage,
       alt: "Infrastructure development image",
     },
     {
-      title: "Community Outreach Expansion",
+      fullName: "Full Name",
       description:
         "We aim to extend our outreach programs to more rural areas, ensuring children with disabilities receive proper care, education, and social support.",
       image: communityImage,
@@ -83,7 +83,7 @@ const Activities = () => {
       {/* Description Section */}
       <section className="max-w-5xl mx-auto px-6 text-center py-12">
         <h2 className="text-xl font-semibold mb-4">
-          {"CVDS Nepal"} Activities
+          {"CVDS Nepal"} Testimonials
         </h2>
         <p className="text-gray-700 text-[15px] leading-relaxed mb-6">
           Recreational activities include hobbies such as painting, gardening,
@@ -105,9 +105,9 @@ const Activities = () => {
       </section>
 
       {/* Activities Grid */}
-      <section className="max-w-6xl mx-auto px-6 pb-20 text-center">
+      <section className="max-w-6xl mx-auto px-6 pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {activities.map((activity, index) => (
+          {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className="bg-white border border-gray-200 rounded-md shadow-sm flex flex-col h-[500px] overflow-hidden"
@@ -115,8 +115,8 @@ const Activities = () => {
               {/* Image Section - Fixed height to match text area */}
               <div className="flex-1 flex items-center justify-center bg-gray-200 overflow-hidden">
                 <img
-                  src={activity.image}
-                  alt={activity.alt}
+                  src={testimonial.image}
+                  alt={testimonial.alt}
                   className="object-cover w-full h-full"
                 />
               </div>
@@ -124,23 +124,24 @@ const Activities = () => {
               {/* Text Section - Equal height to image, with gray border on top and subtle bottom rounding */}
               <div className="flex-1 flex flex-col justify-between p-4 border-t border-gray-200 rounded-b-md">
                 <div>
-                  <h3 className="text-lg font-semibold text-black mb-1">
-                    {activity.title}
+                  <h3 className="text-lg font-semibold text-black mb-1 text-center">
+                    {testimonial.fullName}
                   </h3>
-                  <p className="text-xs text-gray-500 mb-2">
+                  <p className="text-xs text-gray-500 mb-2 text-center">
                     {new Date().toLocaleDateString("en-GB", {
                       day: "2-digit",
                       month: "long",
                       year: "numeric",
                     })}
                   </p>
-                  <p className="text-sm text-black leading-relaxed">
-                    {activity.description}
+                  <p className="text-sm text-black leading-relaxed text-center mb-8">
+                    {testimonial.description}
                   </p>
-                </div>
-                <button className="mt-4 inline-block self-center text-black bg-white px-3 py-1.5 rounded border border-gray-300">
+                  <button className="flex mx-auto block text-black bg-white px-3 py-1.5 rounded border border-gray-300">
                   Read More
                 </button>
+                </div>
+                
               </div>
             </div>
           ))}
@@ -150,4 +151,4 @@ const Activities = () => {
   );
 };
 
-export default Activities;
+export default Testimonials;

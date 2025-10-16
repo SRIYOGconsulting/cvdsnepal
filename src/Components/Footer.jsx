@@ -8,7 +8,7 @@ import {
   Twitter,
   Github,
 } from "lucide-react";
-import logo from "../assets/Broad-press-logo.png";
+import logo from "../assets/Broad-Press-Logo.png";
 
 const Footer = () => {
   return (
