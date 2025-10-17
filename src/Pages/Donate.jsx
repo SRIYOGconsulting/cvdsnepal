@@ -1,14 +1,7 @@
 import { useState, useEffect } from "react";
-import { Heart } from "lucide-react";
+import { Heart,Search } from "lucide-react";
 import img1 from "../assets/images.jpg";
 
-// ===== ScrollToTop Component for Donate Page =====
-const ScrollToTop = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top when DonatePage loads
-  }, []);
-  return null;
-};
 
 export default function DonatePage() {
   const [selectedAmount, setSelectedAmount] = useState(25000);
@@ -17,9 +10,9 @@ export default function DonatePage() {
   const amounts = [200000, 120000, 50000, 25000, 12000, 6000];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6 max-w-5xl mx-auto px-4 py-12">
-       <ScrollToTop />
-      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-8">
+    <div className="min-h-screen bg-gray-50 p-6 max-w-6xl mx-auto px-4 py-12">
+    
+      <div className="w-full grid md:grid-cols-2 gap-8">
         {/* ===== LEFT SIDE - DONATE FORM ===== */}
         <div className="bg-white rounded-2xl shadow-lg p-6 border flex flex-col justify-between">
           <div>
@@ -128,7 +121,147 @@ export default function DonatePage() {
             future.
           </p>
         </div>
+
+
+
+{/* ===== NEW SECTION: Donor List ===== */}
+<div className="w-full col-span-full bg-white py-12 mt-12"> {/* CHANGED: No changes here, but ensuring col-span-full for grid */}
+  {/* Inner Container */}
+  <div className="max-w-6xl mx-auto p-8"> {/* CHANGED: Removed bg-white rounded-2xl border border-gray-200 shadow-lg to reduce boxed feel */}
+    {/* === Header === */}
+    <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
+      <h2 className="text-3xl font-extrabold text-[#1F2B6C] tracking-wide">
+        Donor List
+      </h2>
+
+      {/* === Filters === */}
+      <div className="flex flex-wrap items-center gap-3">
+        <select className="border border-gray-300 rounded-lg p-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-[#1F2B6C]">
+          <option>This Year: 2025</option>
+          <option>2024</option>
+          <option>2023</option>
+        </select>
+
+        <select className="border border-gray-300 rounded-lg p-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-[#1F2B6C]">
+          <option>Giving style: All</option>
+          <option>Occasional</option>
+          <option>Monthly</option>
+        </select>
+
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" /> {/* CHANGED: Replaced emoji with Search icon from lucide-react */}
+          {/* CHANGED: Removed emoji from placeholder text */}
+<input
+  type="text"
+  placeholder="Search by donor name"
+  className="border border-gray-300 rounded-lg py-2 pl-10 pr-3 text-sm w-52 md:w-64 focus:outline-none focus:border-[#1F2B6C]"
+/>
+
+        </div>
       </div>
+    </div>
+
+    {/* === Donor Table === */}
+    <div className="overflow-x-auto border border-gray-100"> {/* CHANGED: Removed rounded-xl shadow-md to reduce boxed feel */}
+      <table className="w-full text-sm text-left">
+        <thead className="bg-[#1F2B6C] text-white">
+          <tr>
+            <th className="p-3 font-semibold">Donor Name</th>
+            <th className="p-3 font-semibold">Member ID</th>
+            <th className="p-3 font-semibold text-right">Total Donations</th>
+            <th className="p-3 font-semibold text-right">Last Donation</th>
+            <th className="p-3 font-semibold text-center">Donated On</th>
+            <th className="p-3 font-semibold text-center">Giving Style</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {[
+            {
+              name: "Alexis Thomas",
+              total: "Rs250.00",
+              last: "Rs250.00",
+              date: "Mar 01, 2025",
+              style: "Occasional",
+            },
+            {
+              name: "Mario Garcia",
+              total: "Rs238.00",
+              last: "Rs20.00",
+              date: "Feb 27, 2025",
+              style: "Occasional",
+            },
+            {
+              name: "Sophia Lawson",
+              total: "Rs510.00",
+              last: "Rs500.00",
+              date: "Feb 24, 2025",
+              style: "Occasional",
+            },
+            {
+              name: "Abdur Young",
+              total: "Rs202.00",
+              last: "Rs100.00",
+              date: "Feb 23, 2025",
+              style: "Occasional",
+            },
+            {
+              name: "Maya Nolan",
+              total: "Rs4,181.57",
+              last: "Rs383.00",
+              date: "Feb 23, 2025",
+              style: "Occasional",
+            },
+          ].map((donor, i) => (
+            <tr
+              key={i}
+              className={`border-t border-gray-100 ${
+                i % 2 === 0 ? "bg-gray-50" : "bg-white"
+              } hover:bg-[#E8ECF5]/50 transition-colors`}
+            >
+              <td className="p-3 font-medium text-gray-800">{donor.name}</td>
+              <td className="p-3 text-[#1F2B6C] font-semibold">Assign ID</td>
+              <td className="p-3 text-gray-700 text-right">{donor.total}</td>
+              <td className="p-3 text-gray-700 text-right">{donor.last}</td>
+              <td className="p-3 text-gray-700 text-center">{donor.date}</td>
+              <td className="p-3 text-gray-700 text-center">{donor.style}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    {/* === Total Donors Counter === */}
+    <div className="mt-6 text-right">
+      <span className="bg-[#E8ECF5] text-[#1F2B6C] px-4 py-1.5 rounded-full text-sm font-semibold"> {/* CHANGED: Removed shadow-sm to reduce boxed feel */}
+        Total donors: 87
+      </span>
+    </div>
+  </div>
+</div>
+{/* ===== End of Donor List Section ===== */}
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      
+
+
+      
     </div>
   );
 }
+
+
+
+ 

@@ -57,8 +57,8 @@ const Footer = () => {
               <li><Link to="/faq">FAQs</Link></li>
               <li><Link to="/testimonials">Testimonials</Link></li>
               <li><Link to="/feedback">Feedback</Link></li>
-              <li>Gallery</li>
-              <li>News</li>
+              <li><Link to="/Gallery">Gallery</Link></li>
+              <li><Link to="/News">News</Link></li>
               <li><Link to="/notice">Notice</Link></li>
             </ul>
           </div>
@@ -72,9 +72,9 @@ const Footer = () => {
               <li>Holidays</li>
               <li>Career</li>
               <li>CSR</li>
-              <li>Message</li>
-              <li>Payment</li>
-              <li>QR</li>
+              <li><Link to="/messages">Message</Link></li>
+              <li><Link to="/payment">Payment</Link></li>
+              <li><Link to="/QR">QR</Link></li>
             </ul>
           </div>
 
@@ -84,7 +84,7 @@ const Footer = () => {
             <ul className="space-y-[12px] text-[15px]">
               <li>Docs</li>
               <li>Community</li>
-              <li>Calendar</li>
+              <li><Link to="/Calendar">Calendar</Link></li>
               <li>Blog</li>
               <li>Trello Board</li>
               <li>Social Impact</li>
