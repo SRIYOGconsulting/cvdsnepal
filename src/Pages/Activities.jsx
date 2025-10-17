@@ -110,14 +110,14 @@ const Activities = () => {
           {activities.map((activity, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-md shadow-sm flex flex-col h-[500px] overflow-hidden"
+              className="bg-white border border-gray-200 rounded-md shadow-sm flex flex-col h-[480px] overflow-hidden"
             >
               {/* Image Section - Fixed height to match text area */}
-              <div className="flex-1 flex items-center justify-center bg-gray-200 overflow-hidden">
+              <div className="relative">
                 <img
                   src={activity.image}
                   alt={activity.alt}
-                  className="object-cover w-full h-full"
+                  className="w-full h-64 object-cover "
                 />
               </div>
               
@@ -134,13 +134,14 @@ const Activities = () => {
                       year: "numeric",
                     })}
                   </p>
-                  <p className="text-sm text-black leading-relaxed">
+                  <p className="text-sm text-black leading-relaxed py-3">
                     {activity.description}
                   </p>
-                </div>
-                <button className="mt-4 inline-block self-center text-black bg-white px-3 py-1.5 rounded border border-gray-300">
+                  <button className=" inline-block self-center text-black bg-white px-3 py-1.5 rounded border border-gray-300">
                   Read More
                 </button>
+                </div>
+                
               </div>
             </div>
           ))}

@@ -30,6 +30,8 @@ import Notice from "./Pages/Notice.jsx";
 import Payment from "./Pages/Payment.jsx";
 import QR from "./Pages/QR.jsx";
 import Calendar from "./Pages/Calendar.jsx";
+import SocialImpact from "./Pages/SocialImpact.jsx";
+import CaseStudies from "./Pages/CaseStudies.jsx";
 // import { Calendar } from "lucide-react";
 
 const router = createBrowserRouter([
@@ -96,9 +98,11 @@ const router = createBrowserRouter([
       { path: "testimonials", element: <Testimonials />, handle: { title: "Testimonials" } },
       { path: "feedback", element: <Feedback />, handle: { title: "Feedback" } },
       { path: "notice", element: <Notice />, handle: { title: "Notice" } },
-        { path: "payment", element: <Payment />, handle: { title: "Payment" } },
-         { path: "QR", element: <QR />, handle: { title: "QR" } },
-           { path: "Calendar", element: <Calendar />, handle: { title: "Calendar" } },
+      { path: "payment", element: <Payment />, handle: { title: "Payment" } },
+      { path: "QR", element: <QR />, handle: { title: "QR" } },
+      { path: "Calendar", element: <Calendar />, handle: { title: "Calendar" } },
+      { path: "socialimpact", element: <SocialImpact />, handle: { title: "Social Impact" } },
+      { path: "casestudies", element: <CaseStudies />, handle: { title: "Case Studies" } },
     ],
 
   },

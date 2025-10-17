@@ -12,10 +12,10 @@ import image10 from "../assets/psychologica.jpg";
 import image11 from "../assets/slide3.jpg";
 
 
-const projects = [
+const socials = [
   {
     id: 1,
-    title: "National Child Right Council",
+    title: "Social Impact",
     image: image11,
     startDate: "Jan 2023",
     endDate: "Dec 2023",
@@ -27,7 +27,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Local Government",
+    title: "Social Impact",
     image: image10,
     startDate: "Feb 2023",
     endDate: "Nov 2023",
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Individual Donors",
+    title: "Social Impact",
     image: image3,
     startDate: "Mar 2023",
     endDate: "Oct 2023",
@@ -50,7 +50,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "Education for All",
+    title: "Social Impact",
     image: image4,
     startDate: "Jan 2024",
     endDate: "Ongoing",
@@ -61,7 +61,7 @@ const projects = [
   },
   {
     id: 5,
-    title: "Women Empowerment",
+    title: "Social Impact",
     image: image5,
     startDate: "Mar 2024",
     endDate: "Ongoing",
@@ -73,7 +73,7 @@ const projects = [
   },
   {
     id: 6,
-    title: "Clean Energy Program",
+    title: "Social Impact",
     image: image7,
     startDate: "May 2024",
     endDate: "Ongoing",
@@ -84,7 +84,7 @@ const projects = [
   },
   {
     id: 7,
-    title: "Community Health",
+    title: "Social Impact",
     image: earlyLifeImage,
     startDate: "Apr 2024",
     endDate: "Ongoing",
@@ -95,7 +95,7 @@ const projects = [
   },
   {
     id: 8,
-    title: "Youth Entrepreneurship",
+    title: "Social Impact",
     image: image6,
     startDate: "Jun 2024",
     endDate: "Ongoing",
@@ -106,7 +106,7 @@ const projects = [
   },
   {
     id: 9,
-    title: "Sustainable Agriculture",
+    title: "Social Impact",
     image: image9,
     startDate: "Jul 2024",
     endDate: "Ongoing",
@@ -117,17 +117,17 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+const SocialImpact = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredProjects = projects.filter((project) =>
-    project.title.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredImpacts = socials.filter((social) =>
+    social.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="min-h-screen max-w-6xl mx-auto px-6 py-10">
       <h1 className="text-5xl font-bold mb-4 text-center text-gray-800">
-        Our Impactful Projects
+        Social Impacts
       </h1>
       <p className="mb-10 text-center text-gray-600 max-w-2xl mx-auto">
         CVDS-Nepal prioritizes socially marginalized, backward caste, women, and extremely poor conflict victim & PWD groups for its entrepreneurship training programs.
@@ -149,43 +149,43 @@ const Projects = () => {
 
       {/* Project Cards 3x3 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredProjects.map((project) => (
+        {filteredImpacts.map((social) => (
           <div
-            key={project.id}
+            key={social.id}
             className="bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden group"
           >
             <div className="relative">
               <img
-                src={project.image}
-                alt={project.title}
+                src={social.image}
+                alt={social.title}
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               {/* Theme badge - same color for all */}
               <span
                 className="absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-semibold bg-[#1F2B6C]"
               >
-                {project.theme}
+                {social.theme}
               </span>
             </div>
             <div className="p-6">
               <h4 className="text-xl font-bold text-gray-800 mb-2">
-                {project.title}
+                {social.title}
               </h4>
-              <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
+              <p className="text-gray-600 mb-4 line-clamp-3">{social.description}</p>
               <div className="flex items-center justify-between text-sm text-gray-500">
                 <div className="flex items-center space-x-2">
                   <Users className="w-4 h-4" />
-                  <span>{project.members.length} Members</span>
+                  <span>{social.members.length} Members</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4" />
-                  <span>{project.country}</span>
+                  <span>{social.country}</span>
                 </div>
               </div>
               <div className="mt-3 flex items-center text-sm text-gray-500">
                 <Calendar className="w-4 h-4 mr-1" />
                 <span>
-                  {project.startDate} - {project.endDate}
+                  {social.startDate} - {social.endDate}
                 </span>
               </div>
             </div>
@@ -196,4 +196,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default SocialImpact;

@@ -87,7 +87,7 @@ const Footer = () => {
               <li><Link to="/Calendar">Calendar</Link></li>
               <li>Blog</li>
               <li>Trello Board</li>
-              <li>Social Impact</li>
+              <li><Link to="/socialimpact">Social Impact</Link></li>
             </ul>
           </div>
 
@@ -98,7 +98,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-[12px] text-[15px]">
               <li>Donate Now</li>
-              <li>Case Studies</li>
+              <li><Link to="/casestudies">Case Studies</Link></li>
               <li>Our Projects</li>
               <li>Donation List</li>
               <li>Careers</li>

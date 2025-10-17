@@ -23,6 +23,8 @@ const BasicBreadcrumbs = () => {
     faq: "FAQ",
     objectives: "Objectives",
     donate: "Donations",
+    socialimpact: "Social Impact",
+    casestudies: "Case Studies",
   };
 
   const formatName = (name) => {

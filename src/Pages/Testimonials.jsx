@@ -105,19 +105,19 @@ const Testimonials = () => {
       </section>
 
       {/* Activities Grid */}
-      <section className="max-w-6xl mx-auto px-6 pb-20">
+      <section className="max-w-6xl mx-auto px-8 pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-md shadow-sm flex flex-col h-[500px] overflow-hidden"
+              className="bg-white border border-gray-200 rounded-md shadow-sm flex flex-col h-[430px] overflow-hidden"
             >
               {/* Image Section - Fixed height to match text area */}
-              <div className="flex-1 flex items-center justify-center bg-gray-200 overflow-hidden">
+              <div className="relative">
                 <img
                   src={testimonial.image}
                   alt={testimonial.alt}
-                  className="object-cover w-full h-full"
+                  className="w-full h-64 object-cover"
                 />
               </div>
               
@@ -134,7 +134,7 @@ const Testimonials = () => {
                       year: "numeric",
                     })}
                   </p>
-                  <p className="text-sm text-black leading-relaxed text-center mb-8">
+                  <p className="text-sm text-black leading-relaxed text-center">
                     {testimonial.description}
                   </p>
                 </div>
