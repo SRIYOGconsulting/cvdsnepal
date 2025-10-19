@@ -1,7 +1,7 @@
 import React from "react";
-import { Phone, Mail } from "lucide-react";  // Lucide icons
-import bankLogo from "../assets/bank.jpg";    // your CVDS Nepal logo
-import qrImage from "../assets/payment.png";  // your QR code image
+import { Phone, Mail } from "lucide-react";  
+import bankLogo from "../assets/bank.jpg";    
+import qrImage from "../assets/qr.jpg";  
 
 const Payment = () => {
   return (

@@ -1,78 +1,137 @@
-// import React from "react";
-// import { Phone, Mail } from "lucide-react";
-// import bankLogo from "../assets/bank.jpg";
-// import qrImage from "../assets/payment.png"; // placeholder QR
-
-// const qrList = Array(12).fill(qrImage); // 12 QR thumbnails
-
-// const Payment = () => {
-//   return (
-//     <section className="min-h-screen bg-white flex flex-col justify-center items-center px-6 py-12">
-//       <h2 className="text-2xl font-semibold text-gray-900 mb-6">Scan QR to Pay</h2>
-
-//       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-//         {qrList.map((qr, index) => (
-//           <div
-//             key={index}
-//             className="flex flex-col items-center border border-black rounded-xl p-4 shadow-sm"
-//           >
-//             <img src={qr} alt={`QR ${index + 1}`} className="w-40 h-40 object-contain mb-2" />
-//             <p className="text-center font-medium text-sm">CVDS Nepal Pvt. Ltd.</p>
-//           </div>
-//         ))}
-//       </div>
-
-//       {/* Optional: Contact info below the grid */}
-//       <div className="mt-10 text-center text-black space-y-2">
-//         <div className="flex justify-center gap-4">
-//           <Phone className="w-4 h-4" />
-//           <span>+977 9852024365</span>
-//           <Mail className="w-4 h-4" />
-//           <span>info@cvdsnepal.com</span>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Payment;
-
-
-
 import React from "react";
-import { Phone, Mail } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  Phone,
+  Mail,
+  Facebook,
+  Globe,
+  MapPin,
+  LogIn,
+  Heart,
+  QrCode,
+} from "lucide-react";
 
-import qrImage from "../assets/payment.png";  // Placeholder QR image
+const cardData = [
+  {
+    id: 1,
+    title: "Payment QR",
+    icon: <QrCode className="w-10 h-10 text-indigo-600" />,
+    image: "/images/qr/payment.jpg",
+    link: "#payment",
+    description: "Scan to pay or support CVDS Nepal directly.",
+  },
+  {
+    id: 2,
+    title: "Facebook",
+    icon: <Facebook className="w-10 h-10 text-blue-600" />,
+    image: "/images/qr/facebook.jpg",
+    link: "https://www.facebook.com/cvdsnepal",
+    description: "Follow our latest updates and community events.",
+  },
+  {
+    id: 3,
+    title: "Donate Locally",
+    icon: <Heart className="w-10 h-10 text-green-600" />,
+    image: "/images/qr/local.jpg",
+    link: "tel:+9779852024365",
+    description: "Support local projects and initiatives in Nepal.",
+  },
+  {
+    id: 4,
+    title: "Donate International",
+    icon: <Globe className="w-10 h-10 text-purple-600" />,
+    image: "/images/qr/international.jpg",
+    link: "mailto:info@cvdsnepal.com",
+    description: "Partner with us globally to create impact.",
+  },
+  {
+    id: 5,
+    title: "Dashboard Login",
+    icon: <LogIn className="w-10 h-10 text-emerald-600" />,
+    image: "/images/qr/dashboard.jpg",
+    link: "https://dashboard.cvdsnepal.com",
+    description: "Access internal dashboard and reports securely.",
+  },
+  {
+    id: 6,
+    title: "Map",
+    icon: <MapPin className="w-10 h-10 text-red-600" />,
+    image: "/images/qr/map.jpg",
+    link: "https://www.google.com/maps/place/CVDS+Nepal/",
+    description: "Find our main office location on Google Maps.",
+  },
+];
 
-// Array of QR codes (12 thumbnails)
-const qrList = Array(12).fill(qrImage);
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
 
-const Payment = () => {
+const QR = () => {
   return (
-    <section className="min-h-screen bg-white flex flex-col justify-center items-center px-6 py-12">
-      
-      {/* ===== Bank Logo and Heading ===== */}
-      <div className="flex flex-col items-center mb-10">
-        
-        <h2 className="text-3xl font-semibold text-gray-900">Scan QR to Pay</h2>
-      </div>
+    <section className="min-h-screen bg-gray-50 flex flex-col items-center py-20 px-6">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-16"
+      >
+        <h1 className="text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+          CVDS Nepal
+        </h1>
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          Empowering communities through technology, education, and support.  
+          Explore our key resources below.
+        </p>
+      </motion.div>
 
-      {/* ===== QR Grid ===== */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {qrList.map((qr, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center border border-black rounded-xl p-4 shadow-sm hover:scale-105 transition-transform duration-200"
+      <div className="max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {cardData.map((card, index) => (
+          <motion.div
+            key={card.id}
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInUp}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center text-center justify-between bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 w-80 h-96 mx-auto"
           >
-            <img src={qr} alt={`QR ${index + 1}`} className="w-40 h-40 object-contain mb-2" />
-            <p className="text-center font-medium text-sm">CVDS Nepal Pvt. Ltd.</p>
-          </div>
+            <div className="pt-8 flex flex-col items-center">
+              <div className="mb-4">{card.icon}</div>
+              {card.image && (
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-32 h-32 object-contain mb-4 rounded-md shadow-sm"
+                />
+              )}
+              <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                {card.title}
+              </h3>
+              <p className="text-gray-600 text-sm px-4">{card.description}</p>
+            </div>
+            <div className="pb-6">
+              <a
+                href={card.link}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block px-6 py-2.5 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition"
+              >
+                Visit
+              </a>
+            </div>
+          </motion.div>
         ))}
       </div>
 
-      {/* ===== Contact Info ===== */}
-      <div className="mt-10 text-center text-black space-y-2">
-        <div className="flex justify-center gap-4 items-center">
+      <motion.footer
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className="mt-20 text-center text-gray-800"
+      >
+        <div className="flex justify-center gap-4 items-center mb-2 flex-wrap">
           <Phone className="w-5 h-5" />
           <span>+977 9852024365</span>
           <Mail className="w-5 h-5" />
@@ -82,13 +141,13 @@ const Payment = () => {
           href="https://www.cvdsnepal.com"
           target="_blank"
           rel="noreferrer"
-          className="text-black underline block pt-2 font-medium"
+          className="text-indigo-600 underline font-medium hover:text-indigo-700 transition"
         >
           www.cvdsnepal.com
         </a>
-      </div>
+      </motion.footer>
     </section>
   );
 };
 
-export default Payment;
+export default QR;
