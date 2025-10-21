@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useState } from "react";
 import img1 from "../assets/female.png";
 import img2 from "../assets/male.png";
 import img3 from "../assets/female.png";
@@ -7,6 +8,10 @@ import img5 from "../assets/female.png";
 import img6 from "../assets/male.png";
 
 const Gallery = () => {
+    //  Added state to track selected image for lightbox
+  const [selectedImage, setSelectedImage] = useState(null);
+
+
   const galleryProfiles = [
     {
       image: img1,
@@ -66,7 +71,8 @@ const Gallery = () => {
         {galleryProfiles.map((child, index) => (
           <div
             key={index}
-            className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition"
+            className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"     //Added cursor-pointer for interactivity
+            onClick={() => setSelectedImage(child)} //  Added open lightbox on image click
           >
             <img
               src={child.image}
@@ -81,8 +87,53 @@ const Gallery = () => {
           </div>
         ))}
       </section>
+
+
+ {/* 🔧 Added Lightbox Modal */}
+     {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4" // 🔧 Added: padding to prevent edges cutoff
+          onClick={() => setSelectedImage(null)}
+        >
+          <div
+            className="bg-white p-4 rounded-lg max-w-2xl w-full relative overflow-auto max-h-[90vh]" // 🔧 FIXED: overflow-auto + max-h to avoid overlap
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-2 right-3 text-3xl text-gray-600 hover:text-black"
+              onClick={() => setSelectedImage(null)}
+            >
+              ×
+            </button>
+
+            <div className="flex flex-col items-center"> {/* 🔧 Added: flex-col center layout */}
+              <img
+                src={selectedImage.image}
+                alt={selectedImage.name}
+                className="w-auto max-w-full h-auto max-h-[60vh] object-contain rounded-md mb-4" // 🔧 FIXED: image scaling to prevent overlap
+              />
+              <h3 className="font-semibold text-lg mb-1">
+                {selectedImage.name}
+              </h3>
+              <p className="text-sm text-gray-600 mb-2">
+                {selectedImage.location}
+              </p>
+              <p className="text-sm text-gray-700 text-justify">
+                {selectedImage.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };
 
 export default Gallery;
+
+
+
+
+
+

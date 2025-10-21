@@ -85,7 +85,7 @@ const Footer = () => {
               <li>Docs</li>
               <li>Community</li>
               <li><Link to="/Calendar">Calendar</Link></li>
-              <li>Blog</li>
+              <li><Link to ="/Blog">Blog</Link></li>
               <li>Trello Board</li>
               <li><Link to="/socialimpact">Social Impact</Link></li>
             </ul>
