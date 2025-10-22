@@ -1,53 +1,119 @@
 
-import React from "react";
+import React,  { useEffect } from "react";
 import { appData } from "../constants";
-import aboutImg from "../assets/images.jpg"; 
+import img1 from "../assets/vocational.jpg"; 
+import img2 from "../assets/home1.jpg";
 
 const About = () => {
-  return (
-    <div className="max-w-5xl mx-auto px-4 py-12">
-      {/* Heading */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-2">Who We Are</h1>
-        <h2 className="text-2xl text-gray-700">
-          Welcome to {appData.organizationName}
-        </h2>
-      </div>
 
-      {/* Image + Text Section */}
-      <div className="flex flex-col lg:flex-row items-center gap-8 mb-12">
-        <div className="w-full lg:w-1/2 flex justify-center">
+    useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll(".fade-in");
+      elements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add("opacity-100", "translate-y-0");
+        }
+      });
+    };
+     window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className="w-full flex flex-col">
+      {/* ========== SECTION About Us ========== */}
+      <section className="flex flex-col lg:flex-row w-full min-h-[90vh]">
+        {/* Left Image */}
+        <div className="lg:w-1/2 w-full h-[300px] lg:h-auto">
           <img
-            src={aboutImg}
-            alt="About Us"
-            className="rounded-xl max-w-md lg:max w-full object-cover"
+            src={img1}
+            alt="About CVDS Nepal"
+            className="w-full h-full object-cover"
           />
         </div>
-        <div className="w-full lg:w-1/2 text-gray-700 space-y-4 text-justify">
-          <p>
-            People with disability are the most vulnerable and marginalized group of people. They live in isolation, segregation, disparagement, poverty and virtual dependence on charity and even pity. They are the victim of the community misconception and stigmas denying them of their inalienable and recognized rights.
-          </p>
-          <p>
-            Conflict Victim and Disable Society ({appData.organizationName}) is located at {appData.municipality} Municipality-{appData.wardno}, {appData.address1}, {appData.address2}, {appData.city}. This organization has been supporting people with disability in Nepal since {appData.established}, providing food, clothes, shelter, and basic care through the Rehabilitation Center for Children with disability due to Cerebral Palsy (CP) project.
-          </p>
-        </div>
-      </div>
 
-      {/* Vision and Mission */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-justify">
-        <div className="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h2 className="text-2xl font-semibold mb-4">Vision</h2>
-          <p>
-            Children with disability due to Cerebral Palsy, making them capable enough to lead an independent life thereby mainstreaming them towards national development.
+        {/* Right Content */}
+        <div className="lg:w-1/2 w-full flex flex-col justify-center px-8 py-12 bg-gray-50 fade-in opacity-0 translate-y-6 transition-all duration-700">
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">About Us</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            People with disability are the most vulnerable and marginalized group
+            of people. They live in isolation, segregation, disparagement,
+            poverty, and dependence on charity. They are victims of community
+            misconceptions and stigmas denying them their basic rights.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Conflict Victim and Disable Society ({appData.organizationName}) is
+            located at {appData.municipality} Municipality-{appData.wardno},{" "}
+            {appData.address1}, {appData.address2}, {appData.city}. The
+            organization has been supporting people with disabilities in Nepal
+            since {appData.established}, providing food, clothes, shelter, and
+            rehabilitation services.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full w-fit transition-all duration-300 shadow-md hover:shadow-lg">
+            Join with us
+          </button>
+        </div>
+      </section>
+
+      {/* ========== SECTION Who We Are & Why Choose Us ========== */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 fade-in opacity-0 translate-y-6 transition-all duration-700">
+          {/* Who We Are */}
+          <div>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Who We Are</h2>
+            <p className="text-gray-700 leading-relaxed">
+              We are a non-profit organization dedicated to improving the lives
+              of people with disabilities and conflict victims across Nepal.
+              Through rehabilitation, education, and empowerment programs, we
+              strive to integrate them into the mainstream of national
+              development.
+            </p>
+          </div>
+
+          {/* Why Choose Us */}
+          <div>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Why Choose Us</h2>
+            <p className="text-gray-700 leading-relaxed">
+              Our experienced team of caregivers, therapists, and educators
+              provides continuous support to help individuals gain independence
+              and dignity. We are driven by compassion, equality, and a belief in
+              the power of inclusive growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== SECTION Digital Transformation (Vision & Mission Style) ========== */}
+      <section className="flex flex-col lg:flex-row-reverse w-full min-h-[80vh] bg-gray-50">
+        {/* Image */}
+        <div className="lg:w-1/2 w-full h-[300px] lg:h-auto">
+          <img
+            src={img2}
+            alt="Digital Transformation"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Text */}
+        <div className="lg:w-1/2 w-full flex flex-col justify-center px-8 py-12 fade-in opacity-0 translate-y-6 transition-all duration-700">
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">
+            Digital Transformation
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Our vision is to make children with disabilities capable of leading
+            independent lives, empowering them through education, therapy, and
+            skill development. We believe in creating a world where disability
+            does not define one’s potential.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Our mission is to remove social bias and provide equal opportunities
+            through music, art, and education — helping every child reach their
+            fullest potential and contribute to Nepal’s inclusive development.
           </p>
         </div>
-        <div className="bg-green-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h2 className="text-2xl font-semibold mb-4">Mission</h2>
-          <p>
-            To remove societal bias and negative stereotypes in {appData.country} and provide equal opportunities. We motivate disabled and conflict victims through music, dance, art, formal education, and personality development programs conducted by medical practitioners, caregivers, therapists, teachers, and administrative personnel.
-          </p>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

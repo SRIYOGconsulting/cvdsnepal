@@ -2,16 +2,21 @@ import React, {  useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { appData } from '../constants';
 
+// ===== fixed Imported images from src/assets (directly, no /images folder) =====
+import maleImage from "../assets/male.png";
+import femaleImage from "../assets/female.png";
+import twitterIcon from "../assets/twitter.png";
+import linkedinIcon from "../assets/linkedin.png";
 const OurTeam = () => {
   const teamMembers = [
-    { name: 'Full Name', role: 'Vice President', image: '../public/assets/images/female.png' },
-    { name: 'Full Name', role: 'Secretary', image: '../public/assets/images/male.png' },
-    { name: 'Full Name', role: 'Joint Secretary', image: '../public/assets/images/female.png' },
-    { name: 'Full Name', role: 'Treasurer', image: '../public/assets/images/male.png' },
-    { name: 'Full Name', role: 'Executive Member', image: '../public/assets/images/male.png' },
-    { name: 'Full Name', role: 'Executive Member', image: '../public/assets/images/female.png' },
-    { name: 'Full Name', role: 'Executive Member', image: '../public/assets/images/male.png' },
-    { name: 'Full Name', role: 'Executive Member', image: '../public/assets/images/male.png' },
+  { name: 'Full Name', role: 'Vice President', image: femaleImage },
+    { name: 'Full Name', role: 'Secretary', image: maleImage },
+    { name: 'Full Name', role: 'Joint Secretary', image: femaleImage },
+    { name: 'Full Name', role: 'Treasurer', image: maleImage },
+    { name: 'Full Name', role: 'Executive Member', image: maleImage },
+    { name: 'Full Name', role: 'Executive Member', image: femaleImage },
+    { name: 'Full Name', role: 'Executive Member', image: maleImage },
+    { name: 'Full Name', role: 'Executive Member', image: maleImage },
     // Add more members as needed
   ];
   return (
@@ -20,7 +25,8 @@ const OurTeam = () => {
         <div className="flex flex-col sm:flex-row w-full h-full md:px-10 py-5 items-center">
           <div className=" h-[390px] flex flex-col items-center justify-center  md:p-0 basis-full w-full sm:basis-[30%] ">
             <div className=" w-[65%] md:h-56 md:w-full lg:h-64 lg:w-[75%] py-12">
-              <img src='../public/assets/images/male.png' alt="President" className="w-48 h-48 rounded-full mb-3 object-cover" />
+              {/* ===== fixed Use imported maleImage for President ===== */}
+              <img src={maleImage} alt="President" className="w-48 h-48 rounded-full mb-3 object-cover" />
             </div>
             <div>
             </div>
@@ -37,8 +43,9 @@ const OurTeam = () => {
             <br />
             <p>Follow CDVS Nepal on social media</p><br/>
             <div>
-              <img src='../public/assets/images/twitter.png' alt="Twitter" className="w-6 h-6 mb-3 object-cover inline mr-2" style={{marginRight:'10px'}}/>
-              <img src='../public/assets/images/linkedin.png' alt="Linkedin" className="w-6 h-6 mb-3 object-cover inline mr-2"/>
+              {/* ===== fixed Use imported social icon images ===== */}
+              <img src={twitterIcon} alt="Twitter" className="w-6 h-6 mb-3 object-cover inline mr-2" style={{ marginRight:'10px' }} />
+              <img src={linkedinIcon} alt="Linkedin" className="w-6 h-6 mb-3 object-cover inline mr-2" />
             </div>
           </div></div></div>
 
@@ -46,6 +53,7 @@ const OurTeam = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 w-xl">
         {teamMembers.map((member, index) => (
           <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 flex flex-col items-center text-center min-h-[280px] " style={{ border: '1px solid #d1d5dc', backgroundColor: 'oklch(0.95 0 0)' }}>
+           {/* ===== Fixed Use member.image imported variable ===== */}
             <img src={member.image} alt={member.name} className="w-48 h-48 rounded-full mb-3 object-cover" />
             <h2 style={{ fontSize: '18px' }}>{member.name}</h2>
             <p className='text-gray-700 ' style={{ fontSize: '14px' }}>{member.role}</p>
@@ -57,3 +65,8 @@ const OurTeam = () => {
 };
 
 export default OurTeam;
+
+
+
+
+
