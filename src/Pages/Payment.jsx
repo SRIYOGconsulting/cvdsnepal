@@ -2,6 +2,7 @@ import React from "react";
 import { Phone, Mail } from "lucide-react";  
 import bankLogo from "../assets/bank.jpg";    
 import qrImage from "../assets/qr.jpg";  
+import { appData } from "../constants";
 
 const Payment = () => {
   return (
@@ -17,7 +18,7 @@ const Payment = () => {
           </h2>
 
           <p><strong>Bank Name:</strong> CVDS Nepal</p>
-          <p><strong>Account Name:</strong> CVDS Nepal Pvt. Ltd.</p>
+          <p><strong>Account Name:</strong> {appData.organizationName}</p>
           <p><strong>Account Number:</strong> 00701017502051</p>
           <p><strong>Branch:</strong> Kathmandu</p>
           <p><strong>SWIFT CODE:</strong> NARBNPKA</p>
@@ -34,7 +35,7 @@ const Payment = () => {
           </p>
 
           <p className="pt-8 text-2xl text-gray-900">
-            <strong>VAT Number:</strong> 606683203
+            <strong>PAN Number:</strong> 606683203
           </p>
         </div>
 
@@ -51,7 +52,7 @@ const Payment = () => {
           />
 
           <div className="text-center text-black font-semibold space-y-2">
-            <p className="text-lg">CVDS Nepal Pvt. Ltd.</p>
+            <p className="text-lg">CVDS Nepal</p>
             <p>Account No: 00701017502051</p>
             <p>Branch: Kathmandu</p>
             <p>Bank: CVDS Nepal</p>
@@ -59,11 +60,11 @@ const Payment = () => {
             <div className="flex flex-col items-center gap-1 pt-3">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+977 9852024365</span>
+                <a href="tel:9779851160868">+977 9851160868</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>info@cvdsnepal.com</span>
+                <a href="mailto:info@cvdsnepal.com">info@cvdsnepal.com</a>
               </div>
             </div>
 

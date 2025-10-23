@@ -1,90 +1,88 @@
 import React from "react";
-  
-import rehabImage from "../assets/rehabilation.jpg";
-import psychologicalImage from "../assets/psychologica.jpg";
-import vocationalImage from "../assets/vocational.jpg";
-import educationImage from "../assets/education.jpg";
-import communityImage from "../assets/community.jpg";
-import advocacyImage from "../assets/advocacy.jpg";
-import healthImage from "../assets/health.jpg";
-import futureImage from "../assets/future.jpg";
+import img1 from "../assets/female.png";
+import img2 from "../assets/male.png";
 
 const Testimonials = () => {
   const testimonials = [
     {
       fullName: "Full Name",
       description:
-        "Providing physical therapy and prosthetic support for conflict-injured individuals to regain mobility and independence.",
-      image: rehabImage,
-      alt: "Rehabilitation image",
+        "CVDS-Nepal gave my son a new life. He couldn’t walk or speak properly, but after months of therapy and love at the rehabilitation center, he now smiles, plays, and even says a few words. I’m forever grateful.",
+      image: img1,
+      alt: "",
+      testimony: "A Mother from Sankhu",
     },
     {
       fullName: "Full Name",
       description:
-        "Counseling and trauma therapy programs to help victims process PTSD and rebuild emotional resilience.",
-      image: psychologicalImage,
-      alt: "Psychological support image",
+        "When I visited CVDS, I saw not just an organization, but a family. The children are cared for with love, and the dedication of the staff is truly inspiring. This is where hope lives.",
+      image: img1,
+      alt: "",
+      testimony: "Kriti Sharma, Donor from Kathmandu",
     },
     {
       fullName: "Full Name",
       description:
-        "Skill-building workshops (e.g., crafts, IT) tailored for disabled youth, leading to employment opportunities.",
-      image: vocationalImage,
-      alt: "Vocational training image",
+        "I was abandoned as a child and had nowhere to go. CVDS gave me food, education, and a home. Today, I work as a computer technician. Without CVDS, I wouldn’t be here.",
+      image: img2,
+      alt: "",
+      testimony: "Former Beneficiary",
     },
     {
       fullName: "Full Name",
       description:
-        "Inclusive schooling and literacy programs for disabled children from conflict zones, bridging educational gaps.",
-      image: educationImage,
-      alt: "Education access image",
+        "The physiotherapy sessions at CVDS have made a huge difference in my daughter’s mobility. She couldn’t even sit before, and now she can stand with support. The team is a blessing.",
+      image: img1,
+      alt: "",
+      testimony: "Parent of a Child with Cerebral Palsy",
     },
     {
       fullName: "Full Name",
       description:
-        "Social events and awareness campaigns to reduce stigma and foster inclusive communities.",
-      image: communityImage,
-      alt: "Community integration image",
+        "Volunteering at CVDS changed my life. These children have faced so much yet remain full of joy and resilience. It was an honor to be part of their journey, even for a short time.",
+      image: img1,
+      alt: "",
+      testimony: "Nina Patel, Volunteer from UK",
     },
     {
       fullName: "Full Name",
       description:
-        "Legal aid and policy advocacy to secure rights and government support for disabled conflict victims.",
-      image: advocacyImage,
-      alt: "Advocacy and rights image",
+        "I’ve donated to many organizations, but CVDS stands out. They are transparent, accountable, and truly passionate about their mission. I trust them completely with my support.",
+      image: img2,
+      alt: "",
+      testimony: "Ramesh Adhikari, Supporter",
     },
     {
       fullName: "Full Name",
       description:
-        "Medical check-ups and nutrition drives to address secondary health issues from disabilities and displacement.",
-      image: healthImage,
-      alt: "Health and nutrition image",
+        "My brother, who has a disability, was always left behind. At CVDS, he was treated with dignity and given the chance to learn and grow. It changed our entire family’s life.",
+      image: img1,
+      alt: "",
+      testimony: "Sibling of a Beneficiary",
     },
     {
       fullName: "Full Name",
       description:
-        "We plan to acquire our own facility to provide children with disabilities a safe and fully equipped environment for learning and living.",
-      image: futureImage,
-      alt: "Infrastructure development image",
+        "I met the founder, Yub Raj Thapa, and was moved by his personal story. He turned his pain into purpose. That spirit flows through every corner of CVDS.",
+      image: img2,
+      alt: "",
+      testimony: "Michael Lee, International NGO Representative",
     },
     {
       fullName: "Full Name",
       description:
-        "We aim to extend our outreach programs to more rural areas, ensuring children with disabilities receive proper care, education, and social support.",
-      image: communityImage,
-      alt: "Community outreach expansion image",
+        "As a doctor, I’ve worked with many organizations, but CVDS is special. They don’t just treat medical issues—they restore self-worth and dignity to children who need it most.",
+      image: img1,
+      alt: "",
+      testimony: "Dr. Anjana Shrestha, Pediatric Specialist",
     },
   ];
 
   return (
-    <div className="bg-white min-h-screen">
-      
-
-      {/* Description Section */}
+    <div className="min-h-screen bg-white text-black max-w-6xl mx-auto px-4">
+      {/* ✅ Keep original heading and paragraphs */}
       <section className="max-w-5xl mx-auto px-6 text-center py-12">
-        <h2 className="text-xl font-semibold mb-4">
-          {"CVDS Nepal"} Testimonials
-        </h2>
+        <h2 className="text-xl font-semibold mb-4">{"CVDS Nepal"} Testimonials</h2>
         <p className="text-gray-700 text-[15px] leading-relaxed mb-6">
           Recreational activities include hobbies such as painting, gardening,
           reading, or gaming, which provide relaxation and enjoyment. Physical
@@ -104,45 +102,38 @@ const Testimonials = () => {
         </p>
       </section>
 
-      {/* Activities Grid */}
-      <section className="max-w-6xl mx-auto px-8 pb-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-white border border-gray-200 rounded-md shadow-sm flex flex-col h-[430px] overflow-hidden"
-            >
-              {/* Image Section - Fixed height to match text area */}
-              <div className="relative">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.alt}
-                  className="w-full h-64 object-cover"
-                />
-              </div>
-              
-              {/* Text Section - Equal height to image, with gray border on top and subtle bottom rounding */}
-              <div className="flex-1 flex flex-col justify-between p-4 border-t border-gray-200 rounded-b-md">
-                <div>
-                  <h3 className="text-lg font-semibold text-black mb-1 text-center">
-                    {testimonial.fullName}
-                  </h3>
-                  <p className="text-xs text-gray-500 mb-2 text-center">
-                    {new Date().toLocaleDateString("en-GB", {
-                      day: "2-digit",
-                      month: "long",
-                      year: "numeric",
-                    })}
-                  </p>
-                  <p className="text-sm text-black leading-relaxed text-center">
-                    {testimonial.description}
-                  </p>
-                </div>
-                
-              </div>
+      {/* ✅ Gallery-style grid layout */}
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto pb-20">
+        {testimonials.map((item, index) => (
+          <div
+            key={index}
+            className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-white cursor-pointer"
+          >
+            <img
+              src={item.image}
+              alt={item.alt}
+              className="w-54 h-54 flex justify-center items-center px-10 py-5 rounded-t-lg object-contain"
+            />
+            <div className="p-4">
+              <h3 className="font-semibold text-lg mb-1 text-blue-800 text-center">
+                {item.fullName}
+              </h3>
+              <p className="text-xs text-gray-500 mb-2 text-center">
+                {new Date().toLocaleDateString("en-GB", {
+                  day: "2-digit",
+                  month: "long",
+                  year: "numeric",
+                })}
+              </p>
+              <p className="text-sm text-gray-700 text-justify">
+                {item.description}
+              </p>
+              <p className="text-sm text-gray-700 text-center pt-4 italic">
+                – {item.testimony}
+              </p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </section>
     </div>
   );

@@ -102,9 +102,9 @@ const router = createBrowserRouter([
       { path: "notice", element: <Notice />, handle: { title: "Notice" } },
       { path: "payment", element: <Payment />, handle: { title: "Payment" } },
       { path: "QR", element: <QR />, handle: { title: "QR" } },
-      { path: "Calendar", element: <Calendar />, handle: { title: "Calendar" } },
-      { path: "socialimpact", element: <SocialImpact />, handle: { title: "Social Impact" } },
-      { path: "casestudies", element: <CaseStudies />, handle: { title: "Case Studies" } },
+      { path: "calendar", element: <Calendar />, handle: { title: "Calendar" } },
+      { path: "impact", element: <SocialImpact />, handle: { title: "Social Impact" } },
+      { path: "case-studies", element: <CaseStudies />, handle: { title: "Case Studies" } },
       { path: "Blog", element: <Blog />, handle: { title: "Blog" } },
     ],
 

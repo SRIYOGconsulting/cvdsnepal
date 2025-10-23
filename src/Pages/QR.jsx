@@ -98,7 +98,7 @@ const QR = () => {
             className="flex flex-col items-center text-center justify-between bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 w-80 h-96 mx-auto"
           >
             <div className="pt-8 flex flex-col items-center">
-              <div className="mb-4">{card.icon}</div>
+              
               {card.image && (
                 <img
                   src={card.image}
@@ -111,16 +111,7 @@ const QR = () => {
               </h3>
               <p className="text-gray-600 text-sm px-4">{card.description}</p>
             </div>
-            <div className="pb-6">
-              <a
-                href={card.link}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block px-6 py-2.5 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition"
-              >
-                Visit
-              </a>
-            </div>
+            <div className="pb-10">{card.icon}</div>
           </motion.div>
         ))}
       </div>
@@ -133,9 +124,9 @@ const QR = () => {
       >
         <div className="flex justify-center gap-4 items-center mb-2 flex-wrap">
           <Phone className="w-5 h-5" />
-          <span>+977 9852024365</span>
+          <a href="tel:9779851160868">+977 9851160868</a>
           <Mail className="w-5 h-5" />
-          <span>info@cvdsnepal.com</span>
+          <a href="mailto:info@cvdsnepal.org.np">info@cvdsnepal.org.np</a>
         </div>
         <a
           href="https://www.cvdsnepal.com"
@@ -143,7 +134,7 @@ const QR = () => {
           rel="noreferrer"
           className="text-indigo-600 underline font-medium hover:text-indigo-700 transition"
         >
-          www.cvdsnepal.com
+          www.cvdsnepal.org.np
         </a>
       </motion.footer>
     </section>

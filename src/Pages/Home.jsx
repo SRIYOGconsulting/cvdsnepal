@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import img1 from "../assets/female.png";
 import img2 from "../assets/male.png";
+import childM from "../assets/male-child.png";
+import childF from "../assets/female-child.png"
 import Header from "../Components/Header";
 import newHeroImage from "../assets/homepage.jpg";
 import img3 from "../assets/blog1.jpg";
@@ -135,10 +137,10 @@ const SponsorSection = () => (
       </p>
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
         {[
-          { img: img1, name: "Aarati Lama" },
-          { img: img2, name: "Bishal Thapa" },
-          { img: img1, name: "Sita Magar" },
-          { img: img2, name: "Ramesh Shrestha" },
+          { img: childF, name: "Aarati Lama" },
+          { img: childM, name: "Bishal Thapa" },
+          { img: childF, name: "Sita Magar" },
+          { img: childM, name: "Ramesh Shrestha" },
         ].map((child, i) => (
           <div
             key={i}
@@ -156,7 +158,7 @@ const SponsorSection = () => (
                 to="/gallery"
                 className="inline-block w-full text-center border border-black py-2 rounded hover:bg-black hover:text-white transition"
               >
-                View Profile
+                View Donors
               </Link>
             </div>
           </div>
@@ -165,7 +167,7 @@ const SponsorSection = () => (
       <div className="space-x-4">
         <Link to="/gallery">
           <button className="border border-black px-6 py-2 rounded hover:bg-black hover:text-white transition">
-            View More
+            Donate Now
           </button>
         </Link>
       </div>

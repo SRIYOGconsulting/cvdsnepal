@@ -84,10 +84,10 @@ const Footer = () => {
             <ul className="space-y-[12px] text-[15px]">
               <li>Docs</li>
               <li>Community</li>
-              <li><Link to="/Calendar">Calendar</Link></li>
+              <li><Link to="/calendar">Calendar</Link></li>
               <li><Link to ="/Blog">Blog</Link></li>
               <li>Trello Board</li>
-              <li><Link to="/socialimpact">Social Impact</Link></li>
+              <li><Link to="/impact">Social Impact</Link></li>
             </ul>
           </div>
 
@@ -98,7 +98,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-[12px] text-[15px]">
               <li>Donate Now</li>
-              <li><Link to="/casestudies">Case Studies</Link></li>
+              <li><Link to="/case-studies">Case Studies</Link></li>
               <li>Our Projects</li>
               <li>Donation List</li>
               <li>Careers</li>
@@ -137,10 +137,10 @@ const Footer = () => {
       {/* ===== Bottom Section ===== */}
       <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-gray-200 text-[13px] text-gray-500 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
         <p>
-          © 2025 <span className="font-medium">{`{ Organization Name }`}</span>
+          © 2025 <span className="font-medium">CVDS Nepal</span>
 . | All
           Rights Reserved. Built With :
-          <span className="text-[#0B5D5E] font-semibold"> BroadPress</span>
+          <a href="https://broadpress.org" target="_blank" className="text-[#0B5D5E] font-semibold cursor-pointer hover:underline"> BroadPress</a>
         </p>
         <div className="flex flex-wrap justify-center gap-2">
           <span className="hover:underline cursor-pointer">

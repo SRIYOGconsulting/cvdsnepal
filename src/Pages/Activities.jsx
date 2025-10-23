@@ -117,7 +117,7 @@ const Activities = () => {
                 <img
                   src={activity.image}
                   alt={activity.alt}
-                  className="w-full h-64 object-cover "
+                  className="w-full h-64 object-cover"
                 />
               </div>
               

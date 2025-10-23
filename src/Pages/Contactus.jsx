@@ -12,7 +12,7 @@ const Contactus = () => {
        {/* Section Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-3">
-          Contact {appData.organizationName}
+           {appData.organizationName}
         </h1>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
           We’re here to help! Get in touch with us and we’ll respond as soon as
@@ -56,7 +56,8 @@ const Contactus = () => {
             </li>
             <li className="flex items-center gap-3">
               <MapPin className="w-5 h-5 text-green-600" />
-              {appData.city || "Kathmandu"}
+              {appData.municipality} Municipality-{appData.wardno} <br/>
+              {appData.address1}, {appData.address2}, {appData.city|| "Kathmandu"}, {appData.country || "Nepal"}
             </li>
           </ul>
         </div>
