@@ -17,7 +17,7 @@ import img2 from "../assets/male.png";
 import childM from "../assets/male-child.png";
 import childF from "../assets/female-child.png"
 import Header from "../Components/Header";
-import newHeroImage from "../assets/homepage.jpg";
+import newHeroImage from "../assets/homepageherobanner.jpg";
 import img3 from "../assets/blog1.jpg";
 import img5 from "../assets/home1.jpg";
 import img6 from "../assets/home2.jpg";

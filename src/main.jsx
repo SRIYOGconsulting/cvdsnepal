@@ -32,9 +32,9 @@ import QR from "./Pages/QR.jsx";
 import Calendar from "./Pages/Calendar.jsx";
 import SocialImpact from "./Pages/SocialImpact.jsx";
 import CaseStudies from "./Pages/CaseStudies.jsx";
-import Blog from "./Pages/Blog.jsx"
+import Blog from "./Pages/Blog.jsx";
 
-// import { Calendar } from "lucide-react";
+import VolunteerForm from "./Pages/VolunterForm.jsx";
 
 const router = createBrowserRouter([
   {
@@ -97,17 +97,41 @@ const router = createBrowserRouter([
       },
       { path: "videos", element: <Videos />, handle: { title: "Videos" } },
       { path: "FAQ", element: <Faq />, handle: { title: "FAQ" } },
-      { path: "testimonials", element: <Testimonials />, handle: { title: "Testimonials" } },
-      { path: "feedback", element: <Feedback />, handle: { title: "Feedback" } },
+      {
+        path: "testimonials",
+        element: <Testimonials />,
+        handle: { title: "Testimonials" },
+      },
+      {
+        path: "feedback",
+        element: <Feedback />,
+        handle: { title: "Feedback" },
+      },
       { path: "notice", element: <Notice />, handle: { title: "Notice" } },
       { path: "payment", element: <Payment />, handle: { title: "Payment" } },
       { path: "QR", element: <QR />, handle: { title: "QR" } },
-      { path: "calendar", element: <Calendar />, handle: { title: "Calendar" } },
-      { path: "impact", element: <SocialImpact />, handle: { title: "Social Impact" } },
-      { path: "case-studies", element: <CaseStudies />, handle: { title: "Case Studies" } },
-      { path: "Blog", element: <Blog />, handle: { title: "Blog" } },
+      {
+        path: "calendar",
+        element: <Calendar />,
+        handle: { title: "Calendar" },
+      },
+      {
+        path: "impact",
+        element: <SocialImpact />,
+        handle: { title: "Social Impact" },
+      },
+      {
+        path: "case-studies",
+        element: <CaseStudies />,
+        handle: { title: "Case Studies" },
+      },
+      { path: "blog", element: <Blog />, handle: { title: "Blog" } },
+      {
+        path: "volunter",
+        element: <VolunteerForm />,
+        handle: { title: "VolunterForm" },
+      },
     ],
-
   },
 ]);
 
