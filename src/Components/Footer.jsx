@@ -58,7 +58,7 @@ const Footer = () => {
               <li><Link to="/testimonials">Testimonials</Link></li>
               <li><Link to="/feedback">Feedback</Link></li>
               <li><Link to="/Gallery">Gallery</Link></li>
-              <li><Link to="/News">News</Link></li>
+            {/* removed news page */}
               <li><Link to="/notice">Notice</Link></li>
             </ul>
           </div>
@@ -69,9 +69,10 @@ const Footer = () => {
               Resources
             </h3>
             <ul className="space-y-[12px] text-[15px]">
-              <li>Holidays</li>
-              <li>Career</li>
-              <li>CSR</li>
+             {/* removed holidays */}
+
+              <li>Appeal</li>
+              <li><Link to="/partners">Partners</Link></li>
               <li><Link to="/messages">Message</Link></li>
               <li><Link to="/payment">Payment</Link></li>
               <li><Link to="/QR">QR</Link></li>
@@ -82,8 +83,8 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-4 text-[16px] tracking-wide">Support</h3>
             <ul className="space-y-[12px] text-[15px]">
-              <li>Docs</li>
-              <li>Community</li>
+            {/* removed docs and community */}
+            
               <li><Link to="/calendar">Calendar</Link></li>
               <li><Link to ="/Blog">Blog</Link></li>
               <li>Trello Board</li>
@@ -100,8 +101,8 @@ const Footer = () => {
               <li>Donate Now</li>
               <li><Link to="/case-studies">Case Studies</Link></li>
               <li>Our Projects</li>
-              <li>Donation List</li>
-              <li>Careers</li>
+              <li>Donors</li>
+       {/* removed careers */}
               <li>Internship</li>
             </ul>
           </div>
